@@ -16,6 +16,9 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://api.github.com" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -34,7 +37,14 @@
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <div class="header-actions">
+      <a class="nav-cta" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true"></span>
+        <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
+      </div>
+    </div>
   </header>
 
   <main>
