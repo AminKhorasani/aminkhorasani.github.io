@@ -56,22 +56,24 @@ button,a{-webkit-tap-highlight-color:transparent}
 .hero-space{min-height:590px;position:relative;display:grid;place-items:center}
 .planet-wrap{position:relative;width:min(40vw,500px);aspect-ratio:1;display:grid;place-items:center;transform-style:preserve-3d;transition:transform .18s linear}
 .planet{width:58%;aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;background:
-  radial-gradient(circle at 35% 28%,rgba(220,226,222,.56) 0 1%,rgba(118,142,125,.28) 5%,rgba(34,45,38,.72) 18%,rgba(10,12,11,.98) 58%,#020303 100%);
-  box-shadow:inset -36px -24px 55px rgba(0,0,0,.72),0 0 70px rgba(63,255,123,.05),0 0 0 1px rgba(255,255,255,.08)}
+  radial-gradient(circle at 32% 28%,rgba(190,255,214,.68) 0 2%,rgba(95,255,145,.38) 8%,rgba(32,110,55,.94) 34%,rgba(10,34,18,.99) 66%,#020805 100%);
+  box-shadow:inset -36px -24px 55px rgba(0,0,0,.62),inset 18px 14px 34px rgba(140,255,190,.11),0 0 90px rgba(51,255,122,.12),0 0 160px rgba(51,255,122,.06),0 0 0 1px rgba(122,255,161,.18)}
 .planet:before{content:"";position:absolute;inset:8% 18% 12% 4%;border-radius:50%;background:
   radial-gradient(circle at 40% 35%,rgba(255,255,255,.18),transparent 8%),
   repeating-radial-gradient(ellipse at 35% 40%,rgba(2,34,14,.42) 0 9px,transparent 10px 24px);
   mix-blend-mode:soft-light;transform:rotate(-18deg)}
-.planet-glow{position:absolute;inset:-20%;border-radius:50%;box-shadow:0 0 90px 18px rgba(77,255,135,.06);z-index:-1}
+.planet-glow{position:absolute;inset:-20%;border-radius:50%;background:radial-gradient(circle,rgba(72,255,128,.24) 0%,rgba(72,255,128,.10) 42%,rgba(72,255,128,0) 72%);filter:blur(18px);box-shadow:0 0 105px 24px rgba(77,255,135,.10);z-index:-1}
 .planet-grid{position:absolute;inset:0;background:
-  repeating-linear-gradient(0deg,transparent 0 18px,rgba(169,255,197,.035) 19px),
-  repeating-linear-gradient(90deg,transparent 0 18px,rgba(169,255,197,.025) 19px);border-radius:50%;transform:rotate(12deg)}
-.planet-shadow{position:absolute;inset:0;background:radial-gradient(circle at 78% 28%,transparent 0 24%,rgba(0,0,0,.1) 36%,rgba(0,0,0,.65) 83%)}
-.orbit{position:absolute;border:1px solid rgba(133,255,171,.15);border-radius:50%;transform-style:preserve-3d}
+  repeating-linear-gradient(0deg,transparent 0 18px,rgba(120,255,170,.085) 19px),
+  repeating-linear-gradient(90deg,transparent 0 18px,rgba(120,255,170,.065) 19px);border-radius:50%;transform:rotate(12deg);mix-blend-mode:screen;opacity:.48}
+.planet-shadow{position:absolute;inset:0;background:
+  radial-gradient(circle at 30% 26%,rgba(255,255,255,.20) 0%,rgba(255,255,255,.08) 4%,rgba(255,255,255,0) 10%),
+  radial-gradient(circle at 78% 28%,transparent 0 24%,rgba(0,0,0,.08) 36%,rgba(0,0,0,.58) 83%)}
+.orbit{position:absolute;border:1px solid rgba(82,255,145,.22);border-radius:50%;transform-style:preserve-3d;box-shadow:0 0 28px rgba(82,255,145,.025)}
 .orbit-a{width:82%;height:36%;transform:rotate(-18deg);animation:orbitSpinA 16s linear infinite}
 .orbit-b{width:98%;height:49%;transform:rotate(42deg);animation:orbitSpinB 21s linear infinite}
 .orbit-c{width:66%;height:95%;transform:rotate(76deg);animation:orbitSpinC 26s linear infinite}
-.satellite{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px 5px rgba(119,242,159,.4)}
+.satellite{position:absolute;width:8px;height:8px;border-radius:50%;background:#7dffae;box-shadow:0 0 18px 5px rgba(125,255,174,.55)}
 .sat-a{right:10%;top:5%}.sat-b{left:14%;bottom:7%}.sat-c{right:4%;top:56%}
 @keyframes orbitSpinA{to{transform:rotate(342deg)}}
 @keyframes orbitSpinB{to{transform:rotate(402deg)}}
