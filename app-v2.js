@@ -55,3 +55,42 @@ function runBuildTypewriter(){
 }
 runBuildTypewriter();
 window.addEventListener('portfolio-language-change',runBuildTypewriter);
+
+const sky=document.getElementById('skyfield');
+if(sky){
+  const sctx=sky.getContext('2d');
+  let stars=[];
+  const resizeSky=()=>{
+    const dpr=Math.min(devicePixelRatio||1,2);
+    sky.width=innerWidth*dpr; sky.height=innerHeight*dpr;
+    sky.style.width=innerWidth+'px'; sky.style.height=innerHeight+'px';
+    sctx.setTransform(dpr,0,0,dpr,0,0);
+    const count=Math.min(240,Math.floor((innerWidth*innerHeight)/7200));
+    stars=Array.from({length:count},()=>({
+      x:Math.random()*innerWidth,
+      y:Math.random()*innerHeight,
+      r:Math.random()*1.15+.2,
+      a:Math.random()*.55+.12,
+      drift:Math.random()*.025+.005,
+      tw:Math.random()*Math.PI*2
+    }));
+  };
+  const drawSky=(t=0)=>{
+    sctx.clearRect(0,0,innerWidth,innerHeight);
+    for(const s of stars){
+      const twinkle=.72+.28*Math.sin(t*.0015+s.tw);
+      sctx.beginPath();
+      sctx.fillStyle='rgba(185,210,255,'+(s.a*twinkle)+')';
+      sctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      sctx.fill();
+      if(!reduceMotion){
+        s.y+=s.drift;
+        if(s.y>innerHeight+3)s.y=-3;
+      }
+    }
+    if(!reduceMotion)requestAnimationFrame(drawSky);
+  };
+  resizeSky();
+  drawSky();
+  addEventListener('resize',resizeSky,{passive:true});
+}
