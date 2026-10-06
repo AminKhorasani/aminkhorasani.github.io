@@ -24,11 +24,13 @@ body:after{
   position:fixed;
   inset:-18% -10%;
   pointer-events:none;
-  z-index:-4;
+  z-index:-3;
   background:
-    radial-gradient(ellipse at 68% 18%,rgba(90,138,255,.11),transparent 34%),
-    radial-gradient(ellipse at 24% 72%,rgba(70,114,220,.08),transparent 38%);
-  filter:blur(38px);
+    radial-gradient(ellipse at 72% 16%,rgba(119,145,255,.10),transparent 34%),
+    radial-gradient(ellipse at 26% 70%,rgba(72,119,229,.075),transparent 40%),
+    radial-gradient(ellipse at 50% 48%,rgba(93,68,170,.055),transparent 44%);
+  filter:blur(54px);
+  mix-blend-mode:screen;
 }
 #skyfield{
   position:fixed;
@@ -39,7 +41,22 @@ body:after{
   pointer-events:none;
   opacity:.92;
 }
-.page-grid{display:none}
+.page-grid{
+  display:block;
+  position:fixed;
+  inset:-12%;
+  z-index:-4;
+  pointer-events:none;
+  opacity:.72;
+  background:
+    radial-gradient(40% 30% at 74% 20%,rgba(100,115,255,.16),transparent 72%),
+    radial-gradient(38% 28% at 28% 42%,rgba(72,128,255,.10),transparent 74%),
+    radial-gradient(32% 24% at 58% 68%,rgba(119,86,210,.085),transparent 76%),
+    radial-gradient(26% 20% at 18% 82%,rgba(57,103,205,.075),transparent 78%);
+  filter:blur(46px) saturate(1.08);
+  transform:translate3d(0,0,0) scale(1.04);
+  animation:nebulaDrift 26s ease-in-out infinite alternate;
+}
 .cursor-glow{
   background:radial-gradient(circle,rgba(76,137,255,.11),rgba(76,137,255,0) 70%);
   opacity:.30;
@@ -146,4 +163,41 @@ body:after{
 }
 @media(prefers-reduced-motion:reduce){
   #skyfield{opacity:.72}
+}
+
+.hero{position:relative}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:58vw;
+  height:58vw;
+  max-width:880px;
+  max-height:880px;
+  right:-18vw;
+  top:-16vw;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 48% 44%,rgba(96,141,255,.13),rgba(96,141,255,.03) 28%,transparent 62%),
+    radial-gradient(circle at 62% 58%,rgba(112,79,190,.07),transparent 46%);
+  filter:blur(28px);
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  left:-22vw;
+  bottom:-18vw;
+  width:56vw;
+  height:34vw;
+  pointer-events:none;
+  z-index:-1;
+  background:radial-gradient(ellipse,rgba(54,93,180,.07),transparent 68%);
+  filter:blur(30px);
+}
+@keyframes nebulaDrift{
+  0%{transform:translate3d(-1.5%,-1%,0) scale(1.04)}
+  100%{transform:translate3d(1.5%,1.2%,0) scale(1.08)}
+}
+@media(prefers-reduced-motion:reduce){
+  .page-grid{animation:none}
 }
