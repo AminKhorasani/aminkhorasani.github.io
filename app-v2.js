@@ -65,14 +65,15 @@ if(sky){
     sky.width=innerWidth*dpr; sky.height=innerHeight*dpr;
     sky.style.width=innerWidth+'px'; sky.style.height=innerHeight+'px';
     sctx.setTransform(dpr,0,0,dpr,0,0);
-    const count=Math.min(240,Math.floor((innerWidth*innerHeight)/7200));
+    const count=Math.min(300,Math.floor((innerWidth*innerHeight)/6200));
     stars=Array.from({length:count},()=>({
       x:Math.random()*innerWidth,
       y:Math.random()*innerHeight,
-      r:Math.random()*1.15+.2,
-      a:Math.random()*.55+.12,
-      drift:Math.random()*.025+.005,
-      tw:Math.random()*Math.PI*2
+      r:Math.random()<.08?Math.random()*1.8+1.0:Math.random()*.9+.15,
+      a:Math.random()<.08?Math.random()*.45+.38:Math.random()*.42+.10,
+      drift:Math.random()*.018+.003,
+      tw:Math.random()*Math.PI*2,
+      hue:Math.random()
     }));
   };
   const drawSky=(t=0)=>{
@@ -80,9 +81,18 @@ if(sky){
     for(const s of stars){
       const twinkle=.72+.28*Math.sin(t*.0015+s.tw);
       sctx.beginPath();
-      sctx.fillStyle='rgba(185,210,255,'+(s.a*twinkle)+')';
+      const rgb=s.hue>.82?'210,198,255':s.hue>.56?'176,205,255':'202,220,255';
+      sctx.fillStyle='rgba('+rgb+','+(s.a*twinkle)+')';
       sctx.arc(s.x,s.y,s.r,0,Math.PI*2);
       sctx.fill();
+      if(s.r>1.25){
+        sctx.beginPath();
+        sctx.strokeStyle='rgba(175,202,255,'+(s.a*.22*twinkle)+')';
+        sctx.lineWidth=.45;
+        sctx.moveTo(s.x-s.r*3,s.y);sctx.lineTo(s.x+s.r*3,s.y);
+        sctx.moveTo(s.x,s.y-s.r*3);sctx.lineTo(s.x,s.y+s.r*3);
+        sctx.stroke();
+      }
       if(!reduceMotion){
         s.y+=s.drift;
         if(s.y>innerHeight+3)s.y=-3;
