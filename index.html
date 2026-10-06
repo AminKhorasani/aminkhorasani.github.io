@@ -1,228 +1,307 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07130d" />
-  <meta name="description" content="Amin Khorasani — Data, AI, Analytics and Product Engineering. Selected work, experiments and open-source projects." />
+  <meta name="theme-color" content="#050807" />
+  <meta name="description" content="Amin Khorasani — Data, AI, analytics and product engineering. Selected work, experience and open-source projects." />
   <meta name="author" content="Amin Khorasani" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Amin Khorasani — Data · AI · Analytics" />
-  <meta property="og:description" content="I turn messy data into clear decisions and useful software." />
+  <meta property="og:description" content="I build systems that turn messy signals into clear decisions." />
   <meta property="og:url" content="https://aminkhorasani.github.io/" />
-  <meta property="og:image" content="https://github.com/AminKhorasani.png" />
+  <meta property="og:image" content="https://github.com/AminKhorasani.png?size=1200" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>Amin Khorasani — Data · AI · Analytics</title>
+
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://api.github.com" />
+  <link rel="preconnect" href="https://github.com" />
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20261005-2" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=20261006-1" />
 </head>
+
 <body>
-  <canvas id="starfield" aria-hidden="true"></canvas>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Amin Khorasani home">
-      <span class="brand-orbit" aria-hidden="true"><i></i></span>
-      <span>AK</span>
-    </a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <a class="nav-cta" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <div class="language-switch" role="group" aria-label="Language">
-        <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
-        <span aria-hidden="true"></span>
-        <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="Amin Khorasani home">
+        <span class="brand-mark">A</span>
+        <span class="brand-name">Amin Khorasani<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#work" data-i18n="navWork">Work</a>
+        <a href="#experience" data-i18n="navExperience">Experience</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true"></span>
+          <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
+        </div>
+        <a class="icon-link" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <span>GH</span><i>↗</i>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero section-shell" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow reveal">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
-        <h1 id="hero-title" class="reveal delay-1">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <div class="availability">
+          <span class="pulse-dot"></span>
+          <span data-i18n="availability">Building at Digikala · Tehran</span>
+        </div>
+
+        <p class="hero-kicker" data-i18n="heroKicker">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
+
+        <h1 data-i18n-html="heroTitle">
           I build systems that turn
-          <span class="gradient-text">messy signals</span>
+          <span>messy signals</span>
           into clear decisions.
         </h1>
-        <p class="hero-lede reveal delay-2">
-          I’m Amin Khorasani. I work at the intersection of analytics, AI, data systems and product — from finding the signal to shipping the software.
+
+        <p class="hero-lede" data-i18n="heroLede">
+          I’m Amin Khorasani. I work where data, AI and product meet — turning ambiguous problems into systems people can actually use.
         </p>
-        <div class="hero-actions reveal delay-3">
-          <a class="button button-primary" href="#work">Explore the orbit <span>↓</span></a>
-          <a class="button button-ghost" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#work"><span data-i18n="seeWork">View my work</span><i>↓</i></a>
+          <a class="button secondary" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer"><span>LinkedIn</span><i>↗</i></a>
         </div>
-        <div class="signal-strip reveal delay-3" aria-label="Live GitHub profile stats">
-          <div><strong id="repo-count">—</strong><span>public repos</span></div>
-          <div><strong id="follower-count">—</strong><span>GitHub followers</span></div>
-          <div><strong>4</strong><span>focus areas</span></div>
+
+        <div class="hero-meta">
+          <div><strong id="repo-count">—</strong><span data-i18n="publicRepos">public repos</span></div>
+          <div><strong id="follower-count">—</strong><span data-i18n="followers">GitHub followers</span></div>
+          <div><strong>4</strong><span data-i18n="focusAreas">focus areas</span></div>
         </div>
       </div>
 
-      <div class="hero-space" aria-hidden="true">
-        <div class="space-label label-one">AI</div>
-        <div class="space-label label-two">DATA</div>
-        <div class="space-label label-three">PRODUCT</div>
-        <div class="space-label label-four">ANALYTICS</div>
-        <div class="planet-wrap" id="planet-wrap">
-          <div class="orbit orbit-a"><span class="satellite sat-a"></span></div>
-          <div class="orbit orbit-b"><span class="satellite sat-b"></span></div>
-          <div class="orbit orbit-c"><span class="satellite sat-c"></span></div>
-          <div class="planet">
-            <div class="planet-glow"></div>
-            <div class="planet-grid"></div>
-            <div class="planet-shadow"></div>
+      <div class="portrait-column reveal delay-1">
+        <div class="portrait-card">
+          <div class="portrait-frame">
+            <img src="https://github.com/AminKhorasani.png?size=900" alt="Amin Khorasani" fetchpriority="high" decoding="async" />
+            <div class="portrait-scan"></div>
           </div>
+
+          <div class="portrait-caption">
+            <div>
+              <span class="caption-label">AMIN / 2026</span>
+              <strong data-i18n="portraitRole">Data · AI · Product</strong>
+            </div>
+            <span class="portrait-index">01</span>
+          </div>
+
+          <div class="portrait-corner top-left"></div>
+          <div class="portrait-corner top-right"></div>
+          <div class="portrait-corner bottom-left"></div>
+          <div class="portrait-corner bottom-right"></div>
         </div>
+
+        <p class="portrait-note" data-i18n="portraitNote">Based in Tehran. Building analytical systems, AI workflows and product experiments.</p>
       </div>
     </section>
 
-    <section class="section section-shell" id="about" aria-labelledby="about-title">
-      <div class="section-kicker reveal">01 / MISSION CONTROL</div>
-      <div class="about-grid">
+    <section class="section shell activity-section" id="activity">
+      <div class="section-heading reveal">
         <div>
-          <h2 id="about-title" class="section-title reveal">The useful part is not the dashboard.<br />It’s the decision after it.</h2>
+          <p class="section-label">01 / <span data-i18n="recentActivityLabel">RECENT ACTIVITY</span></p>
+          <h2 data-i18n="recentActivityTitle">What I’ve been building lately.</h2>
         </div>
-        <div class="about-copy reveal delay-1">
-          <p>
-            Most of my work starts with an ambiguous problem: a metric that needs explanation, a workflow that should be automated, a backend that needs structure, or an idea that needs to become a real product.
-          </p>
-          <p>
-            I like building systems that do more than report what happened. They should preserve context, explain drivers, surface what matters and make the next action easier.
-          </p>
-        </div>
+        <a class="arrow-link" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer"><span data-i18n="githubProfile">GitHub profile</span><i>↗</i></a>
       </div>
 
-      <div class="capability-grid">
-        <article class="capability reveal"><span>01</span><h3>Analytics</h3><p>KPI systems, root-cause thinking, experimentation and decision support.</p></article>
-        <article class="capability reveal delay-1"><span>02</span><h3>AI</h3><p>LLM-powered workflows, agentic systems and reasoning layers around real data.</p></article>
-        <article class="capability reveal delay-2"><span>03</span><h3>Data</h3><p>SQL-heavy analysis, data products, reliable metrics and pragmatic architecture.</p></article>
-        <article class="capability reveal delay-3"><span>04</span><h3>Product</h3><p>Turning analysis into interfaces, tools and products people can actually use.</p></article>
+      <div class="activity-list reveal delay-1" id="activity-list">
+        <div class="activity-placeholder" data-i18n="activityLoading">Loading public GitHub activity…</div>
       </div>
     </section>
 
-    <section class="section section-shell" id="experience" aria-labelledby="experience-title">
-      <div class="section-kicker reveal">02 / EXPERIENCE ORBIT</div>
-      <div class="experience-head">
-        <h2 id="experience-title" class="section-title reveal">Where I’m building now.</h2>
-        <a class="text-link reveal" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">Full career history on LinkedIn ↗</a>
-      </div>
-
-      <div class="career-system reveal delay-1">
-        <div class="career-core">
-          <div class="core-rings"></div>
-          <div class="core-copy"><small>CURRENT ORBIT</small><strong>Data × Decisions</strong></div>
+    <section class="section shell" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-label">02 / <span data-i18n="featuredLabel">FEATURED PROJECTS</span></p>
+          <h2 data-i18n="featuredTitle">Selected work.</h2>
         </div>
-
-        <div class="company-orbit">
-          <div class="company-node">
-            <div class="company-logo-shell">
-              <!-- Current Digikala brand asset. Source: Digikala branding page via Wikimedia Commons. -->
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Digikala_logo_%28en%29.svg" alt="Digikala" />
-            </div>
-            <div class="company-copy">
-              <span class="company-status">CURRENT</span>
-              <h3>Digikala</h3>
-              <p>Data · Analytics · AI</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="work" aria-labelledby="work-title">
-      <div class="section-kicker reveal">03 / SELECTED MISSIONS</div>
-      <div class="work-head">
-        <h2 id="work-title" class="section-title reveal">Things I’ve shipped,<br />tested and learned from.</h2>
-        <p class="work-intro reveal delay-1">A mix of product engineering and analytical work. These are public projects — not a list of employers.</p>
+        <p class="section-aside" data-i18n="featuredAside">Public projects that show how I think, build and ship.</p>
       </div>
 
-      <div class="project-grid">
-        <a class="project-card project-featured reveal" href="https://github.com/AminKhorasani/Poolak" target="_blank" rel="noreferrer">
-          <div class="project-topline"><span>PRODUCT / FINTECH</span><span>01</span></div>
-          <div class="project-visual poolak-visual" aria-hidden="true">
-            <div class="mini-orbit"><i></i></div>
-            <div class="wallet-core">P</div>
+      <div class="projects">
+        <a class="project project-large reveal" href="https://github.com/AminKhorasani/Poolak" target="_blank" rel="noreferrer">
+          <div class="project-number">01</div>
+          <div class="project-header">
+            <p>PRODUCT · FINTECH</p>
+            <span class="project-arrow">↗</span>
           </div>
-          <div class="project-copy">
+          <div class="project-body">
             <h3>Poolak</h3>
-            <p>A personal-finance Telegram Mini App for accounts, transactions, budgets, goals and safe-to-spend — built with finance-safe money handling.</p>
-            <div class="tags"><span>TypeScript</span><span>React</span><span>Express</span><span>PostgreSQL</span></div>
-            <span class="project-link">View repository ↗</span>
+            <p data-i18n="poolakDescription">A personal-finance Telegram Mini App for accounts, transactions, budgets, goals and safe-to-spend — built with finance-safe money handling.</p>
+          </div>
+          <div class="project-tech">
+            <span>TypeScript</span><span>React</span><span>Express</span><span>PostgreSQL</span>
+          </div>
+          <div class="project-art project-art-poolak" aria-hidden="true">
+            <div class="finance-ring ring-one"></div>
+            <div class="finance-ring ring-two"></div>
+            <div class="finance-core">P</div>
           </div>
         </a>
 
-        <a class="project-card reveal delay-1" href="https://github.com/AminKhorasani/jaeiro" target="_blank" rel="noreferrer">
-          <div class="project-topline"><span>PRODUCT / COMMUNITY</span><span>02</span></div>
-          <div class="project-visual jaeiro-visual" aria-hidden="true">
-            <div class="map-pin"><i></i></div><span class="map-dot dot-1"></span><span class="map-dot dot-2"></span><span class="map-dot dot-3"></span>
-          </div>
-          <div class="project-copy">
-            <h3>Jaeiro</h3>
-            <p>A Persian, mobile-first food-discovery community for Tehran with reviews, collections, events, reputation and an admin moderation layer.</p>
-            <div class="tags"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
-            <span class="project-link">View repository ↗</span>
-          </div>
-        </a>
+        <div class="project-stack">
+          <a class="project reveal delay-1" href="https://github.com/AminKhorasani/jaeiro" target="_blank" rel="noreferrer">
+            <div class="project-number">02</div>
+            <div class="project-header">
+              <p>PRODUCT · COMMUNITY</p>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-body">
+              <h3>Jaeiro</h3>
+              <p data-i18n="jaeiroDescription">A Persian, mobile-first food-discovery community with reviews, collections, events, reputation and moderation.</p>
+            </div>
+            <div class="project-tech"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
+          </a>
 
-        <a class="project-card reveal delay-2" href="https://github.com/AminKhorasani/SnappFoodTask" target="_blank" rel="noreferrer">
-          <div class="project-topline"><span>ANALYTICS / CASE STUDY</span><span>03</span></div>
-          <div class="project-visual data-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="project-copy">
-            <h3>Restaurant Analytics</h3>
-            <p>A data-analysis case study spanning collection, cleaning, modeling, visualization, dashboarding and database design for restaurant data.</p>
-            <div class="tags"><span>Python</span><span>Data Viz</span><span>Database</span></div>
-            <span class="project-link">View repository ↗</span>
-          </div>
-        </a>
+          <a class="project reveal delay-2" href="https://github.com/AminKhorasani/SnappFoodTask" target="_blank" rel="noreferrer">
+            <div class="project-number">03</div>
+            <div class="project-header">
+              <p>ANALYTICS · CASE STUDY</p>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-body">
+              <h3>Restaurant Analytics</h3>
+              <p data-i18n="restaurantDescription">A data-analysis case study spanning collection, cleaning, modeling, visualization, dashboarding and database design.</p>
+            </div>
+            <div class="project-tech"><span>Python</span><span>Data Viz</span><span>Database</span></div>
+          </a>
+        </div>
       </div>
 
-      <div class="work-footer reveal">
-        <p>More experiments, coursework and open-source work live on GitHub.</p>
-        <a class="button button-ghost" href="https://github.com/AminKhorasani?tab=repositories" target="_blank" rel="noreferrer">Browse all repositories ↗</a>
+      <div class="section-foot reveal">
+        <span data-i18n="moreRepos">More experiments and open-source work live on GitHub.</span>
+        <a class="arrow-link" href="https://github.com/AminKhorasani?tab=repositories" target="_blank" rel="noreferrer"><span data-i18n="allRepos">All repositories</span><i>↗</i></a>
       </div>
     </section>
 
-    <section class="section section-shell stack-section" aria-labelledby="stack-title">
-      <div class="section-kicker reveal">04 / TOOLKIT</div>
-      <h2 id="stack-title" class="section-title reveal">The stack changes.<br />The problem-solving loop doesn’t.</h2>
-      <div class="stack-marquee reveal delay-1" aria-label="Technology stack">
-        <div class="stack-track">
-          <span>Python</span><span>SQL</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>LLMs</span><span>Analytics</span>
-          <span aria-hidden="true">Python</span><span aria-hidden="true">SQL</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Docker</span><span aria-hidden="true">React</span><span aria-hidden="true">Next.js</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">LLMs</span><span aria-hidden="true">Analytics</span>
+    <section class="section shell" id="experience">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-label">03 / <span data-i18n="experienceLabel">EXPERIENCE</span></p>
+          <h2 data-i18n="experienceTitle">Where I’ve worked.</h2>
+        </div>
+        <a class="arrow-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer"><span data-i18n="fullHistory">Full history</span><i>↗</i></a>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-row reveal">
+          <div class="company-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Digikala_logo_%28en%29.svg" alt="Digikala" />
+          </div>
+          <div class="experience-main">
+            <h3>Digikala</h3>
+            <p data-i18n="digikalaRole">Marketing Insight · Data / AI / Analytics</p>
+          </div>
+          <div class="experience-time">
+            <span data-i18n="current">CURRENT</span>
+            <strong data-i18n="digikalaDate">Dec 2025 — Present</strong>
+          </div>
+        </article>
+
+        <article class="experience-row reveal delay-1">
+          <div class="company-logo snappfood-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Snappfood-logo.svg" alt="SnappFood" />
+          </div>
+          <div class="experience-main">
+            <h3>SnappFood</h3>
+            <p data-i18n="snappfoodRole">Data & Analytics</p>
+          </div>
+          <div class="experience-time">
+            <span data-i18n="previous">PREVIOUS</span>
+            <strong data-i18n="snappfoodDate">Until Nov 2025</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell github-section" id="github">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-label">04 / <span data-i18n="githubSignalLabel">GITHUB SIGNAL</span></p>
+          <h2 data-i18n="githubSignalTitle">A recent trail of building.</h2>
+        </div>
+        <p class="section-aside" data-i18n="githubSignalAside">Public GitHub events from the recent activity window.</p>
+      </div>
+
+      <div class="github-panel reveal delay-1">
+        <div class="github-panel-head">
+          <div>
+            <span class="eyebrow-small">AminKhorasani</span>
+            <strong data-i18n="activityMap">Public activity map</strong>
+          </div>
+          <div class="github-legend">
+            <span data-i18n="less">Less</span>
+            <i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i>
+            <span data-i18n="more">More</span>
+          </div>
+        </div>
+        <div class="activity-map-wrap">
+          <div id="activity-map" class="activity-map" aria-label="Recent public GitHub activity"></div>
+        </div>
+        <div class="github-panel-foot">
+          <span id="event-count">—</span>
+          <span data-i18n="publicEvents">public events in the loaded GitHub window</span>
+          <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer"><span data-i18n="viewGitHub">View GitHub</span> ↗</a>
         </div>
       </div>
     </section>
 
-    <section class="section section-shell contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-planet" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="section-kicker reveal">05 / OPEN CHANNEL</div>
-      <h2 id="contact-title" class="contact-title reveal">Have a messy problem<br />worth turning into a system?</h2>
-      <p class="contact-copy reveal delay-1">The easiest way to reach me is on LinkedIn. You can also explore the code trail on GitHub.</p>
-      <div class="contact-actions reveal delay-2">
-        <a class="button button-primary" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
-        <a class="button button-ghost" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <section class="section shell about-section" id="about">
+      <div class="about-layout">
+        <div class="reveal">
+          <p class="section-label">05 / <span data-i18n="aboutLabel">ABOUT</span></p>
+          <h2 data-i18n-html="aboutTitle">Analytics is useful when it changes<br />what happens next.</h2>
+        </div>
+
+        <div class="about-copy reveal delay-1">
+          <p data-i18n="aboutP1">Most of my work starts with an ambiguous problem: a metric that needs explanation, a workflow that should be automated, or an idea that needs to become a real product.</p>
+          <p data-i18n="aboutP2">I’m most interested in systems that combine data, reasoning and software — so the output is not just a report, but a better decision or a useful product.</p>
+
+          <div class="skill-list">
+            <span>Python</span><span>SQL</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>LLMs</span><span>Analytics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell contact" id="contact">
+      <p class="section-label reveal">06 / <span data-i18n="contactLabel">CONTACT</span></p>
+      <div class="contact-layout">
+        <h2 class="reveal" data-i18n-html="contactTitle">Have a problem worth<br />turning into a system?</h2>
+        <div class="contact-side reveal delay-1">
+          <p data-i18n="contactCopy">If the problem sits somewhere between data, AI, analytics and product, I’d like to hear about it.</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">LinkedIn <i>↗</i></a>
+            <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub <i>↗</i></a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer section-shell">
-    <div><span class="status-dot"></span> Orbit online</div>
-    <div>© <span id="year"></span> Amin Khorasani</div>
-    <a href="#top">Back to top ↑</a>
+  <footer class="site-footer shell">
+    <div class="footer-status"><span class="pulse-dot"></span><span data-i18n="footerStatus">Open to interesting problems</span></div>
+    <div>© <span id="year"></span> <span data-i18n="footerName">Amin Khorasani</span></div>
+    <a href="#top"><span data-i18n="backTop">Back to top</span> ↑</a>
   </footer>
 
-  <script src="./script.js?v=20261005-1" defer></script>
+  <script src="./script.js?v=20261006-1" defer></script>
 </body>
 </html>
