@@ -9,3 +9,49 @@ async function loadGitHub(){try{const [u,e]=await Promise.all([fetch('https://ap
 function renderActivity(events){const box=document.getElementById('activity-list');if(!box)return;box.innerHTML='';const items=events.slice(0,4);if(!items.length){box.innerHTML='<div class="activity-placeholder">No recent public activity found.</div>';return}items.forEach(ev=>{const [title,repo]=evtLabel(ev);const a=document.createElement('a');a.className='activity-item';a.href='https://github.com/'+ev.repo.name;a.target='_blank';a.rel='noreferrer';a.innerHTML='<span class="activity-date">'+fmtDate(ev.created_at)+'</span><span class="activity-title">'+title+'</span><span class="activity-meta">'+repo+' ↗</span>';box.appendChild(a)})}
 function renderMap(events){const map=document.getElementById('activity-map'),count=document.getElementById('event-count');if(!map)return;const days=182,now=new Date(),hits={};events.forEach(ev=>{const k=new Date(ev.created_at).toISOString().slice(0,10);hits[k]=(hits[k]||0)+1});map.innerHTML='';for(let i=days-1;i>=0;i--){const d=new Date(now);d.setDate(now.getDate()-i);const k=d.toISOString().slice(0,10),n=hits[k]||0,l=n===0?0:n===1?1:n<=3?2:n<=6?3:4;const cell=document.createElement('i');cell.className='activity-cell level-'+l;cell.title=k+(n?' · '+n+' event'+(n>1?'s':''):'');map.appendChild(cell)}if(count)count.textContent=events.length}
 loadGitHub();
+const buildPhrases={
+  en:['intelligent AI systems','data products','analytical experiences','decision systems'],
+  fa:['سیستم‌های هوشمند AI','محصولات داده‌ای','تجربه‌های تحلیلی','سیستم‌های تصمیم‌یار']
+};
+let buildTimer=null;
+function runBuildTypewriter(){
+  const textEl=document.getElementById('typewriter-text');
+  const prefixEl=document.getElementById('build-prefix');
+  if(!textEl||!prefixEl)return;
+  if(buildTimer)clearTimeout(buildTimer);
+  const lang=document.documentElement.lang==='fa'?'fa':'en';
+  prefixEl.textContent=lang==='fa'?'می‌سازم':'I build';
+  if(reduceMotion){
+    textEl.textContent=buildPhrases[lang][0];
+    return;
+  }
+  const phrases=buildPhrases[lang];
+  let p=0,i=0,deleting=false;
+  const tick=()=>{
+    const phrase=phrases[p];
+    if(!deleting){
+      i++;
+      textEl.textContent=phrase.slice(0,i);
+      if(i>=phrase.length){
+        deleting=true;
+        buildTimer=setTimeout(tick,1450);
+        return;
+      }
+      buildTimer=setTimeout(tick,58+Math.random()*42);
+    }else{
+      i--;
+      textEl.textContent=phrase.slice(0,i);
+      if(i<=0){
+        deleting=false;
+        p=(p+1)%phrases.length;
+        buildTimer=setTimeout(tick,320);
+        return;
+      }
+      buildTimer=setTimeout(tick,30+Math.random()*22);
+    }
+  };
+  textEl.textContent='';
+  buildTimer=setTimeout(tick,320);
+}
+runBuildTypewriter();
+window.addEventListener('portfolio-language-change',runBuildTypewriter);
