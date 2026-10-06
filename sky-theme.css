@@ -371,3 +371,154 @@ main,
 .section{
   background:transparent;
 }
+
+/* 2026-10-07 identity refinement */
+body{
+  font-family:"Geist",Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+html[dir="rtl"] body{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif!important;
+}
+.hero-kicker,.section-label,.eyebrow-small,.caption-label,.activity-meta,.activity-date{
+  font-family:"Geist Mono","SFMono-Regular",Consolas,monospace;
+}
+html[dir="rtl"] .hero-kicker,
+html[dir="rtl"] .section-label,
+html[dir="rtl"] .eyebrow-small,
+html[dir="rtl"] .caption-label,
+html[dir="rtl"] .activity-meta,
+html[dir="rtl"] .activity-date{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+}
+
+/* Stronger cobalt identity */
+:root{
+  --green:#2a63ff;
+  --gd:#8fbcff;
+  --line:rgba(188,217,255,.12);
+  --line2:rgba(188,217,255,.21);
+}
+.type-shell,.type-cursor{color:#3d73ff!important}
+.pulse-dot{
+  background:#4c7cff;
+  box-shadow:0 0 0 5px rgba(42,99,255,.12),0 0 22px rgba(42,99,255,.46)
+}
+.button.primary:hover,
+.finance-core{background:#2a63ff!important}
+.arrow-link:hover{color:#8fbcff;border-color:#2a63ff}
+.github-legend i[data-level="1"],.activity-cell.level-1{background:#11275c!important}
+.github-legend i[data-level="2"],.activity-cell.level-2{background:#183c91!important}
+.github-legend i[data-level="3"],.activity-cell.level-3{background:#2153cf!important}
+.github-legend i[data-level="4"],.activity-cell.level-4{background:#2a63ff!important}
+
+/* Social icons */
+.social-svg{width:17px;height:17px;display:block;color:#fff}
+.sr-label{font-size:0}
+.social-links{gap:10px}
+.social-link{
+  min-width:142px!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+  color:#fff!important;
+}
+.social-link svg{width:19px;height:19px;flex:0 0 auto;color:#fff}
+.social-link:hover svg{color:#02030a}
+
+/* Direct contact */
+.direct-contact{
+  display:grid;
+  gap:0;
+  margin-top:28px;
+  border-top:1px solid var(--line);
+}
+.direct-contact a{
+  display:grid;
+  grid-template-columns:92px 1fr;
+  align-items:center;
+  gap:16px;
+  min-height:54px;
+  border-bottom:1px solid var(--line);
+}
+.direct-contact span{
+  font-family:"Geist Mono","SFMono-Regular",Consolas,monospace;
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#7187b6;
+}
+.direct-contact strong{
+  font-size:13px;
+  font-weight:500;
+  color:#edf4ff;
+}
+.direct-contact a:hover strong{color:#8fbcff}
+
+/* Location map */
+.location-section{padding-bottom:110px}
+.map-shell{
+  position:relative;
+  height:min(62vh,560px);
+  min-height:420px;
+  overflow:hidden;
+  border:1px solid rgba(188,217,255,.14);
+  background:#050817;
+}
+.location-map{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  filter:grayscale(1) invert(.91) sepia(.12) saturate(2.4) hue-rotate(176deg) brightness(.58) contrast(1.15);
+  opacity:.74;
+}
+.map-shell:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(2,3,10,.12),rgba(2,3,10,.35)),
+    radial-gradient(circle at 67% 52%,rgba(42,99,255,.18),transparent 20%);
+  mix-blend-mode:screen;
+}
+.map-overlay{
+  position:absolute;
+  left:24px;
+  bottom:24px;
+  z-index:2;
+  width:min(390px,calc(100% - 48px));
+  padding:20px;
+  background:rgba(2,3,10,.82);
+  border:1px solid rgba(188,217,255,.17);
+  backdrop-filter:blur(14px);
+}
+.map-overlay>span{
+  font-family:"Geist Mono","SFMono-Regular",Consolas,monospace;
+  display:block;
+  margin-bottom:9px;
+  color:#7fa8ff;
+  font-size:9px;
+  letter-spacing:.15em;
+}
+.map-overlay strong{display:block;font-size:20px;color:#fff}
+.map-overlay p{margin:7px 0 14px;color:#9eafd1;font-size:12px;line-height:1.55}
+.map-overlay a{font-size:11px;font-weight:600;color:#bcd9ff}
+.map-overlay a:hover{color:#fff}
+
+/* GitHub contribution calendar */
+.github-panel{overflow:hidden}
+.activity-map{
+  min-width:850px;
+  grid-template-columns:repeat(53,11px)!important;
+  grid-template-rows:repeat(7,11px)!important;
+}
+.github-panel-foot .contribution-note{
+  color:#6f7f9f;
+  margin-right:auto;
+}
+
+@media(max-width:680px){
+  .direct-contact a{grid-template-columns:1fr;gap:5px;padding:12px 0}
+  .map-shell{min-height:380px;height:54vh}
+  .map-overlay{left:14px;bottom:14px;width:calc(100% - 28px)}
+}
