@@ -20,13 +20,13 @@
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./design-base.css?v=20261006-3" />
   <link rel="stylesheet" href="./design-hero.css?v=20261006-3" />
   <link rel="stylesheet" href="./design-sections.css?v=20261006-3" />
   <link rel="stylesheet" href="./design-responsive.css?v=20261006-3" />
   <link rel="stylesheet" href="./reference-theme.css?v=20261006-1" />
-  <link rel="stylesheet" href="./sky-theme.css?v=20261006-9" />
+  <link rel="stylesheet" href="./sky-theme.css?v=20261007-1" />
 </head>
 
 <body>
@@ -55,7 +55,7 @@
           <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
         </div>
         <a class="icon-link" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <span>GH</span><i>↗</i>
+          <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.41-1.27.74-1.56-2.57-.29-5.27-1.29-5.27-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.17 1.19a10.98 10.98 0 0 1 5.77 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.71 5.44-5.29 5.73.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg><span class="sr-label">GitHub</span>
         </a>
       </div>
     </div>
@@ -228,7 +228,7 @@
         <div class="github-panel-head">
           <div>
             <span class="eyebrow-small">AminKhorasani</span>
-            <strong data-i18n="activityMap">Public activity map</strong>
+            <strong data-i18n="activityMap">Contribution calendar</strong>
           </div>
           <div class="github-legend">
             <span data-i18n="less">Less</span>
@@ -241,7 +241,7 @@
         </div>
         <div class="github-panel-foot">
           <span id="event-count">—</span>
-          <span data-i18n="publicEvents">public events in the loaded GitHub window</span>
+          <span data-i18n="publicEvents">contributions in the last year</span>
           <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer"><span data-i18n="viewGitHub">View GitHub</span> ↗</a>
         </div>
       </div>
@@ -271,10 +271,56 @@
         <h2 class="reveal" data-i18n-html="contactTitle">Have a problem worth<br />turning into a system?</h2>
         <div class="contact-side reveal delay-1">
           <p data-i18n="contactCopy">If the problem sits somewhere between data, AI, analytics and product, I’d like to hear about it.</p>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">LinkedIn <i>↗</i></a>
-            <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer">GitHub <i>↗</i></a>
+
+          <div class="direct-contact">
+            <a href="mailto:amin.a.khorasani@gmail.com">
+              <span data-i18n="emailLabel">Email</span>
+              <strong>amin.a.khorasani@gmail.com</strong>
+            </a>
+            <a href="tel:+989194128772">
+              <span data-i18n="phoneLabel">Phone</span>
+              <strong>+98 919 412 8772</strong>
+            </a>
           </div>
+
+          <div class="contact-links social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social-link" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.41-1.27.74-1.56-2.57-.29-5.27-1.29-5.27-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.17 1.19a10.98 10.98 0 0 1 5.77 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.71 5.44-5.29 5.73.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell location-section" id="location">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-label">07 / <span data-i18n="locationLabel">LOCATION</span></p>
+          <h2 data-i18n="locationTitle">Where I work.</h2>
+        </div>
+        <p class="section-aside" data-i18n="locationAside">Digikala HQ · Vanak Plaza · Khoddami St · Tehran</p>
+      </div>
+
+      <div class="map-shell reveal delay-1">
+        <iframe
+          class="location-map"
+          title="Digikala HQ - Vanak Plaza, Khoddami Street, Tehran"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Digikala%20HQ%20Office%20Vanak%20Plaza%20Khoddami%20Tehran&output=embed">
+        </iframe>
+        <div class="map-overlay">
+          <span data-i18n="mapEyebrow">CURRENT BASE</span>
+          <strong>Digikala HQ</strong>
+          <p data-i18n="mapAddress">Vanak Plaza, Shadi Alley, Khoddami St, Tehran</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Digikala+HQ+Office+Vanak+Plaza+Khoddami+Tehran" target="_blank" rel="noreferrer">
+            <span data-i18n="openMaps">Open in Maps</span> ↗
+          </a>
         </div>
       </div>
     </section>
@@ -286,8 +332,8 @@
     <a href="#top"><span data-i18n="backTop">Back to top</span> ↑</a>
   </footer>
 
-  <script src="./i18n-v2.js?v=20261006-3" defer></script>
-  <script src="./app-v2.js?v=20261006-5" defer></script>
+  <script src="./i18n-v2.js?v=20261007-1" defer></script>
+  <script src="./app-v2.js?v=20261007-1" defer></script>
   <script type="module" src="./starfield-v3.js?v=20261006-2"></script>
 </body>
 </html>
