@@ -21,10 +21,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./design-base.css?v=20261006-1" />
-  <link rel="stylesheet" href="./design-hero.css?v=20261006-1" />
-  <link rel="stylesheet" href="./design-sections.css?v=20261006-1" />
-  <link rel="stylesheet" href="./design-responsive.css?v=20261006-1" />
+  <link rel="stylesheet" href="./design-base.css?v=20261006-2" />
+  <link rel="stylesheet" href="./design-hero.css?v=20261006-2" />
+  <link rel="stylesheet" href="./design-sections.css?v=20261006-2" />
+  <link rel="stylesheet" href="./design-responsive.css?v=20261006-2" />
 </head>
 
 <body>
@@ -68,10 +68,11 @@
 
         <p class="hero-kicker" data-i18n="heroKicker">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
 
-        <h1 data-i18n-html="heroTitle">
-          I build systems that turn
-          <span>messy signals</span>
-          into clear decisions.
+        <h1 class="build-headline" aria-live="polite">
+          <span id="build-prefix" class="build-prefix">I build</span>
+          <span class="type-shell">
+            <span id="typewriter-text" class="typewriter-text">intelligent AI systems</span><span class="type-cursor" aria-hidden="true">|</span>
+          </span>
         </h1>
 
         <p class="hero-lede" data-i18n="heroLede">
@@ -305,7 +306,7 @@
     <a href="#top"><span data-i18n="backTop">Back to top</span> ↑</a>
   </footer>
 
-  <script src="./i18n-v2.js?v=20261006-1" defer></script>
-  <script src="./app-v2.js?v=20261006-1" defer></script>
+  <script src="./i18n-v2.js?v=20261006-2" defer></script>
+  <script src="./app-v2.js?v=20261006-2" defer></script>
 </body>
 </html>
