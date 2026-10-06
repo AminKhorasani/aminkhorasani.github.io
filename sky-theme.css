@@ -313,3 +313,39 @@ body:after{
 @media(max-width:520px){
   .hero h1.build-headline{font-size:clamp(38px,11vw,50px)}
 }
+
+/* Exact flat-shell space backdrop alignment with Velocity */
+:root{
+  --bg:#02030a;
+  --paper:#081124;
+  --ink:#e9f1ff;
+  --muted:#a2b6dd;
+  --green:#2a63ff;
+  --gd:#bcd9ff;
+  --black:#02030a;
+  --white:#e9f1ff;
+}
+html,body{background:#02030a!important}
+body{
+  background:#02030a!important;
+  background-image:none!important;
+}
+body:after,
+.page-grid,
+.hero:before,
+.hero:after{display:none!important}
+#skyfield{
+  display:block;
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-5;
+  pointer-events:none;
+  opacity:1;
+}
+.cursor-glow{
+  background:radial-gradient(circle,rgba(42,99,255,.08),transparent 70%);
+  opacity:.18;
+}
+.site-header{background:rgba(2,3,10,.66)}
