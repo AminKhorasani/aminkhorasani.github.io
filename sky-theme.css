@@ -1036,3 +1036,30 @@ html[data-theme="light"] .map-overlay strong{color:#0a1b33}
 html[data-theme="light"] .map-overlay p{color:#5d6e84}
 html[data-theme="light"] .map-overlay a{color:#173f73}
 html[data-theme="light"] .site-footer{color:#586b83}
+
+
+/* 2026-10-10 mobile hero alignment fix */
+@media(max-width:680px){
+  .hero h1.build-headline{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    align-items:baseline;
+    row-gap:.06em;
+  }
+  .hero h1.build-headline .build-prefix,
+  .hero h1.build-headline .type-shell{
+    display:block;
+    width:100%;
+    min-width:0!important;
+  }
+  .hero h1.build-headline .type-shell{
+    margin-top:.02em;
+  }
+  .mobile-build-break{display:none!important}
+
+  .hero-portrait{
+    justify-self:center!important;
+    margin-inline:auto!important;
+    max-width:270px!important;
+  }
+}
