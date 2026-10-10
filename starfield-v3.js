@@ -22,41 +22,62 @@ function mulberry32(seed) {
   };
 }
 
-function buildStarTile() {
+function buildStarTile(theme) {
   const rand = mulberry32(0x02030a);
   const count = Math.round((TILE * TILE) / DENSITY_PX2);
   let starlight = "";
-  let white = "";
+  let highlights = "";
 
   for (let i = 0; i < count; i++) {
     const x = (rand() * TILE).toFixed(1);
     const y = (rand() * TILE).toFixed(1);
     const b = rand();
     const r = (0.4 + 0.7 * b * b).toFixed(2);
-    const o = (0.12 + 0.38 * b).toFixed(2);
+    const baseOpacity = theme === "light" ? 0.18 : 0.12;
+    const rangeOpacity = theme === "light" ? 0.34 : 0.38;
+    const o = (baseOpacity + rangeOpacity * b).toFixed(2);
     const dot = `<circle cx="${x}" cy="${y}" r="${r}" opacity="${o}"/>`;
 
-    if (b > 0.88) white += dot;
+    if (b > 0.88) highlights += dot;
     else starlight += dot;
   }
 
+  const soft = theme === "light" ? "#173f73" : "#bcd9ff";
+  const bright = theme === "light" ? "#0b2345" : "#ffffff";
+
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" width="${TILE}" height="${TILE}">` +
-    `<g fill="#bcd9ff">${starlight}</g><g fill="#ffffff">${white}</g></svg>`
+    `<g fill="${soft}">${starlight}</g><g fill="${bright}">${highlights}</g></svg>`
   );
 }
 
-const STAR_TILE = `url("data:image/svg+xml,${encodeURIComponent(buildStarTile())}")`;
+function buildBackdrop(theme) {
+  const tile = `url("data:image/svg+xml,${encodeURIComponent(buildStarTile(theme))}")`;
+  const glows = theme === "light"
+    ? [
+        "radial-gradient(120% 90% at 50% -20%, rgb(23 63 115 / 0.035), transparent 60%)",
+        "radial-gradient(90% 70% at 85% 110%, rgb(15 39 77 / 0.025), transparent 55%)",
+      ]
+    : [
+        "radial-gradient(120% 90% at 50% -20%, rgb(10 30 110 / 0.10), transparent 60%)",
+        "radial-gradient(90% 70% at 85% 110%, rgb(42 99 255 / 0.05), transparent 55%)",
+      ];
 
-const BACKDROP = [
-  "radial-gradient(120% 90% at 50% -20%, rgb(10 30 110 / 0.10), transparent 60%)",
-  "radial-gradient(90% 70% at 85% 110%, rgb(42 99 255 / 0.05), transparent 55%)",
-  STAR_TILE,
-].join(", ");
+  return [...glows, tile].join(", ");
+}
 
 const starfield = document.getElementById("skyfield");
 
-if (starfield) {
-  starfield.style.backgroundImage = BACKDROP;
+function applyStarfield(theme) {
+  if (!starfield) return;
+  const next = theme === "light" ? "light" : "dark";
+  starfield.style.backgroundColor = next === "light" ? "#ffffff" : "#02030a";
+  starfield.style.backgroundImage = buildBackdrop(next);
   starfield.style.backgroundRepeat = "no-repeat, no-repeat, repeat";
 }
+
+applyStarfield(document.documentElement.dataset.theme || "dark");
+
+window.addEventListener("portfolio-theme-change", event => {
+  applyStarfield(event.detail?.theme || document.documentElement.dataset.theme || "dark");
+});

@@ -1,3 +1,28 @@
+const THEME_STORAGE_KEY='amin-theme';
+function applyPortfolioTheme(theme,persist=false){
+  const next=theme==='light'?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  document.documentElement.style.colorScheme=next;
+  const toggle=document.getElementById('theme-toggle');
+  if(toggle){
+    const target=next==='dark'?'light':'dark';
+    toggle.setAttribute('aria-label','Switch to '+target+' mode');
+    toggle.setAttribute('title','Switch to '+target+' mode');
+    toggle.setAttribute('aria-pressed',next==='light'?'true':'false');
+  }
+  if(persist){
+    try{localStorage.setItem(THEME_STORAGE_KEY,next)}catch(_){}
+  }
+  window.dispatchEvent(new CustomEvent('portfolio-theme-change',{detail:{theme:next}}));
+}
+applyPortfolioTheme(document.documentElement.dataset.theme||'dark');
+const themeToggle=document.getElementById('theme-toggle');
+if(themeToggle){
+  themeToggle.addEventListener('click',()=>{
+    applyPortfolioTheme(document.documentElement.dataset.theme==='light'?'dark':'light',true);
+  });
+}
+
 const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 const reveals=document.querySelectorAll('.reveal');

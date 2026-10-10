@@ -14,6 +14,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <title>Amin Khorasani — Data · AI · Analytics</title>
 
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('amin-theme') || 'dark';
+    } catch (_) {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
+
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://api.github.com" />
   <link rel="preconnect" href="https://github.com" />
@@ -26,7 +34,7 @@
   <link rel="stylesheet" href="./design-sections.css?v=20261006-3" />
   <link rel="stylesheet" href="./design-responsive.css?v=20261006-3" />
   <link rel="stylesheet" href="./reference-theme.css?v=20261006-1" />
-  <link rel="stylesheet" href="./sky-theme.css?v=20261010-1" />
+  <link rel="stylesheet" href="./sky-theme.css?v=20261010-2" />
 </head>
 
 <body>
@@ -55,6 +63,15 @@
           <span aria-hidden="true"></span>
           <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
         </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 15.3A8.2 8.2 0 0 1 8.7 4a8.3 8.3 0 1 0 11.3 11.3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
         <a class="icon-link" href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer" aria-label="GitHub">
           <svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.18c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.41-1.27.74-1.56-2.57-.29-5.27-1.29-5.27-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.17 1.19a10.98 10.98 0 0 1 5.77 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.71 5.44-5.29 5.73.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg><span class="sr-label">GitHub</span>
         </a>
@@ -73,7 +90,7 @@
         <p class="hero-kicker" data-i18n="heroKicker">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
 
         <h1 class="build-headline" aria-live="polite">
-          <span id="build-prefix" class="build-prefix">I build</span>
+          <span id="build-prefix" class="build-prefix">I build</span><br class="mobile-build-break" aria-hidden="true" />
           <span class="type-shell">
             <span id="typewriter-text" class="typewriter-text">intelligent AI systems</span><span class="type-cursor" aria-hidden="true">|</span>
           </span>
@@ -441,7 +458,7 @@
   </footer>
 
   <script src="./i18n-v2.js?v=20261010-1" defer></script>
-  <script src="./app-v2.js?v=20261007-2" defer></script>
-  <script type="module" src="./starfield-v3.js?v=20261006-2"></script>
+  <script src="./app-v2.js?v=20261010-1" defer></script>
+  <script type="module" src="./starfield-v3.js?v=20261010-1"></script>
 </body>
 </html>
