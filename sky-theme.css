@@ -625,3 +625,139 @@ html[dir="rtl"] .hero-portrait-meta{
   .hero-portrait-frame{aspect-ratio:1/1.08}
   .hero-portrait-meta{font-size:8px}
 }
+
+
+/* 2026-10-10 LinkedIn recommendations */
+.recommendations-section{
+  overflow:hidden;
+}
+.recommendation-marquee{
+  margin-top:16px;
+  overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+}
+.recommendation-track{
+  display:flex;
+  width:max-content;
+  animation:recommendationScroll 54s linear infinite;
+  will-change:transform;
+}
+.recommendation-marquee:hover .recommendation-track{
+  animation-play-state:paused;
+}
+.recommendation-group{
+  display:flex;
+  gap:18px;
+  padding-right:18px;
+}
+.recommendation-card{
+  width:min(720px,78vw);
+  min-height:520px;
+  flex:0 0 auto;
+  padding:28px;
+  border:1px solid rgba(188,217,255,.13);
+  background:
+    linear-gradient(180deg,rgba(8,14,29,.92),rgba(4,8,18,.94));
+  box-shadow:0 24px 70px rgba(0,0,0,.20);
+}
+.recommendation-top{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:1px solid rgba(188,217,255,.09);
+}
+.recommendation-avatar{
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#dce8ff;
+  background:
+    radial-gradient(circle at 32% 28%,rgba(143,188,255,.28),rgba(42,99,255,.08) 58%,rgba(2,3,10,.9));
+  border:1px solid rgba(188,217,255,.18);
+  font:600 12px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.08em;
+}
+.recommendation-person{
+  min-width:0;
+}
+.recommendation-name-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.recommendation-person h3{
+  margin:0;
+  color:#f2f6ff;
+  font-size:20px;
+  font-weight:560;
+  letter-spacing:-.025em;
+}
+.linkedin-badge{
+  width:20px;
+  height:20px;
+  border-radius:3px;
+  display:grid;
+  place-items:center;
+  background:#0a66c2;
+  color:#fff;
+  font:700 10px/1 Arial,sans-serif;
+}
+.recommendation-person p{
+  margin:5px 0 4px;
+  color:#b5c2da;
+  font-size:12px;
+  line-height:1.4;
+}
+.recommendation-person>span{
+  color:#7182a3;
+  font-size:10px;
+  line-height:1.4;
+}
+.recommendation-card blockquote{
+  margin:24px 0 0;
+  color:#c9d3e7;
+}
+.recommendation-card blockquote p{
+  margin:0 0 16px;
+  font-size:16px;
+  line-height:1.75;
+}
+.recommendation-card blockquote p:last-child{
+  margin-bottom:0;
+}
+@keyframes recommendationScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+html[dir="rtl"] .recommendation-track{
+  animation-direction:reverse;
+}
+html[dir="rtl"] .recommendation-card{
+  text-align:right;
+}
+html[dir="rtl"] .recommendation-avatar{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+}
+@media(max-width:680px){
+  .recommendation-card{
+    width:88vw;
+    min-height:auto;
+    padding:22px;
+  }
+  .recommendation-card blockquote p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .recommendation-track{
+    animation:none!important;
+    transform:none!important;
+  }
+}
