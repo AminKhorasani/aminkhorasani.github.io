@@ -567,7 +567,7 @@ html[dir="rtl"] .activity-date{
   height:100%;
   display:block;
   object-fit:cover;
-  object-position:center center;
+  object-position:center 35%;
   filter:saturate(.88) contrast(1.04) brightness(.92);
   transform:scale(1.015);
 }
