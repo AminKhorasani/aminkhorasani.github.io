@@ -160,3 +160,51 @@ function runBuildTypewriter(){
 }
 runBuildTypewriter();
 window.addEventListener('portfolio-language-change',runBuildTypewriter);
+
+
+function recommendationToggleLabel(expanded){
+  const fa=document.documentElement.lang==='fa';
+  return expanded?(fa?'کمتر':'Less'):(fa?'بیشتر':'More');
+}
+function syncRecommendationToggleLabels(){
+  document.querySelectorAll('.recommendation-more').forEach(button=>{
+    const card=button.closest('.recommendation-card');
+    button.textContent=recommendationToggleLabel(card?.classList.contains('is-expanded'));
+  });
+}
+function setupRecommendationExpanders(){
+  const marquee=document.querySelector('.recommendation-marquee');
+  document.querySelectorAll('.recommendation-card').forEach((card,index)=>{
+    const quote=card.querySelector('blockquote');
+    if(!quote||card.querySelector('.recommendation-more'))return;
+    quote.classList.add('recommendation-copy');
+    if(!quote.id)quote.id='recommendation-copy-'+index;
+
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='recommendation-more';
+    button.textContent=recommendationToggleLabel(false);
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-controls',quote.id);
+
+    if(card.closest('[aria-hidden="true"]')){
+      button.tabIndex=-1;
+    }
+
+    button.addEventListener('click',()=>{
+      const expanded=card.classList.toggle('is-expanded');
+      button.setAttribute('aria-expanded',expanded?'true':'false');
+      button.textContent=recommendationToggleLabel(expanded);
+      if(marquee){
+        marquee.classList.toggle(
+          'is-paused',
+          Boolean(document.querySelector('.recommendation-card.is-expanded'))
+        );
+      }
+    });
+
+    card.appendChild(button);
+  });
+}
+setupRecommendationExpanders();
+window.addEventListener('portfolio-language-change',syncRecommendationToggleLabels);

@@ -1063,3 +1063,72 @@ html[data-theme="light"] .site-footer{color:#586b83}
     max-width:270px!important;
   }
 }
+
+
+/* 2026-10-14 compact recommendation cards */
+.recommendation-card{
+  min-height:390px;
+  display:flex;
+  flex-direction:column;
+}
+.recommendation-card .recommendation-copy{
+  position:relative;
+  max-height:13.1em;
+  overflow:hidden;
+  margin-bottom:0;
+}
+.recommendation-card:not(.is-expanded) .recommendation-copy:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:72px;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(4,8,18,0),rgba(4,8,18,.96) 82%);
+}
+.recommendation-card.is-expanded .recommendation-copy{
+  max-height:none;
+  overflow:visible;
+}
+.recommendation-more{
+  margin-top:18px;
+  align-self:flex-start;
+  border:0;
+  padding:0;
+  background:transparent;
+  color:#8fbcff;
+  font:600 11px/1.2 "Geist","Inter",sans-serif;
+  cursor:pointer;
+  border-bottom:1px solid rgba(143,188,255,.35);
+  transition:color .2s ease,border-color .2s ease;
+}
+.recommendation-more:hover{
+  color:#ffffff;
+  border-bottom-color:#ffffff;
+}
+.recommendation-marquee.is-paused .recommendation-track{
+  animation-play-state:paused!important;
+}
+html[dir="rtl"] .recommendation-more{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+}
+html[data-theme="light"] .recommendation-card:not(.is-expanded) .recommendation-copy:after{
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.98) 82%);
+}
+html[data-theme="light"] .recommendation-more{
+  color:#214f8b;
+  border-bottom-color:rgba(33,79,139,.35);
+}
+html[data-theme="light"] .recommendation-more:hover{
+  color:#0a1b33;
+  border-bottom-color:#0a1b33;
+}
+@media(max-width:680px){
+  .recommendation-card{
+    min-height:350px;
+  }
+  .recommendation-card .recommendation-copy{
+    max-height:12em;
+  }
+}
