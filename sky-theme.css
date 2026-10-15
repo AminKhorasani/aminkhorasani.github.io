@@ -1132,3 +1132,57 @@ html[data-theme="light"] .recommendation-more:hover{
     max-height:12em;
   }
 }
+
+
+/* 2026-10-15 experience brand logo variants */
+.experience-row .company-logo{
+  padding:0;
+  overflow:hidden;
+  border:0;
+}
+.experience-row .company-logo img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+}
+.experience-row .digikala-logo{
+  width:72px;
+  height:72px;
+  background:#f1233a;
+  box-shadow:0 8px 30px rgba(241,35,58,.16);
+}
+.experience-row .digikala-logo img{
+  object-fit:cover;
+  filter:none;
+}
+.experience-row .snappfood-logo{
+  width:145px;
+  height:72px;
+  padding:8px 18px;
+  background:#ff04a8;
+  box-shadow:0 8px 30px rgba(255,4,168,.15);
+}
+.experience-row .snappfood-logo img{
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+}
+html[data-theme="light"] .experience-row .digikala-logo{
+  box-shadow:0 8px 26px rgba(117,26,40,.12);
+}
+html[data-theme="light"] .experience-row .snappfood-logo{
+  box-shadow:0 8px 26px rgba(145,13,96,.10);
+}
+@media(max-width:680px){
+  .experience-row .digikala-logo{
+    width:58px;
+    height:58px;
+  }
+  .experience-row .snappfood-logo{
+    width:105px;
+    height:58px;
+    padding:7px 11px;
+  }
+}
