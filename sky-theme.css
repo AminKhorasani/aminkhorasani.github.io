@@ -1231,3 +1231,156 @@ html[data-theme="light"] .experience-row .snappfood-logo{
     height:52px;
   }
 }
+
+
+/* 2026-10-15 education section */
+.education-list{
+  margin-top:42px;
+  border-top:1px solid var(--line2);
+}
+.education-row{
+  min-height:164px;
+  display:grid;
+  grid-template-columns:112px minmax(0,1fr) auto;
+  gap:30px;
+  align-items:center;
+  padding:26px 0;
+  border-bottom:1px solid var(--line);
+}
+.education-badge{
+  width:78px;
+  height:78px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(188,217,255,.15);
+  background:
+    radial-gradient(circle at 32% 28%,rgba(143,188,255,.12),transparent 54%),
+    rgba(8,14,29,.54);
+  color:#dce8ff;
+  box-shadow:0 14px 42px rgba(0,0,0,.15);
+}
+.education-badge span{
+  font:600 16px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:-.03em;
+}
+.education-school{
+  display:block;
+  margin-bottom:7px;
+  color:#7f91b0;
+  font:500 9px/1.4 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.education-main h3{
+  margin:0;
+  color:#edf3ff;
+  font-size:24px;
+  line-height:1.2;
+  font-weight:520;
+  letter-spacing:-.035em;
+}
+.education-main>p{
+  margin:8px 0 0;
+  color:#78879f;
+  font-size:12px;
+}
+.education-details{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+.education-details span{
+  padding:6px 9px;
+  border:1px solid rgba(140,170,235,.13);
+  color:#93a2b9;
+  font-size:9px;
+  line-height:1;
+  border-radius:999px;
+}
+.education-status{
+  min-width:190px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+  text-align:right;
+}
+.education-status span{
+  color:#6d82a8;
+  font:600 9px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.12em;
+}
+.education-status strong{
+  color:#becae0;
+  font-size:11px;
+  font-weight:500;
+}
+html[dir="rtl"] .education-school,
+html[dir="rtl"] .education-badge span,
+html[dir="rtl"] .education-status span{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+  letter-spacing:.02em;
+}
+html[dir="rtl"] .education-status{
+  align-items:flex-start;
+  text-align:left;
+}
+
+html[data-theme="light"] .education-list{
+  border-color:rgba(15,39,77,.16);
+}
+html[data-theme="light"] .education-row{
+  border-color:rgba(15,39,77,.09);
+}
+html[data-theme="light"] .education-badge{
+  border-color:rgba(15,39,77,.13);
+  background:
+    radial-gradient(circle at 32% 28%,rgba(33,79,139,.10),transparent 54%),
+    rgba(255,255,255,.88);
+  color:#173f73;
+  box-shadow:0 12px 34px rgba(24,50,85,.06);
+}
+html[data-theme="light"] .education-school{color:#667b98}
+html[data-theme="light"] .education-main h3{color:#0a1b33}
+html[data-theme="light"] .education-main>p{color:#65758b}
+html[data-theme="light"] .education-details span{
+  border-color:rgba(15,39,77,.12);
+  color:#60728a;
+  background:rgba(255,255,255,.68);
+}
+html[data-theme="light"] .education-status span{color:#536e94}
+html[data-theme="light"] .education-status strong{color:#344b68}
+
+@media(max-width:680px){
+  .education-row{
+    grid-template-columns:72px minmax(0,1fr);
+    gap:16px;
+    min-height:0;
+    padding:24px 0;
+  }
+  .education-badge{
+    width:60px;
+    height:60px;
+  }
+  .education-badge span{font-size:13px}
+  .education-main h3{
+    font-size:20px;
+    line-height:1.28;
+  }
+  .education-status{
+    grid-column:2;
+    min-width:0;
+    align-items:flex-start;
+    text-align:left;
+    gap:5px;
+  }
+  html[dir="rtl"] .education-status{
+    text-align:right;
+    align-items:flex-end;
+  }
+  .education-details{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
