@@ -1186,3 +1186,48 @@ html[data-theme="light"] .experience-row .snappfood-logo{
     padding:7px 11px;
   }
 }
+
+
+/* 2026-10-15 experience logo sizing correction */
+.experience-row .company-logo{
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:16px;
+  flex:0 0 auto;
+}
+.experience-row .digikala-logo{
+  width:64px;
+  height:64px;
+  padding:0;
+  background:#ef233c;
+}
+.experience-row .digikala-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:none!important;
+}
+.experience-row .snappfood-logo{
+  width:112px;
+  height:64px;
+  padding:0;
+  background:#ff00a8;
+}
+.experience-row .snappfood-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:none!important;
+}
+@media(max-width:680px){
+  .experience-row .digikala-logo{
+    width:52px;
+    height:52px;
+  }
+  .experience-row .snappfood-logo{
+    width:92px;
+    height:52px;
+  }
+}
