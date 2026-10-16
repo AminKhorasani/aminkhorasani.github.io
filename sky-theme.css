@@ -1384,3 +1384,41 @@ html[data-theme="light"] .education-status strong{color:#344b68}
     align-items:flex-start;
   }
 }
+
+
+/* 2026-10-16 hero social buttons */
+.hero-actions{
+  align-items:center;
+}
+.social-hero-button{
+  gap:11px;
+}
+.hero-social-icon{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  display:block;
+  color:currentColor;
+}
+.social-hero-button i{
+  margin-left:3px;
+}
+html[data-theme="light"] .social-hero-button .hero-social-icon{
+  color:#173f73;
+}
+html[data-theme="light"] .social-hero-button:hover .hero-social-icon{
+  color:inherit;
+}
+@media(max-width:680px){
+  .hero-actions{
+    gap:10px;
+  }
+  .social-hero-button{
+    padding-inline:16px;
+  }
+  .hero-social-icon{
+    width:17px;
+    height:17px;
+    flex-basis:17px;
+  }
+}
