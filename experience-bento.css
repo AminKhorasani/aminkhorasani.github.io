@@ -1,0 +1,273 @@
+/* Experience Bento Grid — isolated from legacy .experience-row styles.
+   Mirrors the proportions and card language of Selected Work. */
+#experience .experience-bento{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:16px;
+  margin-top:0;
+}
+#experience .experience-card-stack{
+  display:grid;
+  grid-template-rows:minmax(0,1fr) minmax(0,1fr);
+  gap:16px;
+  min-width:0;
+}
+#experience .experience-card{
+  position:relative;
+  isolation:isolate;
+  min-width:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+  padding:28px 30px;
+  border:1px solid rgba(140,170,235,.11);
+  background:linear-gradient(180deg,rgba(9,16,34,.86),rgba(5,11,24,.93));
+  color:#e9efff;
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+#experience .experience-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(125,170,255,.25);
+  background:linear-gradient(180deg,rgba(11,22,48,.94),rgba(6,13,29,.97));
+}
+#experience .experience-card-featured{min-height:696px}
+#experience .experience-card-secondary{min-height:340px}
+#experience .experience-card-header{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+#experience .experience-card-label{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#8291a9;
+  font:500 10px/1.35 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.15em;
+}
+#experience .experience-card-label-current{color:#8ebcff}
+#experience .experience-live-dot{
+  width:7px;
+  height:7px;
+  flex:0 0 7px;
+  border-radius:50%;
+  background:#79aeff;
+  box-shadow:0 0 0 4px rgba(121,174,255,.13),0 0 18px rgba(121,174,255,.28);
+}
+#experience .experience-card-arrow{
+  width:40px;
+  height:40px;
+  flex:0 0 40px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(140,170,235,.18);
+  border-radius:50%;
+  color:#d9e5ff;
+  font-size:17px;
+  line-height:1;
+  text-decoration:none;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+#experience .experience-card-arrow:hover,
+#experience .experience-card-arrow:focus-visible{
+  background:rgba(120,173,255,.14);
+  border-color:#78adff;
+  transform:translate(2px,-2px);
+}
+#experience .experience-card-arrow:focus-visible{outline:2px solid #78adff;outline-offset:3px}
+#experience .experience-card-content{
+  position:relative;
+  z-index:2;
+  margin-top:76px;
+}
+#experience .experience-card-secondary .experience-card-content{margin-top:58px}
+#experience .experience-card-content h3{
+  margin:0 0 16px;
+  color:#e9efff;
+  font-weight:500;
+  font-size:clamp(34px,3.8vw,56px);
+  line-height:1.05;
+  letter-spacing:-.055em;
+}
+#experience .experience-card-secondary .experience-card-content h3{
+  font-size:clamp(32px,3.2vw,46px);
+}
+#experience .experience-card-content p{
+  margin:0;
+  color:#96a4bc;
+  font-size:14px;
+  line-height:1.65;
+  max-width:480px;
+}
+#experience .experience-card-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:26px;
+}
+#experience .experience-card-tags span,
+#experience .experience-card-footer>span{
+  color:#a5b4cc;
+  font:500 11px/1.4 "Geist","Inter",sans-serif;
+}
+#experience .experience-card-tags span{
+  display:inline-flex;
+  padding:7px 11px;
+  border:1px solid rgba(140,170,235,.17);
+  border-radius:999px;
+}
+#experience .experience-card-number{
+  position:absolute;
+  z-index:0;
+  right:28px;
+  bottom:12px;
+  color:rgba(185,208,255,.055);
+  font-size:clamp(82px,8vw,120px);
+  font-weight:700;
+  letter-spacing:-.09em;
+  line-height:1;
+  pointer-events:none;
+}
+#experience .experience-card-footer{
+  position:relative;
+  z-index:2;
+  margin-top:auto;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+}
+#experience .experience-card-footer>span{text-align:end}
+#experience .experience-brand{
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  overflow:hidden;
+  box-sizing:border-box;
+  border-radius:17px;
+  width:76px;
+  height:76px;
+}
+#experience .experience-brand img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  filter:none;
+}
+#experience .experience-brand-digikala{
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:50%;
+  width:146px;
+  height:146px;
+  border-radius:30px;
+  transform:translate(-50%,-50%);
+  background:#ed233c;
+  box-shadow:0 20px 65px rgba(239,35,60,.17),0 0 90px rgba(85,135,243,.12);
+}
+#experience .experience-brand-digikala img{object-fit:cover}
+#experience .experience-brand-snappfood{background:#ff00a8}
+#experience .experience-brand-snappfood img{object-fit:cover}
+#experience .experience-brand-yektanet{
+  background:#fff;
+  padding:10px;
+}
+#experience .experience-featured-art{
+  position:absolute;
+  z-index:0;
+  width:min(450px,82%);
+  aspect-ratio:1;
+  right:-6%;
+  bottom:-21%;
+  pointer-events:none;
+}
+#experience .experience-orbit{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(110,163,255,.19);
+}
+#experience .experience-orbit-outer{inset:0}
+#experience .experience-orbit-inner{inset:13%}
+#experience .experience-satellite{
+  position:absolute;
+  z-index:1;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#78adff;
+  box-shadow:0 0 16px rgba(120,173,255,.55);
+}
+#experience .experience-satellite-one{right:13%;top:18%}
+#experience .experience-satellite-two{right:23%;top:27%;width:8px;height:8px}
+html[dir="rtl"] #experience .experience-card-number{right:auto;left:28px}
+html[dir="rtl"] #experience .experience-featured-art{right:auto;left:-6%}
+html[dir="rtl"] #experience .experience-card-label{font-family:"Vazirmatn",Tahoma,Arial,sans-serif;letter-spacing:.03em}
+
+/* Light mode keeps the same composition and navy night-sky language. */
+html[data-theme="light"] #experience .experience-card{
+  color:#0a1b33;
+  background:rgba(255,255,255,.84);
+  border-color:rgba(15,39,77,.12);
+  box-shadow:0 24px 70px rgba(24,50,85,.05);
+}
+html[data-theme="light"] #experience .experience-card:hover{
+  background:#fff;
+  border-color:rgba(15,39,77,.22);
+  box-shadow:0 24px 70px rgba(24,50,85,.1);
+}
+html[data-theme="light"] #experience .experience-card-content h3{color:#0a1b33}
+html[data-theme="light"] #experience .experience-card-content p{color:#5d708c}
+html[data-theme="light"] #experience .experience-card-label{color:#5d7293}
+html[data-theme="light"] #experience .experience-card-label-current{color:#214f8b}
+html[data-theme="light"] #experience .experience-live-dot{background:#214f8b;box-shadow:0 0 0 4px rgba(33,79,139,.1)}
+html[data-theme="light"] #experience .experience-card-arrow{
+  color:#214f8b;
+  border-color:rgba(15,39,77,.16);
+}
+html[data-theme="light"] #experience .experience-card-arrow:hover{background:rgba(33,79,139,.07)}
+html[data-theme="light"] #experience .experience-card-number{color:rgba(15,39,77,.045)}
+html[data-theme="light"] #experience .experience-card-tags span{
+  border-color:rgba(15,39,77,.14);
+  color:#395977;
+}
+html[data-theme="light"] #experience .experience-card-footer>span{color:#536b88}
+html[data-theme="light"] #experience .experience-orbit{border-color:rgba(23,63,115,.16)}
+html[data-theme="light"] #experience .experience-satellite{background:#214f8b;box-shadow:0 0 10px rgba(33,79,139,.2)}
+
+/* Stack the cards into a one-column feed on narrow screens. */
+@media(max-width:980px){
+  #experience .experience-bento{grid-template-columns:minmax(0,1fr)}
+  #experience .experience-card-featured{min-height:510px}
+  #experience .experience-card-secondary{min-height:280px}
+  #experience .experience-card-secondary .experience-card-content{margin-top:34px}
+  #experience .experience-featured-art{width:min(380px,65%);bottom:-25%;right:2%}
+}
+@media(max-width:600px){
+  #experience .experience-card{padding:24px 22px}
+  #experience .experience-card-featured{min-height:430px}
+  #experience .experience-card-secondary{min-height:270px}
+  #experience .experience-card-content{margin-top:55px}
+  #experience .experience-card-secondary .experience-card-content{margin-top:32px}
+  #experience .experience-card-content h3{font-size:40px}
+  #experience .experience-card-secondary .experience-card-content h3{font-size:36px}
+  #experience .experience-card-content p{font-size:13px}
+  #experience .experience-card-arrow{width:36px;height:36px;flex-basis:36px}
+  #experience .experience-brand{width:62px;height:62px;border-radius:14px}
+  #experience .experience-featured-art{width:265px;right:-8%;bottom:-23%}
+  #experience .experience-brand-digikala{width:106px;height:106px;border-radius:23px}
+  #experience .experience-card-number{font-size:82px}
+  #experience .experience-card-footer{align-items:center}
+  #experience .experience-card-footer>span{font-size:10px}
+  html[dir="rtl"] #experience .experience-featured-art{left:-8%;right:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  #experience .experience-card{transition:none!important}
+}
