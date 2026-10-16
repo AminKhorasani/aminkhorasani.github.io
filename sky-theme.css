@@ -1422,3 +1422,26 @@ html[data-theme="light"] .social-hero-button:hover .hero-social-icon{
     flex-basis:17px;
   }
 }
+
+
+/* 2026-10-16 animated building status */
+.availability .pulse-dot{
+  transform-origin:center;
+  animation:buildingPulse 1.9s ease-in-out infinite;
+}
+@keyframes buildingPulse{
+  0%,100%{
+    transform:scale(.82);
+    opacity:.72;
+  }
+  50%{
+    transform:scale(1.28);
+    opacity:1;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .availability .pulse-dot{
+    animation:none!important;
+    transform:none;
+  }
+}
