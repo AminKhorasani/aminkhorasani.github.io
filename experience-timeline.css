@@ -30,7 +30,7 @@
 #experience .career-rail-fill{
   transform-origin:top center;
   transform:scaleY(var(--career-progress));
-  background:linear-gradient(to bottom,#e92546 0%,#ff16a9 51%,#e9bd3d 100%);
+  background:linear-gradient(to bottom,#2a63ff 0%,#78adff 51%,#bcd9ff 100%);
   box-shadow:0 0 13px rgba(114,160,255,.27);
   will-change:transform;
 }
@@ -243,6 +243,10 @@ html[dir="rtl"] #experience .career-stop-snappfood .career-content{padding-right
 
 /* White starfield mode uses navy ink and colored nodes, not tinted cards. */
 html[data-theme="light"] #experience .career-rail-base{background:rgba(19,51,95,.16)}
+html[data-theme="light"] #experience .career-rail-fill{
+  background:linear-gradient(to bottom,#0a1b33 0%,#173f73 51%,#496f9c 100%);
+  box-shadow:0 0 12px rgba(23,63,115,.2);
+}
 html[data-theme="light"] #experience .career-rail-spark{background:#102747;box-shadow:0 0 12px rgba(33,79,139,.25)}
 html[data-theme="light"] #experience .career-stop{border-color:rgba(18,46,87,.095)}
 html[data-theme="light"] #experience .career-stop::before{background:radial-gradient(ellipse 48% 65% at 50% 52%,rgba(var(--career-rgb),.065),transparent 90%)}
