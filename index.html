@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="./design-responsive.css?v=20261006-3" />
   <link rel="stylesheet" href="./reference-theme.css?v=20261006-1" />
   <link rel="stylesheet" href="./sky-theme.css?v=20261016-5" />
-  <link rel="stylesheet" href="./experience-bento.css?v=20261016-3" />
+  <link rel="stylesheet" href="./experience-timeline.css?v=20261016-1" />
 </head>
 
 <body>
@@ -215,7 +215,7 @@
       </div>
     </section>
 
-    <section class="section shell" id="experience">
+    <section class="section shell career-section" id="experience">
       <div class="section-heading reveal">
         <div>
           <p class="section-label">03 / <span data-i18n="experienceLabel">EXPERIENCE</span></p>
@@ -224,67 +224,59 @@
         <a class="arrow-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer"><span data-i18n="fullHistory">Full history</span><i>↗</i></a>
       </div>
 
-      <div class="experience-bento">
-        <article class="experience-card experience-card-featured experience-card-digikala reveal">
-          <span class="experience-card-number" aria-hidden="true">01</span>
-          <div class="experience-card-header">
-            <div class="experience-card-label experience-card-label-current">
-              <span class="experience-live-dot" aria-hidden="true"></span>
-              <span data-i18n="current">CURRENT</span>
-            </div>
-            <a class="experience-card-arrow" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="View Digikala experience on LinkedIn">↗</a>
+      <div class="career-timeline" id="career-timeline" aria-label="Professional experience timeline">
+        <div class="career-rail" aria-hidden="true">
+          <span class="career-rail-base"></span>
+          <span class="career-rail-fill"><span class="career-rail-spark"></span></span>
+        </div>
+
+        <article class="career-stop career-stop-digikala reveal" data-career-brand="digikala">
+          <div class="career-mark" aria-hidden="true">
+            <img src="./assets/digikala-mark.png" alt="" width="300" height="114" loading="lazy" decoding="async" />
           </div>
-          <div class="experience-card-content">
-            <h3>Digikala</h3>
-            <p data-i18n="digikalaRole">Marketing Insight · Data / AI / Analytics</p>
-            <div class="experience-card-tags">
-              <span data-i18n="digikalaDate">Dec 2025 — Present</span>
+          <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
+          <div class="career-content">
+            <div class="career-eyebrow"><span class="career-live-dot"></span><span data-i18n="current">CURRENT</span><span class="career-sequence">01 / 03</span></div>
+            <h3>Digikala<span class="career-title-dot">.</span></h3>
+            <p class="career-role" data-i18n="digikalaRole">Marketing Insight · Data / AI / Analytics</p>
+            <div class="career-bottom">
+              <span class="career-date" data-i18n="digikalaDate">Dec 2025 — Present</span>
+              <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="Digikala experience on LinkedIn">↗</a>
             </div>
-          </div>
-          <div class="experience-featured-art" aria-hidden="true">
-            <span class="experience-brand experience-brand-digikala">
-              <img src="./assets/digikala-mark.png" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            </span>
           </div>
         </article>
 
-        <div class="experience-card-stack">
-          <article class="experience-card experience-card-secondary experience-card-snappfood reveal delay-1">
-            <span class="experience-card-number" aria-hidden="true">02</span>
-            <div class="experience-card-header">
-              <span class="experience-card-label" data-i18n="previous">PREVIOUS</span>
-              <a class="experience-card-arrow" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="View SnappFood experience on LinkedIn">↗</a>
+        <article class="career-stop career-stop-snappfood reveal" data-career-brand="snappfood">
+          <div class="career-mark" aria-hidden="true">
+            <img src="./assets/snappfood-mark.png" alt="" width="220" height="130" loading="lazy" decoding="async" />
+          </div>
+          <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
+          <div class="career-content">
+            <div class="career-eyebrow"><span data-i18n="previous">PREVIOUS</span><span class="career-sequence">02 / 03</span></div>
+            <h3>SnappFood<span class="career-title-dot">.</span></h3>
+            <p class="career-role" data-i18n="snappfoodRole">Data &amp; Analytics</p>
+            <div class="career-bottom">
+              <span class="career-date" data-i18n="snappfoodDate">Aug 2024 — Nov 2025</span>
+              <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="SnappFood experience on LinkedIn">↗</a>
             </div>
-            <div class="experience-card-content">
-              <h3>SnappFood</h3>
-              <p data-i18n="snappfoodRole">Data &amp; Analytics</p>
-            </div>
-            <div class="experience-card-footer">
-              <div class="experience-brand experience-brand-snappfood">
-                <img src="./assets/snappfood-mark.png" alt="SnappFood logo" width="220" height="130" loading="lazy" decoding="async" />
-              </div>
-              <span data-i18n="snappfoodDate">Aug 2024 — Nov 2025</span>
-            </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="experience-card experience-card-secondary experience-card-yektanet reveal delay-2">
-            <span class="experience-card-number" aria-hidden="true">03</span>
-            <div class="experience-card-header">
-              <span class="experience-card-label" data-i18n="previous">PREVIOUS</span>
-              <a class="experience-card-arrow" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="View Yektanet experience on LinkedIn">↗</a>
+        <article class="career-stop career-stop-yektanet reveal" data-career-brand="yektanet">
+          <div class="career-mark" aria-hidden="true">
+            <img src="./assets/yektanet-mark.png" alt="" width="110" height="110" loading="lazy" decoding="async" />
+          </div>
+          <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
+          <div class="career-content">
+            <div class="career-eyebrow"><span data-i18n="previous">PREVIOUS</span><span class="career-sequence">03 / 03</span></div>
+            <h3>Yektanet<span class="career-title-dot">.</span></h3>
+            <p class="career-role" data-i18n="yektanetRole">Publisher Partnerships · Business Development</p>
+            <div class="career-bottom">
+              <span class="career-date" data-i18n="yektanetDate">Aug 2023 — Dec 2023</span>
+              <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="Yektanet experience on LinkedIn">↗</a>
             </div>
-            <div class="experience-card-content">
-              <h3>Yektanet</h3>
-              <p data-i18n="yektanetRole">Publisher Partnerships · Business Development</p>
-            </div>
-            <div class="experience-card-footer">
-              <div class="experience-brand experience-brand-yektanet">
-                <img src="./assets/yektanet-mark.png" alt="Yektanet logo" loading="lazy" decoding="async" />
-              </div>
-              <span data-i18n="yektanetDate">Aug 2023 — Dec 2023</span>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -555,6 +547,7 @@
 
   <script src="./i18n-v2.js?v=20261016-1" defer></script>
   <script src="./app-v2.js?v=20261014-1" defer></script>
+  <script src="./experience-timeline.js?v=20261016-1" defer></script>
   <script type="module" src="./starfield-v3.js?v=20261010-1"></script>
 </body>
 </html>

@@ -1,0 +1,328 @@
+/* Career Constellation | alternative to Experience Bento.
+   This file is deliberately isolated; the old Bento CSS stays in Git history.
+   The rail draws as the page scrolls, the transparent brand PNGs remain atmospheric. */
+#experience.career-section{position:relative}
+#experience .career-timeline{
+  --career-progress:1;
+  position:relative;
+  isolation:isolate;
+  margin-top:42px;
+}
+#experience .career-rail{
+  position:absolute;
+  z-index:0;
+  inset:16px auto 16px 50%;
+  width:3px;
+  transform:translateX(-50%);
+  pointer-events:none;
+}
+#experience .career-rail-base,
+#experience .career-rail-fill{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  border-radius:999px;
+}
+#experience .career-rail-base{background:rgba(135,164,224,.15)}
+#experience .career-rail-fill{
+  transform-origin:top center;
+  transform:scaleY(var(--career-progress));
+  background:linear-gradient(to bottom,#e92546 0%,#ff16a9 51%,#e9bd3d 100%);
+  box-shadow:0 0 13px rgba(114,160,255,.27);
+  will-change:transform;
+}
+#experience .career-rail-spark{
+  position:absolute;
+  bottom:-5px;
+  left:50%;
+  transform:translateX(-50%);
+  display:block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#f8faff;
+  box-shadow:0 0 12px #9abaff,0 0 25px rgba(147,179,255,.5);
+}
+#experience .career-stop{
+  --career-color:#ef233c;
+  --career-rgb:239,35,60;
+  position:relative;
+  isolation:isolate;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr);
+  align-items:center;
+  min-height:282px;
+  border-bottom:1px solid rgba(140,170,235,.075);
+}
+#experience .career-stop:last-child{border-bottom:0}
+#experience .career-stop-digikala{--career-color:#ef233c;--career-rgb:239,35,60}
+#experience .career-stop-snappfood{--career-color:#ff00a8;--career-rgb:255,0,168}
+#experience .career-stop-yektanet{--career-color:#e7c328;--career-rgb:235,199,44}
+#experience .career-stop::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:10px 0;
+  pointer-events:none;
+  background:radial-gradient(ellipse 48% 65% at 50% 52%,rgba(var(--career-rgb),.045),transparent 90%);
+  opacity:.7;
+  transition:opacity .5s ease;
+}
+#experience .career-stop.is-current-in-view::before{opacity:1}
+#experience .career-pin{
+  position:relative;
+  z-index:3;
+  grid-column:2;
+  grid-row:1;
+  place-self:center;
+  display:grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  border:1px solid rgba(var(--career-rgb),.35);
+  border-radius:50%;
+  background:#070e20;
+  box-shadow:0 0 0 9px rgba(var(--career-rgb),.055);
+  transition:box-shadow .4s,border-color .4s,transform .4s;
+}
+#experience .career-pin-center{
+  display:block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--career-color);
+  box-shadow:0 0 16px rgba(var(--career-rgb),.55);
+}
+#experience .career-pin-halo{
+  position:absolute;
+  inset:-10px;
+  border:1px solid rgba(var(--career-rgb),.16);
+  border-radius:50%;
+  transform:scale(.8);
+  opacity:0;
+  transition:transform .55s,opacity .55s;
+}
+#experience .career-stop.is-current-in-view .career-pin{
+  transform:scale(1.17);
+  border-color:rgba(var(--career-rgb),.7);
+  box-shadow:0 0 0 12px rgba(var(--career-rgb),.085),0 0 25px rgba(var(--career-rgb),.2);
+}
+#experience .career-stop.is-current-in-view .career-pin-halo{opacity:1;transform:scale(1.28)}
+#experience .career-stop-digikala .career-pin-halo{animation:careerOrbitPulse 3s ease-in-out infinite}
+@keyframes careerOrbitPulse{
+  0%,100%{transform:scale(.9);opacity:.12}
+  50%{transform:scale(1.33);opacity:.65}
+}
+#experience .career-content{
+  position:relative;
+  z-index:2;
+  grid-row:1;
+  grid-column:3;
+  padding:38px 16px 38px 40px;
+  min-width:0;
+  transition:transform .5s ease,opacity .5s ease;
+}
+#experience .career-stop-snappfood .career-content{
+  grid-column:1;
+  padding:38px 40px 38px 16px;
+  text-align:right;
+}
+#experience .career-mark{
+  position:relative;
+  z-index:1;
+  grid-row:1;
+  grid-column:1;
+  display:grid;
+  place-items:center;
+  min-width:0;
+  padding:22px;
+  pointer-events:none;
+}
+#experience .career-stop-snappfood .career-mark{grid-column:3}
+#experience .career-mark img{
+  display:block;
+  width:min(78%,340px);
+  max-height:178px;
+  height:auto;
+  object-fit:contain;
+  opacity:.23;
+  filter:drop-shadow(0 0 28px rgba(var(--career-rgb),.12));
+  transition:opacity .65s ease,filter .65s ease,transform .7s cubic-bezier(.2,.75,.2,1);
+}
+#experience .career-stop-digikala .career-mark img{width:min(83%,370px);max-height:180px}
+#experience .career-stop-snappfood .career-mark img{width:min(65%,225px);max-height:170px}
+#experience .career-stop-yektanet .career-mark img{width:min(42%,145px);max-height:148px}
+#experience .career-stop.is-current-in-view .career-mark img{
+  opacity:.43;
+  transform:translateY(-5px) scale(1.05);
+  filter:drop-shadow(0 0 36px rgba(var(--career-rgb),.2));
+}
+#experience .career-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:13px;
+  color:#8696b3;
+  font:600 10px/1.4 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.17em;
+}
+#experience .career-stop-snappfood .career-eyebrow{justify-content:flex-end}
+#experience .career-stop-digikala .career-eyebrow{color:#e0a4ad}
+#experience .career-sequence{opacity:.5;margin-inline-start:10px}
+#experience .career-live-dot{
+  display:inline-block;
+  width:7px;
+  height:7px;
+  background:#fa526c;
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(239,35,60,.7);
+}
+#experience .career-content h3{
+  margin:0;
+  color:#edf3ff;
+  font-size:clamp(36px,4.9vw,66px);
+  line-height:1.07;
+  font-weight:540;
+  letter-spacing:-.065em;
+}
+#experience .career-title-dot{color:var(--career-color)}
+#experience .career-role{
+  margin:14px 0 0;
+  color:#98a6bf;
+  font-size:14px;
+  line-height:1.7;
+  max-width:380px;
+}
+#experience .career-stop-snappfood .career-role{margin-inline-start:auto}
+#experience .career-bottom{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-top:25px;
+}
+#experience .career-stop-snappfood .career-bottom{justify-content:flex-end}
+#experience .career-date{
+  display:inline-block;
+  color:#8193b0;
+  font:500 11px/1.5 "Geist","Inter",sans-serif;
+}
+#experience .career-outlink{
+  display:grid;
+  place-items:center;
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  border:1px solid rgba(136,171,241,.16);
+  color:#a7b9d7;
+  font-size:15px;
+  text-decoration:none;
+  transition:color .2s,transform .2s,border-color .2s;
+}
+#experience .career-outlink:hover,
+#experience .career-outlink:focus-visible{
+  color:var(--career-color);
+  border-color:rgba(var(--career-rgb),.5);
+  transform:translate(2px,-2px);
+}
+#experience .career-outlink:focus-visible{outline:2px solid var(--career-color);outline-offset:3px}
+
+/* Keep reading order and timeline flow compatible with Persian RTL. */
+html[dir="rtl"] #experience .career-content,
+html[dir="rtl"] #experience .career-stop-snappfood .career-content{text-align:start}
+html[dir="rtl"] #experience .career-eyebrow,
+html[dir="rtl"] #experience .career-stop-snappfood .career-eyebrow{justify-content:flex-start}
+html[dir="rtl"] #experience .career-bottom,
+html[dir="rtl"] #experience .career-stop-snappfood .career-bottom{justify-content:flex-start}
+html[dir="rtl"] #experience .career-eyebrow{font-family:"Vazirmatn",Tahoma,Arial,sans-serif;letter-spacing:0}
+html[dir="rtl"] #experience .career-role{font-family:"Vazirmatn",Tahoma,Arial,sans-serif}
+html[dir="rtl"] #experience .career-stop-snappfood .career-role{margin-inline-start:0}
+html[dir="rtl"] #experience .career-stop-snappfood .career-content{padding-right:16px;padding-left:40px}
+
+/* White starfield mode uses navy ink and colored nodes, not tinted cards. */
+html[data-theme="light"] #experience .career-rail-base{background:rgba(19,51,95,.16)}
+html[data-theme="light"] #experience .career-rail-spark{background:#102747;box-shadow:0 0 12px rgba(33,79,139,.25)}
+html[data-theme="light"] #experience .career-stop{border-color:rgba(18,46,87,.095)}
+html[data-theme="light"] #experience .career-stop::before{background:radial-gradient(ellipse 48% 65% at 50% 52%,rgba(var(--career-rgb),.065),transparent 90%)}
+html[data-theme="light"] #experience .career-pin{background:#fff}
+html[data-theme="light"] #experience .career-content h3{color:#0a1b33}
+html[data-theme="light"] #experience .career-role{color:#526882}
+html[data-theme="light"] #experience .career-eyebrow{color:#697e98}
+html[data-theme="light"] #experience .career-stop-digikala .career-eyebrow{color:#a43245}
+html[data-theme="light"] #experience .career-date{color:#55718c}
+html[data-theme="light"] #experience .career-outlink{color:#35577b;border-color:rgba(21,52,99,.18)}
+html[data-theme="light"] #experience .career-stop .career-mark img{opacity:.28}
+html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mark img{opacity:.46}
+
+/* Narrow screens: the rail is a left gutter; each stop remains readable. */
+@media(max-width:900px){
+  #experience .career-timeline{margin-top:30px}
+  #experience .career-rail{left:30px;right:auto;transform:none;inset-block:20px}
+  #experience .career-stop{
+    grid-template-columns:60px minmax(0,1fr);
+    min-height:240px;
+    padding-block:18px;
+  }
+  #experience .career-pin{grid-column:1;width:30px;height:30px}
+  #experience .career-content,
+  #experience .career-stop-snappfood .career-content{
+    grid-column:2;
+    grid-row:1;
+    padding:30px 8px 30px 13px;
+    text-align:start;
+  }
+  #experience .career-stop-snappfood .career-role{margin-inline-start:0}
+  #experience .career-stop-snappfood .career-eyebrow{justify-content:flex-start}
+  #experience .career-stop-snappfood .career-bottom{justify-content:flex-start}
+  #experience .career-mark,
+  #experience .career-stop-snappfood .career-mark{
+    position:absolute;
+    z-index:0;
+    top:16%;
+    right:2%;
+    left:auto;
+    width:36%;
+    padding:0;
+    opacity:.46;
+  }
+  #experience .career-mark img,
+  #experience .career-stop-digikala .career-mark img,
+  #experience .career-stop-snappfood .career-mark img,
+  #experience .career-stop-yektanet .career-mark img{width:100%;max-height:175px}
+  #experience .career-stop-yektanet .career-mark{width:23%}
+  #experience .career-content h3{font-size:clamp(34px,7vw,51px)}
+  #experience .career-role{max-width:330px}
+  html[dir="rtl"] #experience .career-rail{left:auto;right:30px}
+  html[dir="rtl"] #experience .career-stop{grid-template-columns:60px minmax(0,1fr)}
+  html[dir="rtl"] #experience .career-pin{grid-column:1}
+  html[dir="rtl"] #experience .career-stop .career-content{grid-column:2;padding:30px 13px 30px 8px}
+  html[dir="rtl"] #experience .career-stop .career-mark{left:2%;right:auto}
+}
+@media(max-width:520px){
+  #experience .career-stop{min-height:228px;grid-template-columns:48px minmax(0,1fr)}
+  #experience .career-rail{left:24px}
+  #experience .career-pin{width:26px;height:26px}
+  #experience .career-pin-center{width:8px;height:8px}
+  #experience .career-stop .career-content,
+  #experience .career-stop-snappfood .career-content{padding:28px 6px 28px 10px}
+  #experience .career-mark,#experience .career-stop-snappfood .career-mark{top:22%;width:34%;opacity:.3}
+  #experience .career-stop-yektanet .career-mark{width:24%}
+  #experience .career-mark img{max-height:116px}
+  #experience .career-content h3{font-size:clamp(32px,9vw,43px)}
+  #experience .career-role{font-size:12px;max-width:265px}
+  #experience .career-eyebrow{font-size:9px;letter-spacing:.09em}
+  #experience .career-date{font-size:10px}
+  html[dir="rtl"] #experience .career-rail{left:auto;right:24px}
+  html[dir="rtl"] #experience .career-stop{grid-template-columns:48px minmax(0,1fr)}
+  html[dir="rtl"] #experience .career-stop .career-content{padding:28px 10px 28px 6px}
+}
+@media(prefers-reduced-motion:reduce){
+  #experience .career-stop,
+  #experience .career-mark img,
+  #experience .career-pin,
+  #experience .career-pin-halo{transition:none!important;animation:none!important}
+  #experience .career-rail-fill{transform:scaleY(1)!important;will-change:auto}
+  #experience .career-stop .career-mark img{transform:none!important}
+}
