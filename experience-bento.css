@@ -271,3 +271,150 @@ html[data-theme="light"] #experience .experience-satellite{background:#214f8b;bo
 @media(prefers-reduced-motion:reduce){
   #experience .experience-card{transition:none!important}
 }
+
+
+/* Brand atmospheres: keep the Selected Work bento geometry, tint the whole card. */
+#experience .experience-card-digikala{
+  --brand-rgb:239,35,60;
+  --brand-accent:#ef233c;
+}
+#experience .experience-card-snappfood{
+  --brand-rgb:255,0,168;
+  --brand-accent:#ff00a8;
+}
+#experience .experience-card-yektanet{
+  --brand-rgb:42,111,218;
+  --brand-accent:#2a6fda;
+}
+#experience .experience-card{
+  border-color:rgba(var(--brand-rgb),.18);
+  background:
+    radial-gradient(ellipse 92% 80% at 97% 27%,rgba(var(--brand-rgb),.20),transparent 78%),
+    radial-gradient(ellipse 88% 85% at 30% 105%,rgba(var(--brand-rgb),.10),transparent 78%),
+    linear-gradient(112deg,rgba(var(--brand-rgb),.065),rgba(var(--brand-rgb),.11)),
+    linear-gradient(180deg,#091022,#050b19);
+  box-shadow:inset 3px 0 0 rgba(var(--brand-rgb),.8);
+}
+#experience .experience-card::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 65% 65% at 88% 82%,rgba(var(--brand-rgb),.12),transparent 80%),
+    linear-gradient(135deg,rgba(255,255,255,.024),transparent 48%);
+}
+#experience .experience-card::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  width:64%;
+  aspect-ratio:1.5;
+  right:-16%;
+  top:-20%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(var(--brand-rgb),.12),transparent 73%);
+  filter:blur(24px);
+}
+#experience .experience-card:hover{
+  border-color:rgba(var(--brand-rgb),.38);
+  background:
+    radial-gradient(ellipse 92% 80% at 97% 27%,rgba(var(--brand-rgb),.25),transparent 78%),
+    radial-gradient(ellipse 88% 85% at 30% 105%,rgba(var(--brand-rgb),.14),transparent 78%),
+    linear-gradient(112deg,rgba(var(--brand-rgb),.08),rgba(var(--brand-rgb),.14)),
+    linear-gradient(180deg,#0b1429,#070e1d);
+  box-shadow:inset 3px 0 0 var(--brand-accent),0 18px 46px rgba(0,0,0,.17);
+}
+#experience .experience-card-number{color:rgba(var(--brand-rgb),.14)}
+#experience .experience-card-tags span{
+  border-color:rgba(var(--brand-rgb),.25);
+  background:rgba(var(--brand-rgb),.045);
+}
+#experience .experience-card-arrow:hover,
+#experience .experience-card-arrow:focus-visible{
+  border-color:rgba(var(--brand-rgb),.42);
+  background:rgba(var(--brand-rgb),.12);
+}
+/* The logo is a small brand signature, not the card's main illustration. */
+#experience .experience-featured-art{
+  position:absolute;
+  z-index:1;
+  inset:0;
+  width:auto;
+  height:auto;
+  aspect-ratio:auto;
+  pointer-events:none;
+}
+#experience .experience-featured-art .experience-brand-digikala{
+  position:absolute;
+  z-index:1;
+  left:auto;
+  top:auto;
+  right:36px;
+  bottom:32px;
+  width:112px;
+  height:112px;
+  transform:none;
+  border-radius:24px;
+  box-shadow:0 15px 35px rgba(239,35,60,.20);
+}
+#experience .experience-brand-snappfood img{object-fit:cover}
+#experience .experience-brand-yektanet{background:#fff}
+html[dir="rtl"] #experience .experience-card::after{right:auto;left:-16%}
+html[dir="rtl"] #experience .experience-featured-art{left:0;right:0}
+html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{
+  right:auto;
+  left:36px;
+}
+
+/* In light mode the brand washes resemble softly tinted resume cards. */
+html[data-theme="light"] #experience .experience-card{
+  border-color:rgba(var(--brand-rgb),.16);
+  background:
+    radial-gradient(ellipse 110% 95% at 95% 25%,rgba(var(--brand-rgb),.14),transparent 76%),
+    radial-gradient(ellipse 95% 80% at 35% 108%,rgba(var(--brand-rgb),.075),transparent 80%),
+    linear-gradient(112deg,rgba(var(--brand-rgb),.035),rgba(var(--brand-rgb),.085)),
+    linear-gradient(180deg,#fff,#f8faff);
+  box-shadow:inset 4px 0 0 var(--brand-accent),0 18px 50px rgba(24,50,85,.05);
+}
+html[data-theme="light"] #experience .experience-card::before{
+  background:linear-gradient(135deg,rgba(255,255,255,.30),transparent 56%);
+}
+html[data-theme="light"] #experience .experience-card::after{
+  background:radial-gradient(ellipse,rgba(var(--brand-rgb),.09),transparent 73%);
+}
+html[data-theme="light"] #experience .experience-card:hover{
+  border-color:rgba(var(--brand-rgb),.27);
+  background:
+    radial-gradient(ellipse 110% 95% at 95% 25%,rgba(var(--brand-rgb),.18),transparent 76%),
+    radial-gradient(ellipse 95% 80% at 35% 108%,rgba(var(--brand-rgb),.10),transparent 80%),
+    linear-gradient(112deg,rgba(var(--brand-rgb),.045),rgba(var(--brand-rgb),.10)),
+    linear-gradient(180deg,#fff,#f8faff);
+  box-shadow:inset 4px 0 0 var(--brand-accent),0 24px 60px rgba(24,50,85,.09);
+}
+html[data-theme="light"] #experience .experience-card-number{color:rgba(var(--brand-rgb),.12)}
+html[data-theme="light"] #experience .experience-card-tags span{
+  background:rgba(255,255,255,.35);
+  border-color:rgba(var(--brand-rgb),.18);
+}
+
+/* Decorative glow stays behind readable content on narrow viewports. */
+@media(max-width:600px){
+  #experience .experience-featured-art .experience-brand-digikala{
+    right:22px;
+    bottom:22px;
+    width:90px;
+    height:90px;
+    border-radius:19px;
+  }
+  html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{
+    right:auto;
+    left:22px;
+  }
+  #experience .experience-card::after{width:96%;top:-12%}
+}
+@media(prefers-reduced-motion:reduce){
+  #experience .experience-card:hover{transform:none}
+}
