@@ -418,3 +418,66 @@ html[data-theme="light"] #experience .experience-card-tags span{
 @media(prefers-reduced-motion:reduce){
   #experience .experience-card:hover{transform:none}
 }
+
+/* Transparent PNG wordmarks: let brand gradient be the card background. */
+#experience .experience-brand,
+#experience .experience-brand-digikala,
+#experience .experience-brand-snappfood,
+#experience .experience-brand-yektanet{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+#experience .experience-brand img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:.24;
+}
+#experience .experience-featured-art .experience-brand-digikala{
+  width:min(290px,46%);
+  height:130px;
+  bottom:28px;
+  right:24px;
+}
+#experience .experience-featured-art .experience-brand-digikala img{opacity:.22}
+#experience .experience-card-secondary .experience-brand{
+  position:absolute;
+  right:0;
+  bottom:6px;
+  height:auto;
+  margin:0;
+  pointer-events:none;
+}
+#experience .experience-card-secondary .experience-card-footer{
+  min-height:66px;
+}
+#experience .experience-card-footer>span{
+  z-index:2;
+  margin-inline-start:auto;
+  padding:5px 8px;
+  border-radius:8px;
+  background:rgba(5,11,24,.5);
+}
+#experience .experience-brand-snappfood{width:130px!important;height:78px!important}
+#experience .experience-brand-snappfood img{opacity:.22}
+#experience .experience-brand-yektanet{width:88px!important;height:88px!important}
+#experience .experience-brand-yektanet img{opacity:.23}
+html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{right:auto;left:24px}
+html[dir="rtl"] #experience .experience-card-secondary .experience-brand{right:auto;left:0}
+html[data-theme="light"] #experience .experience-card-footer>span{background:rgba(255,255,255,.55)}
+html[data-theme="light"] #experience .experience-brand img{opacity:.19}
+html[data-theme="light"] #experience .experience-featured-art .experience-brand-digikala img{opacity:.20}
+@media(max-width:600px){
+ #experience .experience-featured-art .experience-brand-digikala{width:170px;height:90px;right:16px;bottom:12px}
+ #experience .experience-brand-snappfood{width:100px!important;height:64px!important}
+ #experience .experience-brand-yektanet{width:65px!important;height:65px!important}
+ html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{right:auto;left:16px}
+}

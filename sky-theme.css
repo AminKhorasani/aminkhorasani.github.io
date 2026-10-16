@@ -1602,3 +1602,21 @@ html[dir="rtl"] .education-degree-tag{
   }
   .education-degree-tag{padding:4px 8px;font-size:9px}
 }
+
+/* Transparent University of Tehran PNG, without a boxed tile. */
+.education-section .education-logo{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+.education-section .education-logo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  opacity:.83;
+  filter:none!important;
+}
+html[data-theme="light"] .education-section .education-logo img{opacity:.87}
