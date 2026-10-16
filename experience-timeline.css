@@ -330,3 +330,61 @@ html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mar
   #experience .career-rail-fill{transform:scaleY(1)!important;will-change:auto}
   #experience .career-stop .career-mark img{transform:none!important}
 }
+
+/* Scroll-responsive logo visibility and rail-synchronized pin colors. */
+#experience .career-stop{
+  --focus-opacity:1;
+  --rail-pin-rgb:120,173,255;
+  --rail-pin-color:#78adff;
+}
+#experience .career-mark img,
+#experience .career-stop.is-current-in-view .career-mark img,
+html[data-theme="light"] #experience .career-stop .career-mark img,
+html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mark img{
+  opacity:var(--focus-opacity);
+}
+#experience .career-pin{
+  border-color:rgba(var(--rail-pin-rgb),.40);
+  box-shadow:0 0 0 9px rgba(var(--rail-pin-rgb),.07);
+}
+#experience .career-pin-center{
+  background:var(--rail-pin-color);
+  box-shadow:0 0 16px rgba(var(--rail-pin-rgb),.6);
+}
+#experience .career-pin-halo{border-color:rgba(var(--rail-pin-rgb),.24)}
+#experience .career-stop.is-current-in-view .career-pin{
+  border-color:rgba(var(--rail-pin-rgb),.8);
+  box-shadow:0 0 0 12px rgba(var(--rail-pin-rgb),.10),0 0 25px rgba(var(--rail-pin-rgb),.3);
+}
+/* The SnappFood source had a large transparent left margin. The cropped
+   exclamation is now the primary graphic at its natural vertical ratio. */
+#experience .career-stop-snappfood .career-mark img{
+  width:auto;
+  height:160px;
+  max-width:100%;
+  max-height:160px;
+  object-fit:contain;
+}
+/* Outline the black elements in Yektanet's yellow/charcoal symbol against
+   the night sky without adding a rectangular backdrop or changing the asset. */
+html:not([data-theme="light"]) #experience .career-stop-yektanet .career-mark img{
+  filter:drop-shadow(0 0 1.8px rgba(233,239,255,.85))
+         drop-shadow(0 0 12px rgba(233,196,45,.14));
+}
+html:not([data-theme="light"]) #experience .career-stop-yektanet.is-current-in-view .career-mark img{
+  filter:drop-shadow(0 0 2.2px rgba(233,239,255,.95))
+         drop-shadow(0 0 20px rgba(233,196,45,.22));
+}
+@media(max-width:900px){
+  #experience .career-mark,
+  #experience .career-stop-snappfood .career-mark{opacity:1}
+  #experience .career-stop-snappfood .career-mark img{width:auto;height:135px;max-height:135px;max-width:100%}
+}
+@media(max-width:520px){
+  #experience .career-mark,
+  #experience .career-stop-snappfood .career-mark{opacity:1}
+  #experience .career-stop-snappfood .career-mark img{height:105px;max-height:105px}
+}
+@media(prefers-reduced-motion:reduce){
+  #experience .career-stop{--focus-opacity:1!important}
+}
