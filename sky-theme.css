@@ -1492,3 +1492,52 @@ html[data-theme="light"] .social-hero-button:hover .hero-social-icon{
     width:84%!important;
   }
 }
+
+
+/* 2026-10-16 larger experience logo tiles + Yektanet */
+.experience-row .company-logo,
+.experience-row .digikala-logo,
+.experience-row .snappfood-logo,
+.experience-row .yektanet-logo{
+  width:82px!important;
+  height:82px!important;
+  border-radius:20px;
+}
+.experience-row .snappfood-logo img{
+  width:86%!important;
+}
+.experience-row .yektanet-logo{
+  padding:0!important;
+  background:#ffffff;
+  border:1px solid rgba(188,217,255,.10);
+  box-shadow:0 8px 30px rgba(0,0,0,.16);
+}
+.experience-row .yektanet-logo img{
+  width:78%!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  filter:none!important;
+  transform:none!important;
+}
+html[data-theme="light"] .experience-row .yektanet-logo{
+  border-color:rgba(15,39,77,.10);
+  box-shadow:0 8px 26px rgba(24,50,85,.08);
+}
+@media(max-width:680px){
+  .experience-row .company-logo,
+  .experience-row .digikala-logo,
+  .experience-row .snappfood-logo,
+  .experience-row .yektanet-logo{
+    width:64px!important;
+    height:64px!important;
+    border-radius:16px;
+  }
+  .experience-row .snappfood-logo img{
+    width:86%!important;
+  }
+  .experience-row .yektanet-logo img{
+    width:80%!important;
+  }
+}
