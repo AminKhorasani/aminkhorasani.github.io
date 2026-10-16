@@ -388,3 +388,88 @@ html:not([data-theme="light"]) #experience .career-stop-yektanet.is-current-in-v
 @media(prefers-reduced-motion:reduce){
   #experience .career-stop{--focus-opacity:1!important}
 }
+
+/* Resume-grounded career impact opposite compact inline logos. */
+#experience .career-stop{min-height:350px;align-items:center}
+#experience .career-heading{
+  display:flex;align-items:center;gap:16px;min-width:0;
+}
+#experience .career-stop-snappfood .career-heading{justify-content:flex-end}
+#experience .career-heading h3{min-width:0;font-size:clamp(34px,4vw,56px)}
+#experience .career-heading .career-mark,
+#experience .career-stop-snappfood .career-heading .career-mark{
+  position:relative;inset:auto;grid-column:auto;grid-row:auto;
+  width:64px;height:64px;min-width:64px;flex:0 0 64px;
+  padding:0;display:grid;place-items:center;opacity:1;order:-1;
+}
+#experience .career-heading .career-mark img,
+#experience .career-stop-digikala .career-heading .career-mark img,
+#experience .career-stop-snappfood .career-heading .career-mark img,
+#experience .career-stop-yektanet .career-heading .career-mark img{
+  width:100%;max-width:100%;height:100%;max-height:100%;object-fit:contain;
+  opacity:var(--focus-opacity);transform:none;
+}
+#experience .career-stop-snappfood .career-heading .career-mark{
+  width:50px;height:64px;min-width:50px;flex-basis:50px;
+}
+#experience .career-stop-yektanet .career-heading .career-mark{width:57px;height:57px;min-width:57px;flex-basis:57px}
+#experience .career-job{margin:13px 0 0;color:#d6e1f4;font-size:15px;font-weight:550;line-height:1.45}
+#experience .career-role{margin-top:4px}
+#experience .career-highlights{
+  position:relative;z-index:2;grid-row:1;grid-column:1;
+  padding:26px 30px 26px 12px;max-width:520px;
+}
+#experience .career-stop-snappfood .career-highlights{grid-column:3;padding:26px 12px 26px 30px}
+#experience .career-highlights-label{
+  margin:0 0 17px;color:#7e92b2;font:600 10px/1.4 "Geist Mono","SFMono-Regular",Consolas,monospace;letter-spacing:.15em;
+}
+#experience .career-highlights ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+#experience .career-highlights li{
+  position:relative;padding-inline-start:16px;color:#a3b2ca;
+  font-size:13px;line-height:1.65;max-width:485px;
+}
+#experience .career-highlights li::before{
+  content:"";position:absolute;inset-inline-start:0;top:.73em;
+  width:5px;height:5px;border-radius:50%;background:var(--rail-pin-color,#78adff);
+}
+#experience .career-stop-snappfood .career-content{padding-inline-end:20px}
+#experience .career-stop-snappfood .career-highlights{text-align:start}
+html[data-theme="light"] #experience .career-job{color:#1b3759}
+html[data-theme="light"] #experience .career-highlights-label{color:#667c9e}
+html[data-theme="light"] #experience .career-highlights li{color:#526985}
+html[dir="rtl"] #experience .career-heading{flex-direction:row}
+html[dir="rtl"] #experience .career-stop-snappfood .career-heading{justify-content:flex-start}
+html[dir="rtl"] #experience .career-highlights{text-align:start}
+html[dir="rtl"] #experience .career-highlights-label{font-family:"Vazirmatn",Tahoma,Arial,sans-serif;letter-spacing:0}
+html[dir="rtl"] #experience .career-highlights li{font-family:"Vazirmatn",Tahoma,Arial,sans-serif}
+@media(max-width:900px){
+  #experience .career-stop{grid-template-rows:auto auto;align-content:center;min-height:0;padding:24px 0}
+  #experience .career-content,
+  #experience .career-stop-snappfood .career-content{
+    grid-row:1;grid-column:2;padding:16px 8px 10px 13px;text-align:start;
+  }
+  #experience .career-highlights,
+  #experience .career-stop-snappfood .career-highlights{
+    grid-row:2;grid-column:2;max-width:none;padding:7px 10px 17px 13px;
+  }
+  #experience .career-pin{grid-row:1}
+  #experience .career-stop-snappfood .career-heading{justify-content:flex-start}
+  #experience .career-stop-snappfood .career-bottom{justify-content:flex-start}
+  #experience .career-heading .career-mark,
+  #experience .career-stop-snappfood .career-heading .career-mark{
+    position:relative;top:auto;right:auto;left:auto;width:52px;height:52px;min-width:52px;flex-basis:52px;opacity:1;
+  }
+  #experience .career-stop-snappfood .career-heading .career-mark{width:38px;min-width:38px;flex-basis:38px}
+  #experience .career-stop-yektanet .career-heading .career-mark{width:48px;min-width:48px;flex-basis:48px}
+}
+@media(max-width:520px){
+  #experience .career-heading{gap:11px}
+  #experience .career-heading h3{font-size:clamp(29px,8vw,39px)}
+  #experience .career-highlights,
+  #experience .career-stop-snappfood .career-highlights{padding:6px 6px 14px 10px}
+  #experience .career-highlights li{font-size:12px}
+  #experience .career-job{font-size:13px}
+  #experience .career-heading .career-mark,
+  #experience .career-stop-snappfood .career-heading .career-mark{width:42px;height:42px;min-width:42px;flex-basis:42px}
+  #experience .career-stop-snappfood .career-heading .career-mark{width:31px;min-width:31px;flex-basis:31px}
+}
