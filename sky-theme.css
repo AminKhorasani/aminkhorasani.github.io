@@ -1445,3 +1445,50 @@ html[data-theme="light"] .social-hero-button:hover .hero-social-icon{
     transform:none;
   }
 }
+
+
+/* 2026-10-16 square experience logos */
+.experience-row .company-logo,
+.experience-row .digikala-logo,
+.experience-row .snappfood-logo{
+  width:72px!important;
+  height:72px!important;
+  padding:0!important;
+  border-radius:18px;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+}
+.experience-row .digikala-logo{
+  background:#ef233c;
+}
+.experience-row .digikala-logo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  filter:none!important;
+}
+.experience-row .snappfood-logo{
+  background:#ff00a8;
+}
+.experience-row .snappfood-logo img{
+  width:82%!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  filter:brightness(0) invert(1)!important;
+  transform:none!important;
+}
+@media(max-width:680px){
+  .experience-row .company-logo,
+  .experience-row .digikala-logo,
+  .experience-row .snappfood-logo{
+    width:58px!important;
+    height:58px!important;
+    border-radius:15px;
+  }
+  .experience-row .snappfood-logo img{
+    width:84%!important;
+  }
+}
