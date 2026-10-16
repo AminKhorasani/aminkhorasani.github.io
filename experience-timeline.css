@@ -148,7 +148,7 @@
   max-height:178px;
   height:auto;
   object-fit:contain;
-  opacity:.23;
+  opacity:1;
   filter:drop-shadow(0 0 28px rgba(var(--career-rgb),.12));
   transition:opacity .65s ease,filter .65s ease,transform .7s cubic-bezier(.2,.75,.2,1);
 }
@@ -156,7 +156,7 @@
 #experience .career-stop-snappfood .career-mark img{width:min(65%,225px);max-height:170px}
 #experience .career-stop-yektanet .career-mark img{width:min(42%,145px);max-height:148px}
 #experience .career-stop.is-current-in-view .career-mark img{
-  opacity:.43;
+  opacity:1;
   transform:translateY(-5px) scale(1.05);
   filter:drop-shadow(0 0 36px rgba(var(--career-rgb),.2));
 }
@@ -253,8 +253,8 @@ html[data-theme="light"] #experience .career-eyebrow{color:#697e98}
 html[data-theme="light"] #experience .career-stop-digikala .career-eyebrow{color:#a43245}
 html[data-theme="light"] #experience .career-date{color:#55718c}
 html[data-theme="light"] #experience .career-outlink{color:#35577b;border-color:rgba(21,52,99,.18)}
-html[data-theme="light"] #experience .career-stop .career-mark img{opacity:.28}
-html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mark img{opacity:.46}
+html[data-theme="light"] #experience .career-stop .career-mark img{opacity:1}
+html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mark img{opacity:1}
 
 /* Narrow screens: the rail is a left gutter; each stop remains readable. */
 @media(max-width:900px){
@@ -285,7 +285,7 @@ html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mar
     left:auto;
     width:36%;
     padding:0;
-    opacity:.46;
+    opacity:1;
   }
   #experience .career-mark img,
   #experience .career-stop-digikala .career-mark img,
@@ -307,7 +307,7 @@ html[data-theme="light"] #experience .career-stop.is-current-in-view .career-mar
   #experience .career-pin-center{width:8px;height:8px}
   #experience .career-stop .career-content,
   #experience .career-stop-snappfood .career-content{padding:28px 6px 28px 10px}
-  #experience .career-mark,#experience .career-stop-snappfood .career-mark{top:22%;width:34%;opacity:.3}
+  #experience .career-mark,#experience .career-stop-snappfood .career-mark{top:22%;width:34%;opacity:1}
   #experience .career-stop-yektanet .career-mark{width:24%}
   #experience .career-mark img{max-height:116px}
   #experience .career-content h3{font-size:clamp(32px,9vw,43px)}
