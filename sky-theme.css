@@ -1620,3 +1620,68 @@ html[dir="rtl"] .education-degree-tag{
   filter:none!important;
 }
 html[data-theme="light"] .education-section .education-logo img{opacity:.87}
+
+
+/* 2026-10-19 desktop hero overflow fix */
+@media(min-width:981px){
+  .hero{
+    grid-template-columns:minmax(0,1fr) 350px!important;
+    gap:clamp(42px,4vw,72px)!important;
+  }
+
+  .hero-copy{
+    min-width:0!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  .hero h1.build-headline{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    white-space:normal!important;
+    column-gap:.22em!important;
+    row-gap:.04em!important;
+    font-size:clamp(40px,3.6vw,64px)!important;
+  }
+
+  .hero h1.build-headline .build-prefix{
+    flex:0 0 auto!important;
+    white-space:nowrap!important;
+  }
+
+  .hero h1.build-headline .type-shell{
+    flex:0 0 auto!important;
+    min-width:0!important;
+    max-width:100%!important;
+    white-space:nowrap!important;
+  }
+
+  .hero h1.build-headline .typewriter-text,
+  .hero h1.build-headline .type-cursor{
+    white-space:nowrap!important;
+  }
+
+  .hero-portrait{
+    width:100%!important;
+    max-width:350px!important;
+    justify-self:end!important;
+  }
+}
+
+@media(min-width:981px) and (max-width:1160px){
+  .hero{
+    grid-template-columns:minmax(0,1fr) 310px!important;
+    gap:42px!important;
+  }
+
+  .hero h1.build-headline{
+    font-size:clamp(38px,4vw,50px)!important;
+  }
+
+  .hero-portrait{
+    max-width:310px!important;
+  }
+}
