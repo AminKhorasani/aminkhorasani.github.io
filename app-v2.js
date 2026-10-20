@@ -46,7 +46,6 @@ async function loadGitHub(){
     let events=[];
     if(e.ok){
       events=await e.json();
-      renderActivity(events);
     }
     if(c.ok){
       const calendar=await c.json();
@@ -55,26 +54,6 @@ async function loadGitHub(){
       renderContributionFallback(events);
     }
   }catch(_){}
-}
-function renderActivity(events){
-  const box=document.getElementById('activity-list');
-  if(!box)return;
-  box.innerHTML='';
-  const items=events.slice(0,4);
-  if(!items.length){
-    box.innerHTML='<div class="activity-placeholder">No recent public activity found.</div>';
-    return;
-  }
-  items.forEach(ev=>{
-    const [title,repo]=evtLabel(ev);
-    const a=document.createElement('a');
-    a.className='activity-item';
-    a.href='https://github.com/'+ev.repo.name;
-    a.target='_blank';
-    a.rel='noreferrer';
-    a.innerHTML='<span class="activity-date">'+fmtDate(ev.created_at)+'</span><span class="activity-title">'+title+'</span><span class="activity-meta">'+repo+' ↗</span>';
-    box.appendChild(a);
-  });
 }
 function renderContributionCalendar(calendar){
   const map=document.getElementById('activity-map');
