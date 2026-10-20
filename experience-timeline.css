@@ -491,3 +491,11 @@ html[data-theme="light"] #experience .career-stop-yektanet .career-mark .yektane
 html[data-theme="light"] #experience .career-stop-yektanet .career-mark .yektanet-mark-light{
   display:block;
 }
+
+
+/* 2026-10-20 remove Yektanet logo neon glow */
+#experience .career-stop-yektanet .career-mark .yektanet-mark,
+#experience .career-stop-yektanet.is-current-in-view .career-mark .yektanet-mark{
+  filter:none!important;
+  box-shadow:none!important;
+}
