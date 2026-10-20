@@ -208,3 +208,91 @@ function setupRecommendationExpanders(){
 }
 setupRecommendationExpanders();
 window.addEventListener('portfolio-language-change',syncRecommendationToggleLabels);
+
+
+function setupRecommendationScroller(){
+  const marquee=document.querySelector('.recommendation-marquee');
+  const track=marquee?.querySelector('.recommendation-track');
+  if(!marquee||!track)return;
+
+  let raf=0;
+  let lastTime=0;
+  let userPauseUntil=0;
+  let hovering=false;
+  let dragging=false;
+  let dragStartX=0;
+  let dragStartScroll=0;
+  const speed=28;
+  const resumeDelay=2200;
+
+  const pauseForUser=()=>{
+    userPauseUntil=performance.now()+resumeDelay;
+  };
+
+  const loop=time=>{
+    if(!lastTime)lastTime=time;
+    const dt=Math.min(40,time-lastTime);
+    lastTime=time;
+
+    const expanded=Boolean(document.querySelector('.recommendation-card.is-expanded'));
+    const paused=reduceMotion||expanded||dragging||hovering||time<userPauseUntil||marquee.classList.contains('is-paused');
+
+    if(!paused){
+      const loopWidth=track.scrollWidth/2;
+      marquee.scrollLeft+=(speed*dt)/1000;
+      if(loopWidth>0&&marquee.scrollLeft>=loopWidth){
+        marquee.scrollLeft-=loopWidth;
+      }
+    }
+
+    raf=requestAnimationFrame(loop);
+  };
+
+  marquee.addEventListener('mouseenter',()=>{hovering=true});
+  marquee.addEventListener('mouseleave',()=>{hovering=false});
+
+  marquee.addEventListener('wheel',event=>{
+    if(Math.abs(event.deltaX)>0||event.shiftKey)pauseForUser();
+  },{passive:true});
+
+  marquee.addEventListener('touchstart',pauseForUser,{passive:true});
+  marquee.addEventListener('touchmove',pauseForUser,{passive:true});
+
+  marquee.addEventListener('pointerdown',event=>{
+    if(event.pointerType!=='mouse')return;
+    if(event.target.closest('button,a'))return;
+    dragging=true;
+    pauseForUser();
+    dragStartX=event.clientX;
+    dragStartScroll=marquee.scrollLeft;
+    marquee.classList.add('is-dragging');
+    marquee.setPointerCapture?.(event.pointerId);
+  });
+
+  marquee.addEventListener('pointermove',event=>{
+    if(!dragging||event.pointerType!=='mouse')return;
+    const dx=event.clientX-dragStartX;
+    marquee.scrollLeft=dragStartScroll-dx;
+    pauseForUser();
+  });
+
+  const stopDrag=event=>{
+    if(!dragging)return;
+    dragging=false;
+    marquee.classList.remove('is-dragging');
+    pauseForUser();
+    if(event?.pointerId!=null&&marquee.hasPointerCapture?.(event.pointerId)){
+      marquee.releasePointerCapture(event.pointerId);
+    }
+  };
+  marquee.addEventListener('pointerup',stopDrag);
+  marquee.addEventListener('pointercancel',stopDrag);
+  marquee.addEventListener('lostpointercapture',stopDrag);
+
+  raf=requestAnimationFrame(loop);
+
+  window.addEventListener('beforeunload',()=>{
+    if(raf)cancelAnimationFrame(raf);
+  },{once:true});
+}
+setupRecommendationScroller();

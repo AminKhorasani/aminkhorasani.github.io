@@ -1685,3 +1685,39 @@ html[data-theme="light"] .education-section .education-logo img{opacity:.87}
     max-width:310px!important;
   }
 }
+
+
+/* 2026-10-20 recommendation manual + auto scrolling */
+.recommendation-marquee{
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  scroll-behavior:auto;
+  cursor:grab;
+  touch-action:pan-x pan-y;
+  scrollbar-width:none;
+}
+.recommendation-marquee::-webkit-scrollbar{
+  display:none;
+}
+.recommendation-marquee.is-dragging{
+  cursor:grabbing;
+  user-select:none;
+}
+.recommendation-track{
+  animation:none!important;
+  transform:none!important;
+  will-change:auto!important;
+}
+.recommendation-marquee:hover .recommendation-track,
+.recommendation-marquee.is-paused .recommendation-track{
+  animation-play-state:unset!important;
+}
+html[dir="rtl"] .recommendation-marquee{
+  direction:ltr;
+}
+html[dir="rtl"] .recommendation-card{
+  direction:rtl;
+  text-align:right;
+}
