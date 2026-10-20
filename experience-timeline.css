@@ -473,3 +473,21 @@ html[dir="rtl"] #experience .career-highlights li{font-family:"Vazirmatn",Tahoma
   #experience .career-stop-snappfood .career-heading .career-mark{width:42px;height:42px;min-width:42px;flex-basis:42px}
   #experience .career-stop-snappfood .career-heading .career-mark{width:31px;min-width:31px;flex-basis:31px}
 }
+
+
+/* 2026-10-20 Yektanet dark-mode logo */
+#experience .career-stop-yektanet .career-mark .yektanet-mark{
+  grid-area:1/1;
+}
+#experience .career-stop-yektanet .career-mark .yektanet-mark-dark{
+  display:block;
+}
+#experience .career-stop-yektanet .career-mark .yektanet-mark-light{
+  display:none;
+}
+html[data-theme="light"] #experience .career-stop-yektanet .career-mark .yektanet-mark-dark{
+  display:none;
+}
+html[data-theme="light"] #experience .career-stop-yektanet .career-mark .yektanet-mark-light{
+  display:block;
+}
