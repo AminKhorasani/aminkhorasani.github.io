@@ -1721,3 +1721,55 @@ html[dir="rtl"] .recommendation-card{
   direction:rtl;
   text-align:right;
 }
+
+
+/* 2026-10-20 hero typewriter always starts on second line */
+.hero h1.build-headline{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  align-items:baseline!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  column-gap:0!important;
+  row-gap:.04em!important;
+}
+
+.hero h1.build-headline .build-prefix,
+.hero h1.build-headline .type-shell{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+}
+
+.hero h1.build-headline .build-prefix{
+  white-space:nowrap!important;
+}
+
+.hero h1.build-headline .type-shell{
+  margin-top:.02em;
+  white-space:nowrap!important;
+}
+
+.hero h1.build-headline .typewriter-text,
+.hero h1.build-headline .type-cursor{
+  white-space:nowrap!important;
+}
+
+.mobile-build-break{
+  display:none!important;
+}
+
+@media(min-width:981px){
+  .hero h1.build-headline{
+    font-size:clamp(40px,3.6vw,64px)!important;
+  }
+}
+
+@media(min-width:981px) and (max-width:1160px){
+  .hero h1.build-headline{
+    font-size:clamp(38px,4vw,50px)!important;
+  }
+}
