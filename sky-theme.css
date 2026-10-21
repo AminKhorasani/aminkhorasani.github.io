@@ -1830,3 +1830,134 @@ html[data-theme="light"] .map-open-link:hover{
     bottom:14px;
   }
 }
+
+
+/* 2026-10-21 The Rakht featured project */
+.project-private{
+  cursor:default;
+}
+.project-private:hover{
+  transform:translateY(-2px);
+}
+.project-private-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 10px;
+  border:1px solid rgba(143,188,255,.22);
+  border-radius:999px;
+  color:#8fbcff;
+  background:rgba(42,99,255,.06);
+  font:600 8px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+.project-rakht .project-body{
+  max-width:610px;
+}
+.project-rakht .project-tech{
+  max-width:560px;
+}
+.project-art-rakht{
+  left:auto;
+  right:-34px;
+  bottom:-54px;
+  width:460px;
+  height:460px;
+  transform:none;
+}
+.project-art-rakht:before,
+.project-art-rakht:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(143,188,255,.10);
+}
+.project-art-rakht:before{inset:38px}
+.project-art-rakht:after{inset:96px}
+.rakht-node{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#0b1731;
+  border:1px solid rgba(143,188,255,.38);
+  box-shadow:0 0 24px rgba(42,99,255,.12);
+  z-index:2;
+}
+.rakht-node-root{
+  left:50%;
+  top:50%;
+  width:96px;
+  height:96px;
+  margin:-48px 0 0 -48px;
+  display:grid;
+  place-items:center;
+  color:#dce9ff;
+  background:radial-gradient(circle at 34% 28%,rgba(143,188,255,.22),rgba(19,43,92,.72) 58%,rgba(5,12,27,.96));
+  border-color:rgba(143,188,255,.34);
+  font:600 17px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.08em;
+  box-shadow:0 0 70px rgba(42,99,255,.10);
+}
+.rakht-node-a{left:14%;top:24%}
+.rakht-node-b{right:12%;top:22%}
+.rakht-node-c{left:17%;bottom:20%}
+.rakht-node-d{right:10%;bottom:18%}
+.rakht-link{
+  position:absolute;
+  left:50%;
+  top:50%;
+  height:1px;
+  transform-origin:left center;
+  background:linear-gradient(90deg,rgba(143,188,255,.34),rgba(143,188,255,.08));
+  z-index:1;
+}
+.rakht-link-a{width:154px;transform:rotate(214deg)}
+.rakht-link-b{width:158px;transform:rotate(-35deg)}
+.rakht-link-c{width:156px;transform:rotate(145deg)}
+.rakht-link-d{width:164px;transform:rotate(36deg)}
+html[data-theme="light"] .project-private-badge{
+  color:#214f8b;
+  border-color:rgba(33,79,139,.22);
+  background:rgba(33,79,139,.05);
+}
+html[data-theme="light"] .rakht-node{
+  background:#f7f9fc;
+  border-color:rgba(23,63,115,.28);
+  box-shadow:0 0 22px rgba(23,63,115,.08);
+}
+html[data-theme="light"] .rakht-node-root{
+  color:#173f73;
+  background:radial-gradient(circle at 34% 28%,rgba(73,111,156,.14),rgba(255,255,255,.96) 66%);
+  border-color:rgba(23,63,115,.24);
+}
+html[data-theme="light"] .rakht-link{
+  background:linear-gradient(90deg,rgba(23,63,115,.28),rgba(23,63,115,.05));
+}
+html[data-theme="light"] .project-art-rakht:before,
+html[data-theme="light"] .project-art-rakht:after{
+  border-color:rgba(23,63,115,.09);
+}
+html[dir="rtl"] .project-private-badge,
+html[dir="rtl"] .rakht-node-root{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+  letter-spacing:.02em;
+}
+@media(max-width:680px){
+  .project-art-rakht{
+    width:320px;
+    height:320px;
+    right:-72px;
+    bottom:-70px;
+    opacity:.86;
+  }
+  .rakht-node-root{
+    width:76px;
+    height:76px;
+    margin:-38px 0 0 -38px;
+    font-size:13px;
+  }
+  .rakht-link-a,.rakht-link-b,.rakht-link-c{width:112px}
+  .rakht-link-d{width:118px}
+}
