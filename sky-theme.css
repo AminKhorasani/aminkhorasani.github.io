@@ -1961,3 +1961,89 @@ html[dir="rtl"] .rakht-node-root{
   .rakht-link-a,.rakht-link-b,.rakht-link-c{width:112px}
   .rakht-link-d{width:118px}
 }
+
+
+/* 2026-10-21 project delivery status badges */
+.project-badges{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.project-status{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 10px;
+  border-radius:999px;
+  font:600 8px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
+  letter-spacing:.11em;
+  white-space:nowrap;
+}
+.project-status:before{
+  content:"";
+  width:6px;
+  height:6px;
+  margin-right:7px;
+  border-radius:50%;
+}
+.project-status-shipped{
+  color:#b9f6d2;
+  border:1px solid rgba(88,214,145,.22);
+  background:rgba(44,164,100,.08);
+}
+.project-status-shipped:before{
+  background:#59d793;
+  box-shadow:0 0 12px rgba(89,215,147,.48);
+}
+.project-status-progress{
+  color:#bcd9ff;
+  border:1px solid rgba(143,188,255,.22);
+  background:rgba(42,99,255,.07);
+}
+.project-status-progress:before{
+  background:#5c8cff;
+  box-shadow:0 0 12px rgba(92,140,255,.48);
+}
+html[data-theme="light"] .project-status-shipped{
+  color:#17633a;
+  border-color:rgba(23,99,58,.18);
+  background:rgba(23,99,58,.055);
+}
+html[data-theme="light"] .project-status-shipped:before{
+  background:#23834d;
+  box-shadow:0 0 10px rgba(35,131,77,.24);
+}
+html[data-theme="light"] .project-status-progress{
+  color:#214f8b;
+  border-color:rgba(33,79,139,.18);
+  background:rgba(33,79,139,.05);
+}
+html[data-theme="light"] .project-status-progress:before{
+  background:#315f98;
+  box-shadow:0 0 10px rgba(49,95,152,.22);
+}
+html[dir="rtl"] .project-status{
+  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+  letter-spacing:.02em;
+}
+html[dir="rtl"] .project-status:before{
+  margin-right:0;
+  margin-left:7px;
+}
+@media(max-width:680px){
+  .project-header{
+    align-items:flex-start;
+    gap:12px;
+  }
+  .project-badges{
+    gap:6px;
+  }
+  .project-status,
+  .project-private-badge{
+    min-height:26px;
+    padding:0 8px;
+    font-size:7px;
+  }
+}
