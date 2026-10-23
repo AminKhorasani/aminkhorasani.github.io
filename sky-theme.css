@@ -1832,7 +1832,7 @@ html[data-theme="light"] .map-open-link:hover{
 }
 
 
-/* 2026-10-24 The Rakht: branching agentic root-system artwork */
+/* 2026-10-24 The Rakht: organic branching roots, without agent iconography */
 .project-rakht .project-body{max-width:610px}
 .project-rakht .project-tech{max-width:590px}
 .project-art-rakht{
@@ -1847,38 +1847,20 @@ html[data-theme="light"] .map-open-link:hover{
 }
 .project-art-rakht::after{display:none}
 .rakht-root-svg{position:relative;width:100%;height:100%;overflow:visible;display:block}
-.rakht-root-main,.rakht-root-secondary,.rakht-root-hairs{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.rakht-root-main,.rakht-root-secondary,.rakht-root-hairs,.rakht-root-grain{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .rakht-root-main{stroke:url(#rakht-root-stroke);stroke-width:3.8;opacity:.77;filter:drop-shadow(0 0 5px rgba(100,156,255,.16))}
 .rakht-root-main .rakht-trunk{stroke-width:6.5;opacity:.92}
 .rakht-root-secondary{stroke:#83b2ff;stroke-width:1.8;opacity:.48}
 .rakht-root-hairs{stroke:#85aef0;stroke-width:1;opacity:.36}
-.rakht-agent-orbit{fill:rgba(19,42,86,.40);stroke:rgba(133,180,255,.45);stroke-width:1}
-.rakht-agent-core{fill:url(#rakht-agent-fill);opacity:.9}
-.rakht-agent-dot{fill:#f5f9ff}
-.rakht-subagent{filter:drop-shadow(0 0 9px rgba(110,164,255,.35))}
-.rakht-orchestrator-shell{fill:rgba(8,20,44,.97);stroke:rgba(159,197,255,.52);stroke-width:1}
-.rakht-orchestrator{filter:drop-shadow(0 0 16px rgba(72,123,255,.18))}
-.rakht-orchestrator-icon{fill:rgba(105,167,255,.18);stroke:#8ebdff;stroke-width:1}
-.rakht-orchestrator-icon-core{fill:#e2efff}
-.rakht-orchestrator-title{font:600 13px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;fill:#dce9ff;letter-spacing:1px}
-.rakht-agents-caption{font:500 9px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;fill:#91b8f4;letter-spacing:1.5px;opacity:.83}
+.rakht-root-grain{fill:none;stroke:#c3d9ff;stroke-width:.85;opacity:.3;stroke-linecap:round}
 html[data-theme="light"] .project-art-rakht::before{background:radial-gradient(ellipse at 50% 45%,rgba(23,63,115,.08),transparent 68%)}
 html[data-theme="light"] .rakht-root-main{stroke:#39669d;filter:none;opacity:.8}
 html[data-theme="light"] .rakht-root-secondary{stroke:#426d9d;opacity:.52}
 html[data-theme="light"] .rakht-root-hairs{stroke:#527ba4;opacity:.38}
-html[data-theme="light"] .rakht-agent-orbit{fill:rgba(255,255,255,.85);stroke:rgba(23,63,115,.42)}
-html[data-theme="light"] .rakht-agent-core{fill:#4178b7}
-html[data-theme="light"] .rakht-agent-dot{fill:#fff}
-html[data-theme="light"] .rakht-subagent{filter:none}
-html[data-theme="light"] .rakht-orchestrator-shell{fill:rgba(255,255,255,.97);stroke:rgba(23,63,115,.32)}
-html[data-theme="light"] .rakht-orchestrator-icon{fill:rgba(23,63,115,.08);stroke:#376a9e}
-html[data-theme="light"] .rakht-orchestrator-icon-core{fill:#376a9e}
-html[data-theme="light"] .rakht-orchestrator-title{fill:#173f73}
-html[data-theme="light"] .rakht-agents-caption{fill:#35618f}
+html[data-theme="light"] .rakht-root-grain{stroke:#527ba4;opacity:.32}
 @media(max-width:680px){
   .project-art-rakht{width:340px;right:-62px;bottom:-48px;opacity:.85}
 }
-@media(prefers-reduced-motion:reduce){.rakht-subagent,.rakht-orchestrator{filter:none}}
 
 /* 2026-10-21 project delivery status badges */
 .project-badges{
