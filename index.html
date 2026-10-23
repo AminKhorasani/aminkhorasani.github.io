@@ -152,21 +152,72 @@
           </div>
           <div class="project-body">
             <h3>The Rakht</h3>
-            <p data-i18n="rakhtDescription">Built at Digikala, The Rakht is an internal decision-intelligence system built around KPI Driver Trees and WBR, connecting metric movement to driver relationships, anomaly investigation, root-cause narratives and weekly business context — so teams can move from “what changed?” to “why?” and “what next?”.</p>
+            <p data-i18n="rakhtDescription">Built at Digikala, The Rakht combines KPI Driver Trees and WBR with an orchestrator agent coordinating specialized sub-agents. It connects metric changes to driver relationships, anomaly investigation, and root-cause narratives to support faster, more actionable business decisions.</p>
           </div>
           <div class="project-tech">
-            <span>KPI Driver Tree</span><span>WBR</span><span>Root Cause</span><span>Decision Intelligence</span>
+            <span>KPI Driver Tree</span><span>WBR</span><span>Orchestrator Agent</span><span>Sub-Agents</span><span>Decision Intelligence</span>
           </div>
           <div class="project-art project-art-rakht" aria-hidden="true">
-            <span class="rakht-link rakht-link-a"></span>
-            <span class="rakht-link rakht-link-b"></span>
-            <span class="rakht-link rakht-link-c"></span>
-            <span class="rakht-link rakht-link-d"></span>
-            <span class="rakht-node rakht-node-root">KPI</span>
-            <span class="rakht-node rakht-node-a"></span>
-            <span class="rakht-node rakht-node-b"></span>
-            <span class="rakht-node rakht-node-c"></span>
-            <span class="rakht-node rakht-node-d"></span>
+            <svg class="rakht-root-svg" viewBox="0 0 560 510" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <defs>
+                <linearGradient id="rakht-root-stroke" x1="0" y1="0" x2="0.6" y2="1">
+                  <stop offset="0" stop-color="#c2dcff"/><stop offset=".45" stop-color="#78adff"/><stop offset="1" stop-color="#3152a2"/>
+                </linearGradient>
+                <radialGradient id="rakht-agent-fill"><stop offset="0" stop-color="#bcd9ff"/><stop offset="1" stop-color="#4777d8"/></radialGradient>
+              </defs>
+              <g class="rakht-root-main">
+                <path class="rakht-trunk" d="M281 112 C280 139 290 163 283 191"/>
+                <path d="M283 180 C250 197 192 209 143 250 C112 278 102 316 84 339"/>
+                <path d="M283 186 C258 211 245 233 227 283 C214 317 194 344 173 370"/>
+                <path d="M284 187 C309 214 355 220 387 271 C410 307 416 330 444 357"/>
+                <path d="M284 180 C334 197 420 203 466 249 C494 276 502 323 535 349"/>
+              </g>
+              <g class="rakht-root-secondary">
+                <path d="M143 250 C118 264 100 278 62 286 C42 292 28 307 16 329"/>
+                <path d="M126 273 C143 302 151 315 145 340 C140 368 130 398 119 422"/>
+                <path d="M90 326 C72 343 55 352 43 381 C31 403 27 426 12 446"/>
+                <path d="M204 327 C211 358 217 387 204 414 C194 438 187 455 182 482"/>
+                <path d="M179 364 C159 379 162 399 152 417 C140 446 129 464 113 493"/>
+                <path d="M227 283 C251 310 270 344 283 371 C298 407 302 441 315 490"/>
+                <path d="M387 271 C357 291 331 313 337 353 C343 393 346 431 332 476"/>
+                <path d="M405 307 C427 323 454 335 468 370 C479 401 497 434 523 465"/>
+                <path d="M466 249 C489 245 508 236 527 245 C541 251 545 270 553 284"/>
+                <path d="M480 274 C458 301 463 322 482 340 C504 359 525 371 547 389"/>
+              </g>
+              <g class="rakht-root-hairs">
+                <path d="M106 301 C88 302 83 310 73 323 C63 337 48 345 37 345"/>
+                <path d="M72 333 C55 333 44 343 39 359"/>
+                <path d="M46 379 C28 384 24 391 17 411"/>
+                <path d="M132 312 C125 328 115 333 104 337"/>
+                <path d="M143 346 C158 359 164 367 164 387"/>
+                <path d="M129 400 C105 415 103 426 101 444"/>
+                <path d="M190 346 C175 344 160 349 148 359"/>
+                <path d="M201 379 C184 392 180 413 170 427"/>
+                <path d="M152 415 C162 432 163 449 157 474"/>
+                <path d="M269 339 C252 349 247 366 241 384"/>
+                <path d="M284 377 C270 399 268 428 263 450"/>
+                <path d="M298 425 C313 439 319 451 332 458"/>
+                <path d="M338 346 C321 364 306 373 300 396"/>
+                <path d="M341 390 C360 405 367 428 370 457"/>
+                <path d="M399 304 C385 335 377 348 377 379"/>
+                <path d="M430 339 C422 362 421 382 433 402"/>
+                <path d="M462 363 C445 382 447 406 448 431"/>
+                <path d="M475 386 C497 390 504 407 512 425"/>
+                <path d="M503 318 C522 318 538 326 550 341"/>
+                <path d="M516 245 C516 225 535 216 548 218"/>
+              </g>
+              <g class="rakht-subagent" transform="translate(143 250)"><circle class="rakht-agent-orbit" r="19"/><circle class="rakht-agent-core" r="7"/><circle class="rakht-agent-dot" r="2.4"/></g>
+              <g class="rakht-subagent" transform="translate(227 283)"><circle class="rakht-agent-orbit" r="19"/><circle class="rakht-agent-core" r="7"/><circle class="rakht-agent-dot" r="2.4"/></g>
+              <g class="rakht-subagent" transform="translate(387 271)"><circle class="rakht-agent-orbit" r="19"/><circle class="rakht-agent-core" r="7"/><circle class="rakht-agent-dot" r="2.4"/></g>
+              <g class="rakht-subagent" transform="translate(466 249)"><circle class="rakht-agent-orbit" r="19"/><circle class="rakht-agent-core" r="7"/><circle class="rakht-agent-dot" r="2.4"/></g>
+              <g class="rakht-orchestrator">
+                <rect class="rakht-orchestrator-shell" x="193" y="57" width="176" height="55" rx="14"/>
+                <circle class="rakht-orchestrator-icon" cx="218" cy="85" r="7"/>
+                <circle class="rakht-orchestrator-icon-core" cx="218" cy="85" r="2.5"/>
+                <text class="rakht-orchestrator-title" x="236" y="89">ORCHESTRATOR</text>
+              </g>
+              <text class="rakht-agents-caption" x="312" y="236">SPECIALIZED SUB-AGENTS</text>
+            </svg>
           </div>
         </article>
 

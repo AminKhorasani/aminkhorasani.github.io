@@ -1832,136 +1832,53 @@ html[data-theme="light"] .map-open-link:hover{
 }
 
 
-/* 2026-10-21 The Rakht featured project */
-.project-private{
-  cursor:default;
-}
-.project-private:hover{
-  transform:translateY(-2px);
-}
-.project-private-badge{
-  display:inline-flex;
-  align-items:center;
-  min-height:30px;
-  padding:0 10px;
-  border:1px solid rgba(143,188,255,.22);
-  border-radius:999px;
-  color:#8fbcff;
-  background:rgba(42,99,255,.06);
-  font:600 8px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
-  letter-spacing:.12em;
-  white-space:nowrap;
-}
-.project-rakht .project-body{
-  max-width:610px;
-}
-.project-rakht .project-tech{
-  max-width:560px;
-}
+/* 2026-10-24 The Rakht: branching agentic root-system artwork */
+.project-rakht .project-body{max-width:610px}
+.project-rakht .project-tech{max-width:590px}
 .project-art-rakht{
-  left:auto;
-  right:-34px;
-  bottom:-54px;
-  width:460px;
-  height:460px;
-  transform:none;
+  position:absolute;left:auto;right:-34px;bottom:-54px;
+  width:490px;height:auto;aspect-ratio:560/510;
+  transform:none;overflow:visible;pointer-events:none;opacity:.94;z-index:1;
 }
-.project-art-rakht:before,
-.project-art-rakht:after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  border:1px solid rgba(143,188,255,.10);
+.project-art-rakht::before{
+  content:"";position:absolute;inset:16% 8% 6%;border:0;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 45%,rgba(42,99,255,.14),transparent 68%);
+  filter:blur(30px);pointer-events:none;
 }
-.project-art-rakht:before{inset:38px}
-.project-art-rakht:after{inset:96px}
-.rakht-node{
-  position:absolute;
-  width:18px;
-  height:18px;
-  border-radius:50%;
-  background:#0b1731;
-  border:1px solid rgba(143,188,255,.38);
-  box-shadow:0 0 24px rgba(42,99,255,.12);
-  z-index:2;
-}
-.rakht-node-root{
-  left:50%;
-  top:50%;
-  width:96px;
-  height:96px;
-  margin:-48px 0 0 -48px;
-  display:grid;
-  place-items:center;
-  color:#dce9ff;
-  background:radial-gradient(circle at 34% 28%,rgba(143,188,255,.22),rgba(19,43,92,.72) 58%,rgba(5,12,27,.96));
-  border-color:rgba(143,188,255,.34);
-  font:600 17px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;
-  letter-spacing:.08em;
-  box-shadow:0 0 70px rgba(42,99,255,.10);
-}
-.rakht-node-a{left:14%;top:24%}
-.rakht-node-b{right:12%;top:22%}
-.rakht-node-c{left:17%;bottom:20%}
-.rakht-node-d{right:10%;bottom:18%}
-.rakht-link{
-  position:absolute;
-  left:50%;
-  top:50%;
-  height:1px;
-  transform-origin:left center;
-  background:linear-gradient(90deg,rgba(143,188,255,.34),rgba(143,188,255,.08));
-  z-index:1;
-}
-.rakht-link-a{width:154px;transform:rotate(214deg)}
-.rakht-link-b{width:158px;transform:rotate(-35deg)}
-.rakht-link-c{width:156px;transform:rotate(145deg)}
-.rakht-link-d{width:164px;transform:rotate(36deg)}
-html[data-theme="light"] .project-private-badge{
-  color:#214f8b;
-  border-color:rgba(33,79,139,.22);
-  background:rgba(33,79,139,.05);
-}
-html[data-theme="light"] .rakht-node{
-  background:#f7f9fc;
-  border-color:rgba(23,63,115,.28);
-  box-shadow:0 0 22px rgba(23,63,115,.08);
-}
-html[data-theme="light"] .rakht-node-root{
-  color:#173f73;
-  background:radial-gradient(circle at 34% 28%,rgba(73,111,156,.14),rgba(255,255,255,.96) 66%);
-  border-color:rgba(23,63,115,.24);
-}
-html[data-theme="light"] .rakht-link{
-  background:linear-gradient(90deg,rgba(23,63,115,.28),rgba(23,63,115,.05));
-}
-html[data-theme="light"] .project-art-rakht:before,
-html[data-theme="light"] .project-art-rakht:after{
-  border-color:rgba(23,63,115,.09);
-}
-html[dir="rtl"] .project-private-badge,
-html[dir="rtl"] .rakht-node-root{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-  letter-spacing:.02em;
-}
+.project-art-rakht::after{display:none}
+.rakht-root-svg{position:relative;width:100%;height:100%;overflow:visible;display:block}
+.rakht-root-main,.rakht-root-secondary,.rakht-root-hairs{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.rakht-root-main{stroke:url(#rakht-root-stroke);stroke-width:3.8;opacity:.77;filter:drop-shadow(0 0 5px rgba(100,156,255,.16))}
+.rakht-root-main .rakht-trunk{stroke-width:6.5;opacity:.92}
+.rakht-root-secondary{stroke:#83b2ff;stroke-width:1.8;opacity:.48}
+.rakht-root-hairs{stroke:#85aef0;stroke-width:1;opacity:.36}
+.rakht-agent-orbit{fill:rgba(19,42,86,.40);stroke:rgba(133,180,255,.45);stroke-width:1}
+.rakht-agent-core{fill:url(#rakht-agent-fill);opacity:.9}
+.rakht-agent-dot{fill:#f5f9ff}
+.rakht-subagent{filter:drop-shadow(0 0 9px rgba(110,164,255,.35))}
+.rakht-orchestrator-shell{fill:rgba(8,20,44,.97);stroke:rgba(159,197,255,.52);stroke-width:1}
+.rakht-orchestrator{filter:drop-shadow(0 0 16px rgba(72,123,255,.18))}
+.rakht-orchestrator-icon{fill:rgba(105,167,255,.18);stroke:#8ebdff;stroke-width:1}
+.rakht-orchestrator-icon-core{fill:#e2efff}
+.rakht-orchestrator-title{font:600 13px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;fill:#dce9ff;letter-spacing:1px}
+.rakht-agents-caption{font:500 9px/1 "Geist Mono","SFMono-Regular",Consolas,monospace;fill:#91b8f4;letter-spacing:1.5px;opacity:.83}
+html[data-theme="light"] .project-art-rakht::before{background:radial-gradient(ellipse at 50% 45%,rgba(23,63,115,.08),transparent 68%)}
+html[data-theme="light"] .rakht-root-main{stroke:#39669d;filter:none;opacity:.8}
+html[data-theme="light"] .rakht-root-secondary{stroke:#426d9d;opacity:.52}
+html[data-theme="light"] .rakht-root-hairs{stroke:#527ba4;opacity:.38}
+html[data-theme="light"] .rakht-agent-orbit{fill:rgba(255,255,255,.85);stroke:rgba(23,63,115,.42)}
+html[data-theme="light"] .rakht-agent-core{fill:#4178b7}
+html[data-theme="light"] .rakht-agent-dot{fill:#fff}
+html[data-theme="light"] .rakht-subagent{filter:none}
+html[data-theme="light"] .rakht-orchestrator-shell{fill:rgba(255,255,255,.97);stroke:rgba(23,63,115,.32)}
+html[data-theme="light"] .rakht-orchestrator-icon{fill:rgba(23,63,115,.08);stroke:#376a9e}
+html[data-theme="light"] .rakht-orchestrator-icon-core{fill:#376a9e}
+html[data-theme="light"] .rakht-orchestrator-title{fill:#173f73}
+html[data-theme="light"] .rakht-agents-caption{fill:#35618f}
 @media(max-width:680px){
-  .project-art-rakht{
-    width:320px;
-    height:320px;
-    right:-72px;
-    bottom:-70px;
-    opacity:.86;
-  }
-  .rakht-node-root{
-    width:76px;
-    height:76px;
-    margin:-38px 0 0 -38px;
-    font-size:13px;
-  }
-  .rakht-link-a,.rakht-link-b,.rakht-link-c{width:112px}
-  .rakht-link-d{width:118px}
+  .project-art-rakht{width:340px;right:-62px;bottom:-48px;opacity:.85}
 }
-
+@media(prefers-reduced-motion:reduce){.rakht-subagent,.rakht-orchestrator{filter:none}}
 
 /* 2026-10-21 project delivery status badges */
 .project-badges{
