@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="./design-sections.css?v=20261006-3" />
   <link rel="stylesheet" href="./design-responsive.css?v=20261006-3" />
   <link rel="stylesheet" href="./reference-theme.css?v=20261006-1" />
-  <link rel="stylesheet" href="./sky-theme.css?v=20261024-3" />
+  <link rel="stylesheet" href="./sky-theme.css?v=20261101-1" />
   <link rel="stylesheet" href="./experience-timeline.css?v=20261020-2" />
 </head>
 
@@ -227,7 +227,7 @@
         </article>
 
         <div class="project-stack">
-          <a class="project reveal delay-1" href="https://github.com/AminKhorasani/jaeiro" target="_blank" rel="noreferrer">
+          <a class="project project-jaeiro reveal delay-1" href="https://github.com/AminKhorasani/jaeiro" target="_blank" rel="noreferrer">
             <div class="project-number">02</div>
             <div class="project-header">
               <p>PRODUCT · COMMUNITY</p>
@@ -241,9 +241,25 @@
               <p data-i18n="jaeiroDescription">A Persian, mobile-first food-discovery community with reviews, collections, events, reputation and moderation.</p>
             </div>
             <div class="project-tech"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
+            <div class="project-art project-art-jaeiro" aria-hidden="true">
+              <svg class="jaeiro-orbit-svg" viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <ellipse class="jaeiro-orbit-ring" cx="130" cy="115" rx="91" ry="78"/>
+                <ellipse class="jaeiro-orbit-path" cx="130" cy="115" rx="111" ry="48" transform="rotate(-28 130 115)"/>
+                <path class="jaeiro-orbit-arc" d="M43 148 C54 195 105 217 153 207"/>
+                <circle class="jaeiro-orbit-dot" cx="31" cy="105" r="4"/>
+                <circle class="jaeiro-orbit-dot jaeiro-orbit-dot-small" cx="214" cy="38" r="3"/>
+                <circle class="jaeiro-orbit-dot jaeiro-orbit-dot-small" cx="220" cy="177" r="2.5"/>
+              </svg>
+              <div class="jaeiro-lockup">
+                <div class="jaeiro-logo-frame">
+                  <img src="https://raw.githubusercontent.com/AminKhorasani/jaeiro/76463b0b7c8af050b4b01def3fee4dbdd561caef/src/app/icon.png" alt="" width="256" height="256" loading="lazy" decoding="async"/>
+                </div>
+                <span class="jaeiro-wordmark">جایی‌رو</span>
+              </div>
+            </div>
           </a>
 
-          <a class="project reveal delay-2" href="https://github.com/AminKhorasani/Poolak" target="_blank" rel="noreferrer">
+          <a class="project project-poolak reveal delay-2" href="https://github.com/AminKhorasani/Poolak" target="_blank" rel="noreferrer">
             <div class="project-number">03</div>
             <div class="project-header">
               <p>PRODUCT · PERSONAL FINANCE</p>
@@ -257,6 +273,39 @@
               <p data-i18n="poolakDescription">A personal-finance product for managing accounts, transactions, budgets, goals and safe-to-spend — designed around clear, everyday financial decisions.</p>
             </div>
             <div class="project-tech"><span>TypeScript</span><span>React</span><span>Express</span><span>PostgreSQL</span></div>
+            <div class="project-art project-art-poolak" aria-hidden="true">
+              <svg class="poolak-coin-svg" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                  <linearGradient id="poolak-coin-face-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#b8fff1"/>
+                    <stop offset=".42" stop-color="#20c7b1"/>
+                    <stop offset="1" stop-color="#08766f"/>
+                  </linearGradient>
+                  <linearGradient id="poolak-coin-edge-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e0fff9"/>
+                    <stop offset=".48" stop-color="#159f94"/>
+                    <stop offset="1" stop-color="#075b59"/>
+                  </linearGradient>
+                  <linearGradient id="poolak-coin-letter-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f2fffc"/>
+                    <stop offset="1" stop-color="#b3f5e9"/>
+                  </linearGradient>
+                </defs>
+                <ellipse class="poolak-coin-shadow" cx="184" cy="205" rx="119" ry="126"/>
+                <circle class="poolak-coin-edge" cx="180" cy="178" r="129"/>
+                <circle class="poolak-coin-face" cx="180" cy="173" r="120"/>
+                <circle class="poolak-coin-rim" cx="180" cy="173" r="103"/>
+                <circle class="poolak-coin-inner" cx="180" cy="173" r="88"/>
+                <g class="poolak-coin-ticks">
+                  <path d="M180 61v13 M180 272v13 M68 173h13 M279 173h13"/>
+                  <path d="M101 94l9 9 M250 243l9 9 M259 94l-9 9 M110 243l-9 9"/>
+                </g>
+                <path class="poolak-coin-monogram" fill-rule="evenodd" d="
+                  M139 246V99h70c47 0 73 23 73 63 0 40-27 63-74 63h-37v21h-32zm32-50h36c28 0 43-11 43-34 0-22-15-33-43-33h-36v67z"/>
+                <path class="poolak-coin-glint" d="M105 119c12-18 29-31 49-38"/>
+                <circle class="poolak-coin-spark" cx="270" cy="91" r="4"/>
+              </svg>
+            </div>
           </a>
         </div>
       </div>
