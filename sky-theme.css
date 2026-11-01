@@ -2017,7 +2017,8 @@ html[dir="rtl"] .project-status:before{
   stroke:#b9d2ff;stroke-width:.8;stroke-dasharray:2 6;opacity:.22;
 }
 .jaeiro-mark-image{
-  opacity:.88;filter:drop-shadow(0 0 8px rgba(105,167,255,.13));
+  opacity:.88;
+  filter:url(#jaeiro-mark-monochrome) drop-shadow(0 0 8px rgba(105,167,255,.13));
 }
 .jaeiro-mark-point{fill:#9fc5ff;opacity:.66}
 .jaeiro-mark-point-small{opacity:.4}
@@ -2026,7 +2027,10 @@ html[data-theme="light"] .project-art-jaeiro::before{
 }
 html[data-theme="light"] .jaeiro-mark-orbit{stroke:#496f9c;opacity:.24}
 html[data-theme="light"] .jaeiro-mark-orbit-inner{stroke:#173f73;opacity:.17}
-html[data-theme="light"] .jaeiro-mark-image{filter:url(#jaeiro-mark-monochrome-light);opacity:.78}
+html[data-theme="light"] .jaeiro-mark-image{
+  filter:url(#jaeiro-mark-monochrome-light) drop-shadow(0 0 7px rgba(23,63,115,.08));
+  opacity:.78;
+}
 html[data-theme="light"] .jaeiro-mark-point{fill:#496f9c;opacity:.48}
 
 .project-poolak .project-body{max-width:73%}
@@ -2052,12 +2056,14 @@ html[data-theme="light"] .jaeiro-mark-point{fill:#496f9c;opacity:.48}
 .poolak-coin-ticks{
   fill:none;stroke:#8fbaff;stroke-width:1.6;stroke-linecap:round;opacity:.48;
 }
-.poolak-coin-mark{
-  fill:none;stroke:#b9d2ff;stroke-width:6.2;stroke-linecap:round;
-  stroke-linejoin:round;opacity:.78;
+.poolak-coin-center-ring{
+  fill:none;
+  stroke:rgba(185,210,255,.38);
+  stroke-width:1.15;
 }
-.poolak-coin-mark-detail{
-  fill:none;stroke:#69a7ff;stroke-width:1.5;stroke-linecap:round;opacity:.65;
+.poolak-coin-center-dot{
+  fill:#b9d2ff;
+  opacity:.58;
 }
 .poolak-coin-glint{
   fill:none;stroke:#dce7ff;stroke-width:2;stroke-linecap:round;opacity:.38;
@@ -2071,8 +2077,8 @@ html[data-theme="light"] .poolak-coin-face{
 }
 html[data-theme="light"] .poolak-coin-rim{stroke:rgba(23,63,115,.28)}
 html[data-theme="light"] .poolak-coin-ticks{stroke:#496f9c;opacity:.52}
-html[data-theme="light"] .poolak-coin-mark{stroke:#173f73;opacity:.76}
-html[data-theme="light"] .poolak-coin-mark-detail{stroke:#496f9c;opacity:.7}
+html[data-theme="light"] .poolak-coin-center-ring{stroke:rgba(23,63,115,.28)}
+html[data-theme="light"] .poolak-coin-center-dot{fill:#173f73;opacity:.52}
 html[data-theme="light"] .poolak-coin-glint{stroke:#496f9c;opacity:.35}
 html[data-theme="light"] .poolak-coin-point{fill:#173f73;opacity:.58}
 @media(max-width:680px){
