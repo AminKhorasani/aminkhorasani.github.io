@@ -1996,183 +1996,94 @@ html[dir="rtl"] .project-status:before{
 }
 
 
-/* 2026-11-01 selected project artwork: Jaeiro brand mark and Poolak coin. */
+/* 2026-11-01 refined project artwork: monochrome Jaeiro mark + native Poolak coin. */
 .project-jaeiro .project-body{max-width:70%}
 .project-jaeiro .project-tech{max-width:68%}
 .project-art-jaeiro{
-  position:absolute;
-  left:auto;
-  right:-4px;
-  bottom:-31px;
-  width:210px;
-  height:210px;
-  transform:none;
-  overflow:visible;
-  pointer-events:none;
-  opacity:.96;
-  z-index:1;
+  position:absolute;left:auto;right:-14px;bottom:-28px;
+  width:202px;height:180px;transform:none;overflow:visible;
+  pointer-events:none;opacity:.9;z-index:1;
 }
-.jaeiro-orbit-svg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  overflow:visible;
+.project-art-jaeiro::before{
+  content:"";position:absolute;inset:18% 14% 8%;border-radius:50%;
+  background:radial-gradient(ellipse at 52% 52%,rgba(42,99,255,.11),transparent 70%);
+  filter:blur(24px);pointer-events:none;
 }
-.jaeiro-orbit-ring,
-.jaeiro-orbit-path,
-.jaeiro-orbit-arc{
-  fill:none;
-  stroke:#f2620e;
-  stroke-linecap:round;
+.jaeiro-mark-svg{position:relative;display:block;width:100%;height:100%;overflow:visible}
+.jaeiro-mark-orbit,.jaeiro-mark-orbit-inner{
+  fill:none;stroke:#8fbaff;stroke-width:1.15;opacity:.2;
 }
-.jaeiro-orbit-ring{stroke-width:1.15;opacity:.22}
-.jaeiro-orbit-path{stroke-width:1.1;stroke-dasharray:3 7;opacity:.34}
-.jaeiro-orbit-arc{stroke-width:1.5;opacity:.22}
-.jaeiro-orbit-dot{
-  fill:#ff8b45;
-  filter:drop-shadow(0 0 7px rgba(242,98,14,.55));
+.jaeiro-mark-orbit-inner{
+  stroke:#b9d2ff;stroke-width:.8;stroke-dasharray:2 6;opacity:.22;
 }
-.jaeiro-orbit-dot-small{opacity:.65}
-.jaeiro-lockup{
-  position:absolute;
-  right:34px;
-  bottom:29px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:7px;
+.jaeiro-mark-image{
+  opacity:.88;filter:drop-shadow(0 0 8px rgba(105,167,255,.13));
 }
-.jaeiro-logo-frame{
-  width:104px;
-  height:104px;
-  overflow:hidden;
-  border-radius:25px;
-  background:#fff5ec;
-  border:1px solid rgba(242,98,14,.26);
-  box-shadow:0 12px 32px rgba(0,0,0,.2),0 0 28px rgba(242,98,14,.10);
+.jaeiro-mark-point{fill:#9fc5ff;opacity:.66}
+.jaeiro-mark-point-small{opacity:.4}
+html[data-theme="light"] .project-art-jaeiro::before{
+  background:radial-gradient(ellipse at 52% 52%,rgba(23,63,115,.07),transparent 70%);
 }
-.jaeiro-logo-frame img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.jaeiro-wordmark{
-  color:#ffad7b;
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-  font-size:13px;
-  font-weight:800;
-  line-height:1.3;
-  text-shadow:0 1px 12px rgba(242,98,14,.16);
-}
-html[data-theme="light"] .jaeiro-orbit-ring,
-html[data-theme="light"] .jaeiro-orbit-path,
-html[data-theme="light"] .jaeiro-orbit-arc{stroke:#d94f06}
-html[data-theme="light"] .jaeiro-wordmark{color:#d94f06}
-html[data-theme="light"] .jaeiro-logo-frame{
-  box-shadow:0 10px 26px rgba(90,52,24,.12);
-}
+html[data-theme="light"] .jaeiro-mark-orbit{stroke:#496f9c;opacity:.24}
+html[data-theme="light"] .jaeiro-mark-orbit-inner{stroke:#173f73;opacity:.17}
+html[data-theme="light"] .jaeiro-mark-image{filter:url(#jaeiro-mark-monochrome-light);opacity:.78}
+html[data-theme="light"] .jaeiro-mark-point{fill:#496f9c;opacity:.48}
 
 .project-poolak .project-body{max-width:73%}
 .project-poolak .project-tech{max-width:74%}
 .project-art-poolak{
-  position:absolute;
-  left:auto;
-  right:-14px;
-  bottom:-48px;
-  width:218px;
-  height:218px;
-  transform:none;
-  overflow:visible;
-  pointer-events:none;
-  opacity:.94;
-  z-index:1;
+  position:absolute;left:auto;right:-12px;bottom:-31px;
+  width:198px;height:198px;transform:none;overflow:visible;
+  pointer-events:none;opacity:.9;z-index:1;
 }
 .project-art-poolak::before{
-  content:"";
-  position:absolute;
-  inset:13%;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(20,184,166,.18),transparent 69%);
-  filter:blur(24px);
+  content:"";position:absolute;inset:16%;border-radius:50%;
+  background:radial-gradient(circle,rgba(42,99,255,.10),transparent 70%);
+  filter:blur(22px);
 }
 .poolak-coin-svg{
-  position:relative;
-  display:block;
-  width:100%;
-  height:100%;
-  overflow:visible;
-  filter:drop-shadow(0 13px 22px rgba(0,0,0,.18));
-}
-.poolak-coin-shadow{fill:rgba(0,0,0,.2);filter:blur(9px)}
-.poolak-coin-edge{
-  fill:url(#poolak-coin-edge-gradient);
-  stroke:rgba(208,255,247,.58);
-  stroke-width:2.2;
+  position:relative;display:block;width:100%;height:100%;overflow:visible;
+  filter:drop-shadow(0 0 10px rgba(42,99,255,.08));
 }
 .poolak-coin-face{
-  fill:url(#poolak-coin-face-gradient);
-  stroke:#b9fff2;
-  stroke-width:2.2;
+  fill:rgba(42,99,255,.045);stroke:rgba(159,197,255,.72);stroke-width:1.8;
 }
-.poolak-coin-rim{
-  fill:none;
-  stroke:rgba(237,255,251,.72);
-  stroke-width:2.2;
-}
-.poolak-coin-inner{
-  fill:rgba(3,91,87,.12);
-  stroke:rgba(230,255,250,.34);
-  stroke-width:1.5;
-}
+.poolak-coin-rim{fill:none;stroke:rgba(185,210,255,.42);stroke-width:1.2}
 .poolak-coin-ticks{
-  fill:none;
-  stroke:rgba(237,255,251,.66);
-  stroke-width:3;
-  stroke-linecap:round;
+  fill:none;stroke:#8fbaff;stroke-width:1.6;stroke-linecap:round;opacity:.48;
 }
-.poolak-coin-monogram{
-  fill:url(#poolak-coin-letter-gradient);
-  stroke:rgba(3,91,87,.2);
-  stroke-width:1;
-  stroke-linejoin:round;
-  filter:drop-shadow(0 2px 2px rgba(0,73,67,.22));
+.poolak-coin-mark{
+  fill:none;stroke:#b9d2ff;stroke-width:6.2;stroke-linecap:round;
+  stroke-linejoin:round;opacity:.78;
+}
+.poolak-coin-mark-detail{
+  fill:none;stroke:#69a7ff;stroke-width:1.5;stroke-linecap:round;opacity:.65;
 }
 .poolak-coin-glint{
-  fill:none;
-  stroke:rgba(255,255,255,.72);
-  stroke-width:4;
-  stroke-linecap:round;
+  fill:none;stroke:#dce7ff;stroke-width:2;stroke-linecap:round;opacity:.38;
 }
-.poolak-coin-spark{
-  fill:#e5fff9;
-  filter:drop-shadow(0 0 8px rgba(117,255,235,.75));
+.poolak-coin-point{fill:#b9d2ff;opacity:.75}
+html[data-theme="light"] .project-art-poolak::before{
+  background:radial-gradient(circle,rgba(23,63,115,.07),transparent 70%);
 }
+html[data-theme="light"] .poolak-coin-face{
+  fill:rgba(23,63,115,.025);stroke:rgba(23,63,115,.58);
+}
+html[data-theme="light"] .poolak-coin-rim{stroke:rgba(23,63,115,.28)}
+html[data-theme="light"] .poolak-coin-ticks{stroke:#496f9c;opacity:.52}
+html[data-theme="light"] .poolak-coin-mark{stroke:#173f73;opacity:.76}
+html[data-theme="light"] .poolak-coin-mark-detail{stroke:#496f9c;opacity:.7}
+html[data-theme="light"] .poolak-coin-glint{stroke:#496f9c;opacity:.35}
+html[data-theme="light"] .poolak-coin-point{fill:#173f73;opacity:.58}
 @media(max-width:680px){
   .project-jaeiro .project-body{max-width:76%}
   .project-jaeiro .project-tech{max-width:75%}
   .project-art-jaeiro{
-    width:166px;
-    height:170px;
-    right:-20px;
-    bottom:-27px;
-    opacity:.88;
+    width:158px;height:145px;right:-18px;bottom:-24px;opacity:.82;
   }
-  .jaeiro-lockup{right:26px;bottom:25px;gap:5px}
-  .jaeiro-logo-frame{width:80px;height:80px;border-radius:19px}
-  .jaeiro-wordmark{font-size:11px}
   .project-poolak .project-body{max-width:76%}
   .project-poolak .project-tech{max-width:78%}
   .project-art-poolak{
-    width:166px;
-    height:166px;
-    right:-29px;
-    bottom:-32px;
-    opacity:.86;
+    width:154px;height:154px;right:-24px;bottom:-25px;opacity:.82;
   }
-}
-@media(prefers-reduced-motion:reduce){
-  .jaeiro-orbit-svg,
-  .poolak-coin-svg{animation:none!important;transition:none!important}
 }
