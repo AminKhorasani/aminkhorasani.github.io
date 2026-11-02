@@ -2093,3 +2093,8 @@ html[data-theme="light"] .poolak-coin-point{fill:#173f73;opacity:.58}
     width:154px;height:154px;right:-24px;bottom:-25px;opacity:.82;
   }
 }
+
+
+/* 2026-11-02: use Amin's uploaded portrait in a true square hero frame. */
+.hero-portrait-frame{aspect-ratio:1 / 1 !important}
+.hero-portrait-frame img{object-position:50% 50%}
