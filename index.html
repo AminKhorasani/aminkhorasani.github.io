@@ -28,14 +28,14 @@
   <link rel="preconnect" href="https://upload.wikimedia.org" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./design-base.css?v=20261006-3" />
-  <link rel="stylesheet" href="./design-hero.css?v=20261006-3" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./design-base.css?v=20261124-1" />
+  <link rel="stylesheet" href="./design-hero.css?v=20261124-1" />
   <link rel="stylesheet" href="./design-sections.css?v=20261006-3" />
-  <link rel="stylesheet" href="./design-responsive.css?v=20261006-3" />
-  <link rel="stylesheet" href="./reference-theme.css?v=20261006-1" />
-  <link rel="stylesheet" href="./sky-theme.css?v=20261119-1" />
-  <link rel="stylesheet" href="./experience-timeline.css?v=20261020-2" />
+  <link rel="stylesheet" href="./design-responsive.css?v=20261124-1" />
+  <link rel="stylesheet" href="./reference-theme.css?v=20261124-1" />
+  <link rel="stylesheet" href="./sky-theme.css?v=20261124-1" />
+  <link rel="stylesheet" href="./experience-timeline.css?v=20261124-1" />
 </head>
 
 <body>
@@ -51,21 +51,16 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#work" data-i18n="navWork">Work</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#teaching" data-i18n="navTeaching">Teaching</a>
-        <a href="#education" data-i18n="navEducation">Education</a>
-        <a href="#recommendations" data-i18n="navRecommendations">Recommendations</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#education">Education</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <div class="language-switch" role="group" aria-label="Language">
-          <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
-          <span aria-hidden="true"></span>
-          <button type="button" class="language-option" data-lang="fa" aria-pressed="false">فا</button>
-        </div>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
           <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
@@ -87,10 +82,10 @@
       <div class="hero-copy reveal">
         <div class="availability">
           <span class="pulse-dot"></span>
-          <span data-i18n="availability">Building at Digikala · Tehran</span>
+          <span>Building</span>
         </div>
 
-        <p class="hero-kicker" data-i18n="heroKicker">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
+        <p class="hero-kicker">DATA · AI · ANALYTICS · PRODUCT ENGINEERING</p>
 
         <h1 class="build-headline" aria-live="polite">
           <span id="build-prefix" class="build-prefix">I build</span><br class="mobile-build-break" aria-hidden="true" />
@@ -99,12 +94,12 @@
           </span>
         </h1>
 
-        <p class="hero-lede" data-i18n="heroLede">
+        <p class="hero-lede">
           I’m Amin Khorasani. I work where data, AI and product meet — turning ambiguous problems into systems people can actually use.
         </p>
 
         <div class="hero-actions">
-          <a class="button primary" href="#work"><span data-i18n="seeWork">View my work</span><i>↓</i></a>
+          <a class="button primary" href="#work"><span>View my work</span><i>↓</i></a>
 
           <a class="button secondary social-hero-button" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <svg class="hero-social-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -135,10 +130,10 @@
     <section class="section shell" id="work">
       <div class="section-heading reveal">
         <div>
-          <p class="section-label">01 / <span data-i18n="featuredLabel">FEATURED PROJECTS</span></p>
-          <h2 data-i18n="featuredTitle">Selected work.</h2>
+          <p class="section-label">01 / <span>FEATURED PROJECTS</span></p>
+          <h2>Selected work.</h2>
         </div>
-        <p class="section-aside" data-i18n="featuredAside">Public projects that show how I think, build and ship.</p>
+        <p class="section-aside">Selected product, analytics and decision systems that show how I think, build and ship.</p>
       </div>
 
       <div class="projects">
@@ -147,13 +142,13 @@
           <div class="project-header">
             <p>DIGIKALA · DECISION INTELLIGENCE · KPI SYSTEM</p>
             <div class="project-badges">
-              <span class="project-status project-status-shipped" data-i18n="statusShipped">SHIPPED</span>
-              <span class="project-private-badge" data-i18n="privateInternal">PRIVATE / INTERNAL</span>
+              <span class="project-status project-status-shipped">SHIPPED</span>
+              <span class="project-private-badge">PRIVATE / INTERNAL</span>
             </div>
           </div>
           <div class="project-body">
             <h3>The Rakht</h3>
-            <p data-i18n="rakhtDescription">Built at Digikala, The Rakht combines KPI Driver Trees and WBR with an orchestrator agent coordinating specialized sub-agents. It connects metric changes to driver relationships, anomaly investigation, and root-cause narratives to support faster, more actionable business decisions.</p>
+            <p>Built at Digikala, The Rakht combines KPI Driver Trees and WBR with an orchestrator agent coordinating specialized sub-agents. It connects metric changes to driver relationships, anomaly investigation, and root-cause narratives to support faster, more actionable business decisions.</p>
           </div>
           <div class="project-tech">
             <span>KPI Driver Tree</span><span>WBR</span><span>Orchestrator Agent</span><span>Sub-Agents</span><span>Decision Intelligence</span>
@@ -233,13 +228,13 @@
             <div class="project-header">
               <p>PRODUCT · COMMUNITY</p>
               <div class="project-badges">
-                <span class="project-status project-status-progress" data-i18n="statusInProgress">IN PROGRESS</span>
+                <span class="project-status project-status-progress">IN PROGRESS</span>
                 <span class="project-arrow">↗</span>
               </div>
             </div>
             <div class="project-body">
               <h3>Jaeiro</h3>
-              <p data-i18n="jaeiroDescription">A Persian, mobile-first food-discovery community with reviews, collections, events, reputation and moderation.</p>
+              <p>A Persian, mobile-first food-discovery community with reviews, collections, events, reputation and moderation.</p>
             </div>
             <div class="project-tech"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
             <div class="project-art project-art-jaeiro" aria-hidden="true">
@@ -282,13 +277,13 @@
             <div class="project-header">
               <p>PRODUCT · PERSONAL FINANCE</p>
               <div class="project-badges">
-                <span class="project-status project-status-progress" data-i18n="statusInProgress">IN PROGRESS</span>
+                <span class="project-status project-status-progress">IN PROGRESS</span>
                 <span class="project-arrow">↗</span>
               </div>
             </div>
             <div class="project-body">
               <h3>Poolak</h3>
-              <p data-i18n="poolakDescription">A personal-finance product for managing accounts, transactions, budgets, goals and safe-to-spend — designed around clear, everyday financial decisions.</p>
+              <p>A personal-finance product for managing accounts, transactions, budgets, goals and safe-to-spend — designed around clear, everyday financial decisions.</p>
             </div>
             <div class="project-tech"><span>TypeScript</span><span>React</span><span>Express</span><span>PostgreSQL</span></div>
             <div class="project-art project-art-poolak" aria-hidden="true">
@@ -310,37 +305,37 @@
       </div>
 
       <div class="section-foot reveal">
-        <span data-i18n="moreRepos">More experiments and open-source work live on GitHub.</span>
-        <a class="arrow-link" href="https://github.com/AminKhorasani?tab=repositories" target="_blank" rel="noreferrer"><span data-i18n="allRepos">All repositories</span><i>↗</i></a>
+        <span>More experiments and open-source work live on GitHub.</span>
+        <a class="arrow-link" href="https://github.com/AminKhorasani?tab=repositories" target="_blank" rel="noreferrer"><span>All repositories</span><i>↗</i></a>
       </div>
     </section>
 
     <section class="section shell career-section" id="experience">
       <div class="section-heading reveal">
         <div>
-          <p class="section-label">02 / <span data-i18n="experienceLabel">EXPERIENCE</span></p>
-          <h2 data-i18n="experienceTitle">Where I’ve worked.</h2>
+          <p class="section-label">02 / <span>EXPERIENCE</span></p>
+          <h2>Where I’ve worked.</h2>
         </div>
-        <a class="arrow-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer"><span data-i18n="fullHistory">Full history</span><i>↗</i></a>
+        <a class="arrow-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer"><span>Full history</span><i>↗</i></a>
       </div>
       <div class="career-timeline" id="career-timeline" aria-label="Professional experience timeline">
         <div class="career-rail" aria-hidden="true"><span class="career-rail-base"></span><span class="career-rail-fill"><span class="career-rail-spark"></span></span></div>
         <article class="career-stop career-stop-digikala reveal" data-career-brand="digikala">
           <div class="career-highlights">
-            <p class="career-highlights-label" data-i18n="careerHighlightsLabel">SELECTED IMPACT</p>
-            <ul><li data-i18n="digikalaImpact1">Led WBR analytics, translating KPI shifts into root-cause narratives and cross-functional actions.</li><li data-i18n="digikalaImpact2">Architected an agentic KPI Driver Tree foundation for metric execution and anomaly investigation.</li><li data-i18n="digikalaImpact3">Designed budget allocation and 3-hour delivery measurement frameworks.</li></ul>
+            <p class="career-highlights-label">SELECTED IMPACT</p>
+            <ul><li>Led WBR analytics, translating KPI shifts into root-cause narratives and cross-functional actions.</li><li>Architected an agentic KPI Driver Tree foundation for metric execution and anomaly investigation.</li><li>Designed budget allocation and 3-hour delivery measurement frameworks.</li></ul>
           </div>
           <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
           <div class="career-content">
-            <div class="career-eyebrow"><span class="career-live-dot"></span><span data-i18n="current">CURRENT</span><span class="career-sequence">01 / 03</span></div>
+            <div class="career-eyebrow"><span class="career-live-dot"></span><span>CURRENT</span><span class="career-sequence">01 / 03</span></div>
             <div class="career-heading">
               <div class="career-mark" aria-hidden="true"><img src="./assets/digikala-mark.png" alt="" width="300" height="114" loading="lazy" decoding="async" /></div>
               <h3>Digikala<span class="career-title-dot">.</span></h3>
             </div>
-            <p class="career-job" data-i18n="digikalaJob">Senior Business Data Analyst</p>
-            <p class="career-role" data-i18n="digikalaRole">Marketing Insight &amp; Planning Strategy</p>
+            <p class="career-job">Senior Business Data Analyst</p>
+            <p class="career-role">Marketing Insight · Data / AI / Analytics</p>
             <div class="career-bottom">
-              <span class="career-date" data-i18n="digikalaDate">Dec 2025 — Present</span>
+              <span class="career-date">Dec 2025 — Present</span>
               <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="Digikala experience on LinkedIn">↗</a>
             </div>
           </div>
@@ -348,20 +343,20 @@
 
         <article class="career-stop career-stop-snappfood reveal" data-career-brand="snappfood">
           <div class="career-highlights">
-            <p class="career-highlights-label" data-i18n="careerHighlightsLabel">SELECTED IMPACT</p>
-            <ul><li data-i18n="snappfoodImpact1">Built a fraud-detection framework spanning five fraud typologies.</li><li data-i18n="snappfoodImpact2">Analyzed growth opportunities through campaigns, customer behavior, and business segments.</li><li data-i18n="snappfoodImpact3">Developed vendor sales forecasts and growth models to support decisions.</li></ul>
+            <p class="career-highlights-label">SELECTED IMPACT</p>
+            <ul><li>Built a fraud-detection framework spanning five fraud typologies.</li><li>Analyzed growth opportunities through campaigns, customer behavior, and business segments.</li><li>Developed vendor sales forecasts and growth models to support decisions.</li></ul>
           </div>
           <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
           <div class="career-content">
-            <div class="career-eyebrow"><span data-i18n="previous">PREVIOUS</span><span class="career-sequence">02 / 03</span></div>
+            <div class="career-eyebrow"><span>PREVIOUS</span><span class="career-sequence">02 / 03</span></div>
             <div class="career-heading">
               <div class="career-mark" aria-hidden="true"><img src="./assets/snappfood-exclamation.png" alt="" width="53" height="96" loading="lazy" decoding="async" /></div>
               <h3>SnappFood<span class="career-title-dot">.</span></h3>
             </div>
-            <p class="career-job" data-i18n="snappfoodJob">Growth Data Analyst</p>
-            <p class="career-role" data-i18n="snappfoodRole">Commercial Insight &amp; Planning</p>
+            <p class="career-job">Growth Data Analyst</p>
+            <p class="career-role">Data &amp; Analytics</p>
             <div class="career-bottom">
-              <span class="career-date" data-i18n="snappfoodDate">Aug 2024 — Nov 2025</span>
+              <span class="career-date">Aug 2024 — Nov 2025</span>
               <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="SnappFood experience on LinkedIn">↗</a>
             </div>
           </div>
@@ -369,20 +364,20 @@
 
         <article class="career-stop career-stop-yektanet reveal" data-career-brand="yektanet">
           <div class="career-highlights">
-            <p class="career-highlights-label" data-i18n="careerHighlightsLabel">SELECTED IMPACT</p>
-            <ul><li data-i18n="yektanetImpact1">Analyzed publisher performance, audiences, inventory quality, and campaign delivery.</li><li data-i18n="yektanetImpact2">Translated business signals into prioritized growth initiatives and KPIs.</li><li data-i18n="yektanetImpact3">Developed segmentation and personalization logic for advertising placements.</li></ul>
+            <p class="career-highlights-label">SELECTED IMPACT</p>
+            <ul><li>Analyzed publisher performance, audiences, inventory quality, and campaign delivery.</li><li>Translated business signals into prioritized growth initiatives and KPIs.</li><li>Developed segmentation and personalization logic for advertising placements.</li></ul>
           </div>
           <div class="career-pin" aria-hidden="true"><span class="career-pin-center"></span><span class="career-pin-halo"></span></div>
           <div class="career-content">
-            <div class="career-eyebrow"><span data-i18n="previous">PREVIOUS</span><span class="career-sequence">03 / 03</span></div>
+            <div class="career-eyebrow"><span>PREVIOUS</span><span class="career-sequence">03 / 03</span></div>
             <div class="career-heading">
               <div class="career-mark" aria-hidden="true"><img class="yektanet-mark yektanet-mark-light" src="./assets/yektanet-mark.png" alt="" width="110" height="110" loading="lazy" decoding="async" /><img class="yektanet-mark yektanet-mark-dark" src="./assets/yektanet-mark-dark.png" alt="" width="110" height="110" loading="lazy" decoding="async" /></div>
               <h3>Yektanet<span class="career-title-dot">.</span></h3>
             </div>
-            <p class="career-job" data-i18n="yektanetJob">Business Analyst</p>
-            <p class="career-role" data-i18n="yektanetRole">Chavosh Web</p>
+            <p class="career-job">Business Analyst</p>
+            <p class="career-role">Publisher Partnerships · Business Development</p>
             <div class="career-bottom">
-              <span class="career-date" data-i18n="yektanetDate">Aug 2023 — Jan 2024</span>
+              <span class="career-date">Aug 2023 — Dec 2023</span>
               <a class="career-outlink" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noopener noreferrer" aria-label="Yektanet experience on LinkedIn">↗</a>
             </div>
           </div>
@@ -394,33 +389,33 @@
     <section class="section shell teaching-section" id="teaching">
       <div class="section-heading reveal">
         <div>
-          <p class="section-label">03 / <span data-i18n="teachingLabel">TEACHING</span></p>
-          <h2 data-i18n="teachingTitle">Teaching.</h2>
+          <p class="section-label">03 / <span>TEACHING</span></p>
+          <h2>Teaching.</h2>
         </div>
-        <p class="section-aside" data-i18n="teachingAside">A practical course connecting data, strategy and business building.</p>
+        <p class="section-aside">A practical course connecting data, strategy and business building.</p>
       </div>
 
       <article class="teaching-card reveal">
         <div class="teaching-main">
           <div class="teaching-topline">
-            <span class="teaching-role" data-i18n="rubikampRole">COURSE INSTRUCTOR · RUBIKAMP</span>
-            <span class="teaching-status" data-i18n="rubikampStatus">CURRENT COURSE</span>
+            <span class="teaching-role">COURSE INSTRUCTOR · RUBIKAMP</span>
+            <span class="teaching-status">CURRENT COURSE</span>
           </div>
-          <h3 class="teaching-title" data-i18n="rubikampCourseTitle">Growth &amp; Data Analytics</h3>
-          <p class="teaching-subtitle" data-i18n="rubikampSubtitle">Business Growth Through Data, Strategy &amp; Solution Building</p>
+          <h3 class="teaching-title">Growth &amp; Data Analytics</h3>
+          <p class="teaching-subtitle">Business Growth Through Data, Strategy &amp; Solution Building</p>
 
           <div class="teaching-metrics" aria-label="Course format">
             <div class="teaching-metric">
-              <strong data-i18n="rubikampHoursValue">81</strong>
-              <span data-i18n="rubikampHoursLabel">learning hours</span>
+              <strong>81</strong>
+              <span>learning hours</span>
             </div>
             <div class="teaching-metric">
-              <strong data-i18n="rubikampSessionsValue">54</strong>
-              <span data-i18n="rubikampSessionsLabel">sessions</span>
+              <strong>54</strong>
+              <span>sessions</span>
             </div>
             <div class="teaching-metric">
-              <strong data-i18n="rubikampWeeksValue">27</strong>
-              <span data-i18n="rubikampWeeksLabel">weeks</span>
+              <strong>27</strong>
+              <span>weeks</span>
             </div>
           </div>
 
@@ -428,7 +423,7 @@
 
         <a class="teaching-brand-panel" href="https://rubikamp.org/" target="_blank" rel="noreferrer" aria-label="Visit Rubikamp">
           <img src="https://rubikamp.org/rk-white.png" alt="Rubikamp" width="160" height="160" loading="lazy" decoding="async" />
-          <span data-i18n="rubikampVisit">Explore Rubikamp</span>
+          <span>Explore Rubikamp</span>
           <i aria-hidden="true">↗</i>
         </a>
       </article>
@@ -437,10 +432,10 @@
     <section class="section shell education-section" id="education">
       <div class="section-heading reveal">
         <div>
-          <p class="section-label">04 / <span data-i18n="educationLabel">EDUCATION</span></p>
-          <h2 data-i18n="educationTitle">University of Tehran.</h2>
+          <p class="section-label">04 / <span>EDUCATION</span></p>
+          <h2>University of Tehran.</h2>
         </div>
-        <p class="section-aside" data-i18n="educationAside">Two degrees, one university — engineering from physical systems to software systems.</p>
+        <p class="section-aside">Two degrees, one university — engineering from physical systems to software systems.</p>
       </div>
 
       <div class="education-list">
@@ -453,11 +448,11 @@
           </div>
           <div class="education-main">
             <span class="education-school">University of Tehran</span>
-            <h3 data-i18n="mscTitle">Master of Science in Software Engineering</h3>
-            <p data-i18n="mscMeta">Sep 2023 — Present · Tehran, Iran</p>
+            <h3>Master of Science in Software Engineering</h3>
+            <p>Sep 2023 — Present · Tehran, Iran</p>
           </div>
           <div class="education-status">
-            <span data-i18n="graduateStudy">GRADUATE STUDY</span>
+            <span>GRADUATE STUDY</span>
             <strong>Software Engineering</strong>
           </div>
         </article>
@@ -471,15 +466,15 @@
           </div>
           <div class="education-main">
             <span class="education-school">University of Tehran</span>
-            <h3 data-i18n="bscTitle">Bachelor of Science in Mechanical Engineering</h3>
-            <p data-i18n="bscMeta">Sep 2018 — Oct 2023 · Tehran, Iran</p>
+            <h3>Bachelor of Science in Mechanical Engineering</h3>
+            <p>Sep 2018 — Oct 2023 · Tehran, Iran</p>
             <div class="education-details">
-              <span data-i18n="bscGpa">Overall GPA 3.6/4 · 17.94/20</span>
-              <span data-i18n="bscRecentGpa">Last two years 3.8/4 · 18.66/20</span>
+              <span>Overall GPA 3.6/4 · 17.94/20</span>
+              <span>Last two years 3.8/4 · 18.66/20</span>
             </div>
           </div>
           <div class="education-status">
-            <span data-i18n="undergraduateStudy">UNDERGRADUATE</span>
+            <span>UNDERGRADUATE</span>
             <strong>Mechanical Engineering</strong>
           </div>
         </article>
@@ -490,11 +485,11 @@
       <div class="shell">
         <div class="section-heading reveal">
           <div>
-            <p class="section-label">05 / <span data-i18n="recommendationsLabel">RECOMMENDATIONS</span></p>
-            <h2 data-i18n="recommendationsTitle">What people I’ve worked with say.</h2>
+            <p class="section-label">05 / <span>RECOMMENDATIONS</span></p>
+            <h2>What people I’ve worked with say.</h2>
           </div>
           <a class="arrow-link" href="https://www.linkedin.com/in/aminkhorasani/" target="_blank" rel="noreferrer">
-            <span data-i18n="viewLinkedIn">View on LinkedIn</span><i>↗</i>
+            <span>View on LinkedIn</span><i>↗</i>
           </a>
         </div>
       </div>
@@ -585,22 +580,22 @@
     <section class="section shell github-section" id="github">
       <div class="section-heading reveal">
         <div>
-          <p class="section-label">06 / <span data-i18n="githubSignalLabel">GITHUB SIGNAL</span></p>
-          <h2 data-i18n="githubSignalTitle">A recent trail of building.</h2>
+          <p class="section-label">06 / <span>GITHUB SIGNAL</span></p>
+          <h2>A recent trail of building.</h2>
         </div>
-        <p class="section-aside" data-i18n="githubSignalAside">Public GitHub events from the recent activity window.</p>
+        <p class="section-aside">GitHub contribution calendar. Private activity is included when enabled on your GitHub profile.</p>
       </div>
 
       <div class="github-panel reveal delay-1">
         <div class="github-panel-head">
           <div>
             <span class="eyebrow-small">AminKhorasani</span>
-            <strong data-i18n="activityMap">Contribution calendar</strong>
+            <strong>Contribution calendar</strong>
           </div>
           <div class="github-legend">
-            <span data-i18n="less">Less</span>
+            <span>Less</span>
             <i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i>
-            <span data-i18n="more">More</span>
+            <span>More</span>
           </div>
         </div>
         <div class="activity-map-wrap">
@@ -608,8 +603,8 @@
         </div>
         <div class="github-panel-foot">
           <span id="event-count">—</span>
-          <span data-i18n="publicEvents">contributions in the last year</span>
-          <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer"><span data-i18n="viewGitHub">View GitHub</span> ↗</a>
+          <span>contributions in the last year</span>
+          <a href="https://github.com/AminKhorasani" target="_blank" rel="noreferrer"><span>View GitHub</span> ↗</a>
         </div>
       </div>
     </section>
@@ -617,13 +612,13 @@
     <section class="section shell about-section" id="about">
       <div class="about-layout">
         <div class="reveal">
-          <p class="section-label">07 / <span data-i18n="aboutLabel">ABOUT</span></p>
-          <h2 data-i18n-html="aboutTitle">Analytics is useful when it changes<br />what happens next.</h2>
+          <p class="section-label">07 / <span>ABOUT</span></p>
+          <h2>Analytics is useful when it changes<br />what happens next.</h2>
         </div>
 
         <div class="about-copy reveal delay-1">
-          <p data-i18n="aboutP1">Most of my work starts with an ambiguous problem: a metric that needs explanation, a workflow that should be automated, or an idea that needs to become a real product.</p>
-          <p data-i18n="aboutP2">I’m most interested in systems that combine data, reasoning and software — so the output is not just a report, but a better decision or a useful product.</p>
+          <p>Most of my work starts with an ambiguous problem: a metric that needs explanation, a workflow that should be automated, or an idea that needs to become a real product.</p>
+          <p>I’m most interested in systems that combine data, reasoning and software — so the output is not just a report, but a better decision or a useful product.</p>
 
           <div class="skill-list">
             <span>Python</span><span>SQL</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>LLMs</span><span>Analytics</span>
@@ -633,19 +628,19 @@
     </section>
 
     <section class="section shell contact" id="contact">
-      <p class="section-label reveal">08 / <span data-i18n="contactLabel">CONTACT</span></p>
+      <p class="section-label reveal">08 / <span>CONTACT</span></p>
       <div class="contact-layout">
-        <h2 class="reveal" data-i18n-html="contactTitle">Have a problem worth<br />turning into a system?</h2>
+        <h2 class="reveal">Have a problem worth<br />turning into a system?</h2>
         <div class="contact-side reveal delay-1">
-          <p data-i18n="contactCopy">If the problem sits somewhere between data, AI, analytics and product, I’d like to hear about it.</p>
+          <p>If the problem sits somewhere between data, AI, analytics and product, I’d like to hear about it.</p>
 
           <div class="direct-contact">
             <a href="mailto:amin.a.khorasani@gmail.com">
-              <span data-i18n="emailLabel">Email</span>
+              <span>Email</span>
               <strong>amin.a.khorasani@gmail.com</strong>
             </a>
             <a href="tel:+989194128772">
-              <span data-i18n="phoneLabel">Phone</span>
+              <span>Phone</span>
               <strong>+98 919 412 8772</strong>
             </a>
           </div>
@@ -666,8 +661,8 @@
 
     <section class="section shell location-section" id="location">
       <div class="section-heading location-heading reveal">
-        <p class="section-label">09 / <span data-i18n="locationLabel">LOCATION</span></p>
-        <p class="section-aside" data-i18n="locationAside">Digikala HQ · Vanak Plaza · Khoddami St · Tehran</p>
+        <p class="section-label">09 / <span>LOCATION</span></p>
+        <p class="section-aside">Digikala HQ · Vanak Plaza · Khoddami St · Tehran</p>
       </div>
 
       <div class="map-shell reveal delay-1">
@@ -679,20 +674,19 @@
           src="https://www.google.com/maps?q=No.%2031%2C%20Vanak%20Plaza%20Building%2C%20Shadi%20Alley%2C%20Khoddami%20St%2C%20Tehran&z=17&iwloc=&output=embed">
         </iframe>
         <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Digikala+HQ+Office+Vanak+Plaza+Khoddami+Tehran" target="_blank" rel="noreferrer">
-          <span data-i18n="openMaps">Open in Maps</span> ↗
+          <span>Open in Maps</span> ↗
         </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer shell">
-    <div class="footer-status"><span class="pulse-dot"></span><span data-i18n="footerStatus">Open to interesting problems</span></div>
-    <div>© <span id="year"></span> <span data-i18n="footerName">Amin Khorasani</span></div>
-    <a href="#top"><span data-i18n="backTop">Back to top</span> ↑</a>
+    <div class="footer-status"><span class="pulse-dot"></span><span>Open to interesting problems</span></div>
+    <div>© <span id="year"></span> <span>Amin Khorasani</span></div>
+    <a href="#top"><span>Back to top</span> ↑</a>
   </footer>
 
-  <script src="./i18n-v2.js?v=20261119-1" defer></script>
-  <script src="./app-v2.js?v=20261020-2" defer></script>
+  <script src="./app-v2.js?v=20261124-1" defer></script>
   <script src="./experience-timeline.js?v=20261016-2" defer></script>
   <script type="module" src="./starfield-v3.js?v=20261010-1"></script>
 </body>

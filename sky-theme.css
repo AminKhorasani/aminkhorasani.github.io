@@ -74,12 +74,10 @@ body:after{
 .site-footer a:hover{color:var(--gd)}
 .nav{color:#8e99ad}
 .nav a:after{background:#dce7ff}
-.language-switch,.icon-link{
+.icon-link{
   border-color:rgba(140,170,235,.16);
   background:rgba(8,14,29,.42)
 }
-.language-option{color:#8390a7}
-.language-option.is-active{background:#dfe9ff;color:#07101f}
 .availability{
   background:rgba(8,14,29,.28);
   border-color:rgba(140,170,235,.16);
@@ -376,19 +374,8 @@ main,
 body{
   font-family:"Geist",Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
 }
-html[dir="rtl"] body{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif!important;
-}
 .hero-kicker,.section-label,.eyebrow-small,.caption-label,.activity-meta,.activity-date{
   font-family:"Geist Mono","SFMono-Regular",Consolas,monospace;
-}
-html[dir="rtl"] .hero-kicker,
-html[dir="rtl"] .section-label,
-html[dir="rtl"] .eyebrow-small,
-html[dir="rtl"] .caption-label,
-html[dir="rtl"] .activity-meta,
-html[dir="rtl"] .activity-date{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
 }
 
 /* Stronger cobalt identity */
@@ -604,10 +591,6 @@ html[dir="rtl"] .activity-date{
   letter-spacing:.12em;
 }
 .hero-portrait-meta span:last-child{text-align:right}
-html[dir="rtl"] .hero-portrait-meta{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-  letter-spacing:.03em;
-}
 
 @media(max-width:980px){
   .hero{
@@ -735,15 +718,6 @@ html[dir="rtl"] .hero-portrait-meta{
   from{transform:translateX(0)}
   to{transform:translateX(-50%)}
 }
-html[dir="rtl"] .recommendation-track{
-  animation-direction:reverse;
-}
-html[dir="rtl"] .recommendation-card{
-  text-align:right;
-}
-html[dir="rtl"] .recommendation-avatar{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-}
 @media(max-width:680px){
   .recommendation-card{
     width:88vw;
@@ -847,17 +821,11 @@ html[data-theme="light"] .arrow-link:hover,
 html[data-theme="light"] .site-footer a:hover{color:#214f8b!important}
 html[data-theme="light"] .nav{color:#596a82}
 html[data-theme="light"] .nav a:after{background:#173f73}
-html[data-theme="light"] .language-switch,
 html[data-theme="light"] .icon-link,
 html[data-theme="light"] .theme-toggle{
   border-color:rgba(15,39,77,.14);
   background:rgba(255,255,255,.78);
   color:#173f73;
-}
-html[data-theme="light"] .language-option{color:#65748a}
-html[data-theme="light"] .language-option.is-active{
-  background:#0f274d;
-  color:#fff;
 }
 html[data-theme="light"] .availability{
   background:rgba(255,255,255,.72);
@@ -1110,9 +1078,6 @@ html[data-theme="light"] .site-footer{color:#586b83}
 .recommendation-marquee.is-paused .recommendation-track{
   animation-play-state:paused!important;
 }
-html[dir="rtl"] .recommendation-more{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-}
 html[data-theme="light"] .recommendation-card:not(.is-expanded) .recommendation-copy:after{
   background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.98) 82%);
 }
@@ -1316,16 +1281,6 @@ html[data-theme="light"] .experience-row .snappfood-logo{
   font-size:11px;
   font-weight:500;
 }
-html[dir="rtl"] .education-school,
-html[dir="rtl"] .education-badge span,
-html[dir="rtl"] .education-status span{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-  letter-spacing:.02em;
-}
-html[dir="rtl"] .education-status{
-  align-items:flex-start;
-  text-align:left;
-}
 
 html[data-theme="light"] .education-list{
   border-color:rgba(15,39,77,.16);
@@ -1374,10 +1329,6 @@ html[data-theme="light"] .education-status strong{color:#344b68}
     align-items:flex-start;
     text-align:left;
     gap:5px;
-  }
-  html[dir="rtl"] .education-status{
-    text-align:right;
-    align-items:flex-end;
   }
   .education-details{
     flex-direction:column;
@@ -1589,9 +1540,6 @@ html[data-theme="light"] .education-degree-tag{
   color:#31577f;
   border-color:rgba(15,39,77,.16);
 }
-html[dir="rtl"] .education-degree-tag{
-  font-family:"Geist Mono","SFMono-Regular",Consolas,monospace;
-}
 @media(max-width:680px){
   .education-mark{width:64px;gap:7px}
   .education-logo{
@@ -1713,13 +1661,6 @@ html[data-theme="light"] .education-section .education-logo img{opacity:.87}
 .recommendation-marquee:hover .recommendation-track,
 .recommendation-marquee.is-paused .recommendation-track{
   animation-play-state:unset!important;
-}
-html[dir="rtl"] .recommendation-marquee{
-  direction:ltr;
-}
-html[dir="rtl"] .recommendation-card{
-  direction:rtl;
-  text-align:right;
 }
 
 
@@ -1970,14 +1911,6 @@ html[data-theme="light"] .project-status-progress{
 html[data-theme="light"] .project-status-progress:before{
   background:#315f98;
   box-shadow:0 0 10px rgba(49,95,152,.22);
-}
-html[dir="rtl"] .project-status{
-  font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-  letter-spacing:.02em;
-}
-html[dir="rtl"] .project-status:before{
-  margin-right:0;
-  margin-left:7px;
 }
 @media(max-width:680px){
   .project-header{
@@ -2248,9 +2181,6 @@ html[data-theme="light"] .poolak-coin-point{fill:#173f73;opacity:.58}
   font-size:13px;
   font-style:normal;
 }
-html[dir="rtl"] .teaching-metrics{direction:rtl}
-html[dir="rtl"] .teaching-role,
-html[dir="rtl"] .teaching-status{letter-spacing:.02em}
 html[data-theme="light"] .teaching-card{
   border-color:rgba(23,63,115,.15);
   background:linear-gradient(135deg,#f6f9ff,#edf3fc);

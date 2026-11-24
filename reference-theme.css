@@ -30,9 +30,7 @@ body:before{display:none}
 .brand-dot{color:var(--green)}
 .nav{color:#9ca39d}
 .nav a:after{background:var(--white)}
-.language-switch,.icon-link{background:transparent;border-color:var(--line2)}
-.language-option{color:#868d87}
-.language-option.is-active{background:var(--white);color:#0a0d0c}
+.icon-link{background:transparent;border-color:var(--line2)}
 .icon-link{color:#dfe2dd}
 .hero{
   min-height:calc(100vh - 79px);

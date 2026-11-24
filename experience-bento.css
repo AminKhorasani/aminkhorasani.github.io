@@ -207,9 +207,6 @@
 }
 #experience .experience-satellite-one{right:13%;top:18%}
 #experience .experience-satellite-two{right:23%;top:27%;width:8px;height:8px}
-html[dir="rtl"] #experience .experience-card-number{right:auto;left:28px}
-html[dir="rtl"] #experience .experience-featured-art{right:auto;left:-6%}
-html[dir="rtl"] #experience .experience-card-label{font-family:"Vazirmatn",Tahoma,Arial,sans-serif;letter-spacing:.03em}
 
 /* Light mode keeps the same composition and navy night-sky language. */
 html[data-theme="light"] #experience .experience-card{
@@ -266,7 +263,6 @@ html[data-theme="light"] #experience .experience-satellite{background:#214f8b;bo
   #experience .experience-card-number{font-size:82px}
   #experience .experience-card-footer{align-items:center}
   #experience .experience-card-footer>span{font-size:10px}
-  html[dir="rtl"] #experience .experience-featured-art{left:-8%;right:auto}
 }
 @media(prefers-reduced-motion:reduce){
   #experience .experience-card{transition:none!important}
@@ -362,12 +358,6 @@ html[data-theme="light"] #experience .experience-satellite{background:#214f8b;bo
 }
 #experience .experience-brand-snappfood img{object-fit:cover}
 #experience .experience-brand-yektanet{background:#fff}
-html[dir="rtl"] #experience .experience-card::after{right:auto;left:-16%}
-html[dir="rtl"] #experience .experience-featured-art{left:0;right:0}
-html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{
-  right:auto;
-  left:36px;
-}
 
 /* In light mode the brand washes resemble softly tinted resume cards. */
 html[data-theme="light"] #experience .experience-card{
@@ -408,10 +398,6 @@ html[data-theme="light"] #experience .experience-card-tags span{
     width:90px;
     height:90px;
     border-radius:19px;
-  }
-  html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{
-    right:auto;
-    left:22px;
   }
   #experience .experience-card::after{width:96%;top:-12%}
 }
@@ -470,8 +456,6 @@ html[data-theme="light"] #experience .experience-card-tags span{
 #experience .experience-brand-snappfood img{opacity:.22}
 #experience .experience-brand-yektanet{width:88px!important;height:88px!important}
 #experience .experience-brand-yektanet img{opacity:.23}
-html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{right:auto;left:24px}
-html[dir="rtl"] #experience .experience-card-secondary .experience-brand{right:auto;left:0}
 html[data-theme="light"] #experience .experience-card-footer>span{background:rgba(255,255,255,.55)}
 html[data-theme="light"] #experience .experience-brand img{opacity:.19}
 html[data-theme="light"] #experience .experience-featured-art .experience-brand-digikala img{opacity:.20}
@@ -479,5 +463,4 @@ html[data-theme="light"] #experience .experience-featured-art .experience-brand-
  #experience .experience-featured-art .experience-brand-digikala{width:170px;height:90px;right:16px;bottom:12px}
  #experience .experience-brand-snappfood{width:100px!important;height:64px!important}
  #experience .experience-brand-yektanet{width:65px!important;height:65px!important}
- html[dir="rtl"] #experience .experience-featured-art .experience-brand-digikala{right:auto;left:16px}
 }

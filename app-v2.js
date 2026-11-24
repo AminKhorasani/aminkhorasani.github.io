@@ -28,7 +28,6 @@ const year=document.getElementById('year');if(year)year.textContent=new Date().g
 const reveals=document.querySelectorAll('.reveal');
 if('IntersectionObserver'in window&&!reduceMotion){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -24px'});reveals.forEach(el=>o.observe(el))}else reveals.forEach(el=>el.classList.add('visible'));
 const glow=document.querySelector('.cursor-glow');if(glow&&!reduceMotion)addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
-const fmtDate=d=>new Intl.DateTimeFormat(document.documentElement.lang==='fa'?'fa-IR':'en-US',{month:'short',day:'numeric',year:'numeric'}).format(new Date(d));
 const evtLabel=e=>{const repo=e.repo?.name?.split('/')[1]||'GitHub';if(e.type==='PushEvent')return['Pushed code',repo];if(e.type==='CreateEvent')return['Created '+(e.payload?.ref_type||'repository item'),repo];if(e.type==='PullRequestEvent')return['Updated a pull request',repo];if(e.type==='IssuesEvent')return['Updated an issue',repo];if(e.type==='WatchEvent')return['Starred a repository',repo];if(e.type==='ForkEvent')return['Forked a repository',repo];return['Worked on '+repo,repo]};
 async function loadGitHub(){
   try{
@@ -93,63 +92,46 @@ function renderContributionFallback(events){
   if(count)count.textContent=total;
 }
 loadGitHub();
-const buildPhrases={
-  en:['intelligent AI systems','data products','analytical experiences','decision systems'],
-  fa:['سیستم‌های هوشمند AI','محصولات داده‌ای','تجربه‌های تحلیلی','سیستم‌های تصمیم‌یار']
-};
-let buildTimer=null;
+const buildPhrases=['intelligent AI systems','data products','analytical experiences','decision systems'];
 function runBuildTypewriter(){
   const textEl=document.getElementById('typewriter-text');
-  const prefixEl=document.getElementById('build-prefix');
-  if(!textEl||!prefixEl)return;
-  if(buildTimer)clearTimeout(buildTimer);
-  const lang=document.documentElement.lang==='fa'?'fa':'en';
-  prefixEl.textContent=lang==='fa'?'می‌سازم':'I build';
+  if(!textEl)return;
   if(reduceMotion){
-    textEl.textContent=buildPhrases[lang][0];
+    textEl.textContent=buildPhrases[0];
     return;
   }
-  const phrases=buildPhrases[lang];
   let p=0,i=0,deleting=false;
   const tick=()=>{
-    const phrase=phrases[p];
+    const phrase=buildPhrases[p];
     if(!deleting){
       i++;
       textEl.textContent=phrase.slice(0,i);
       if(i>=phrase.length){
         deleting=true;
-        buildTimer=setTimeout(tick,1450);
+        setTimeout(tick,1450);
         return;
       }
-      buildTimer=setTimeout(tick,58+Math.random()*42);
+      setTimeout(tick,58+Math.random()*42);
     }else{
       i--;
       textEl.textContent=phrase.slice(0,i);
       if(i<=0){
         deleting=false;
-        p=(p+1)%phrases.length;
-        buildTimer=setTimeout(tick,320);
+        p=(p+1)%buildPhrases.length;
+        setTimeout(tick,320);
         return;
       }
-      buildTimer=setTimeout(tick,30+Math.random()*22);
+      setTimeout(tick,30+Math.random()*22);
     }
   };
   textEl.textContent='';
-  buildTimer=setTimeout(tick,320);
+  setTimeout(tick,320);
 }
 runBuildTypewriter();
-window.addEventListener('portfolio-language-change',runBuildTypewriter);
 
 
 function recommendationToggleLabel(expanded){
-  const fa=document.documentElement.lang==='fa';
-  return expanded?(fa?'کمتر':'Less'):(fa?'بیشتر':'More');
-}
-function syncRecommendationToggleLabels(){
-  document.querySelectorAll('.recommendation-more').forEach(button=>{
-    const card=button.closest('.recommendation-card');
-    button.textContent=recommendationToggleLabel(card?.classList.contains('is-expanded'));
-  });
+  return expanded?'Less':'More';
 }
 function setupRecommendationExpanders(){
   const marquee=document.querySelector('.recommendation-marquee');
@@ -186,7 +168,6 @@ function setupRecommendationExpanders(){
   });
 }
 setupRecommendationExpanders();
-window.addEventListener('portfolio-language-change',syncRecommendationToggleLabels);
 
 
 function setupRecommendationScroller(){
